@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+<!-- TODO if I can tie this it a single backstory or pawnkind then use it.
+  <TraitDef>
+    <defName>RH_TET_Skaven_PlagueMonk</defName>
+    <degreeDatas>
+      <li>
+        <label>fervent believer</label>
+        <description>{PAWN_nameDef} is a fervent believer in the Horned Rat, and will do anything to please the Great One. {PAWN_pronoun} has spent so much time around poisons that {PAWN_pronoun} has developed a natural resistance to them.</description>
+        <statOffsets>
+      <ToxicSensitivity>-0.20</ToxicSensitivity>
+        </statOffsets>
+      </li>
+    </degreeDatas>
+    <requiredWorkTags>
+      <li>Violent</li>
+    </requiredWorkTags>
+  </TraitDef>
+  -->
+</Defs>

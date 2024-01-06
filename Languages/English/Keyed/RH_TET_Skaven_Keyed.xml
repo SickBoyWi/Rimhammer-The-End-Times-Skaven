@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<LanguageData>
+	<RH_TET_Skaven>Rimhammer - The End Times - Skaven</RH_TET_Skaven>
+	
+	<RH_TET_Skaven_UnderEmpireTunnelRaidLabel>Tunnel Raid</RH_TET_Skaven_UnderEmpireTunnelRaidLabel>
+	<RH_TET_Skaven_UnderEmpireTunnelRaid>The foul and treacherous skaven of the Under Empire are invading your warrens through the under way. Quick-quick, defend your home place.\n\nIn order to avoid any potential retribution, the foul attacking skaven have destroyed your route to the under ways.</RH_TET_Skaven_UnderEmpireTunnelRaid>
+	<RH_TET_Skaven_BerserkTunnelRaidLabel>Tunnel Attackers</RH_TET_Skaven_BerserkTunnelRaidLabel>
+	<RH_TET_Skaven_BerserkTunnelRaid>Berserk skaven have found their way to your under-way tunnel exit, and have entered your warrens from the underway. Perhaps your enemies (or allies) have drugged them, and sent them to sow destruction amongst your ranks.\n\nQuick-quick, defend your home from these mad rats!</RH_TET_Skaven_BerserkTunnelRaid>
+	<RH_TET_Skaven_TunnelGasAttackLabel>Gas Attack</RH_TET_Skaven_TunnelGasAttackLabel>
+	<RH_TET_Skaven_TunnelGasAttack>Some nefarious and unknown skaven enemy has released a gas bomb at your under-way tunnel entrance. For the sake of the health of your colonists, you'd best avoid the area until the gas dissipates.</RH_TET_Skaven_TunnelGasAttack>
+	<RH_TET_Skaven_TunnelPawnJoinLabel>Tunnel Joiner</RH_TET_Skaven_TunnelPawnJoinLabel>
+	<RH_TET_Skaven_TunnelPawnJoin>A pawn has joined your warrens via the under-way tunnels.\n\nThe warpstone wealth arrayed around the tunnel will cause better pawns to join. If you're unhappy with the pawn, you have only yourself to blame.</RH_TET_Skaven_TunnelPawnJoin>
+
+	<!-- Screaming Bell Stuff -->
+	<RH_TET_Skaven_CommandNoncombatRing>Noncombat Ring</RH_TET_Skaven_CommandNoncombatRing>
+	<RH_TET_Skaven_CommandNoncombatRingDesc>Ring the bell for a noncombat related boon, or perhaps curse. The effects of this type of ring are minor, so there isn't much to gain; there also isn't much lose should things go wrong.</RH_TET_Skaven_CommandNoncombatRingDesc>
+	<RH_TET_Skaven_CommandCombatRing>Combat Ring</RH_TET_Skaven_CommandCombatRing>
+	<RH_TET_Skaven_CommandCombatRingDesc>Ring the bell for a combat boon, or perhaps curse. If you're under attack, why not take the chance?</RH_TET_Skaven_CommandCombatRingDesc>
+	<RH_TET_Skaven_CommandMightyRing>Mighty Ring</RH_TET_Skaven_CommandMightyRing>
+	<RH_TET_Skaven_CommandMightyRingDesc>Ring the bell for a might boon or curse. The boons you receive for this type of ring will be great, but the curses have equal chance to be awful.</RH_TET_Skaven_CommandMightyRingDesc>
+	<RH_TET_Skaven_CommandBellDisabled>Bell still cooling down from last ring.</RH_TET_Skaven_CommandBellDisabled>
+	<RH_TET_Skaven_BellRingPositive>Your bell ring has had a positive effect!</RH_TET_Skaven_BellRingPositive>
+	<RH_TET_Skaven_BellRingNegative>Your bell ring seems to have gone awry.</RH_TET_Skaven_BellRingNegative>
+	<RH_TET_Skaven_BellRingNegativeIllnessLabel>Bad Bell Ring</RH_TET_Skaven_BellRingNegativeIllnessLabel>
+	<RH_TET_Skaven_BellRingNegativeIllnessDesc>Your bell ring seems to have gone awry. The foul energies unleashed in the mighty ring have caused your colonists to become ill.\n\nThey should stand back up soon, but will remain sick until the illness runs its course.</RH_TET_Skaven_BellRingNegativeIllnessDesc>
+	<RH_TET_Skaven_BellRingPositiveLabel>Positive Bell Ring</RH_TET_Skaven_BellRingPositiveLabel>
+	<RH_TET_Skaven_BellRingPositiveDesc>Your bell ring has had a positive effect. The foul energies have coalesced into a boon for your colonists: {0}.</RH_TET_Skaven_BellRingPositiveDesc>
+	<RH_TET_Skaven_BellRingPositiveBoostMinorDesc>Successful combat bell ring: Minor boost to your pawns.</RH_TET_Skaven_BellRingPositiveBoostMinorDesc>
+	<RH_TET_Skaven_BellRingPositiveBoostMajorDesc>Successful combat bell ring: Major boost to your pawns!</RH_TET_Skaven_BellRingPositiveBoostMajorDesc>
+	<RH_TET_Skaven_BellRingPositiveRatSwarmDesc>Successful combat bell ring: Rat swarm summoned!</RH_TET_Skaven_BellRingPositiveRatSwarmDesc>
+	<RH_TET_Skaven_BellRingPositiveDebuffFoesMinorDesc>Successful combat bell ring: Minor debuff for foes.</RH_TET_Skaven_BellRingPositiveDebuffFoesMinorDesc>
+	<RH_TET_Skaven_BellRingPositiveDebuffFoesMajorDesc>Successful combat bell ring: Major debuff for foes!</RH_TET_Skaven_BellRingPositiveDebuffFoesMajorDesc>
+	<RH_TET_Skaven_BellRingNegativeDefuffDesc>Failed combat bell ring: colonists debuffed.</RH_TET_Skaven_BellRingNegativeDefuffDesc>
+	<RH_TET_Skaven_BellRingNegativeExplodeDesc>Failed combat bell ring: eplosion!</RH_TET_Skaven_BellRingNegativeExplodeDesc>
+	<RH_TET_Skaven_BellRingPositiveInspiredDesc>Successful bell ring: Your pawns have become inspired to work harder.</RH_TET_Skaven_BellRingPositiveInspiredDesc>
+	<RH_TET_Skaven_BellRingPositiveMoodDesc>Successful bell ring: Your pawns have been blessed by the Great Horned Rat.</RH_TET_Skaven_BellRingPositiveMoodDesc>
+	<RH_TET_Skaven_BellRingMentalStateFixedDesc>Successful bell ring: Your pawn has been cured of their bad mental state:{0}</RH_TET_Skaven_BellRingMentalStateFixedDesc>
+	<RH_TET_Skaven_BellRingPositiveRatJoinersdDesc>Successful bell ring: A swarm of rats has answered your call, and joined you.</RH_TET_Skaven_BellRingPositiveRatJoinersdDesc>
+	<RH_TET_Skaven_BellRingNegativeMoodDesc>Bad bell ring: The mood of your pawns will suffer.</RH_TET_Skaven_BellRingNegativeMoodDesc>
+	<RH_TET_Skaven_BellRingNegativeWorkSlowDesc>Bad bell ring: Your pawns will work slower until the effect wears off.</RH_TET_Skaven_BellRingNegativeWorkSlowDesc>
+	<RH_TET_Skaven_BellRingNegativeDiseaseDesc>Bad bell ring: Your pawns have gotten sick.</RH_TET_Skaven_BellRingNegativeDiseaseDesc>
+	<RH_TET_Skaven_BellRingNegativeMentalDesc>Bad bell ring: Your pawns have suffered mentally.</RH_TET_Skaven_BellRingNegativeMentalDesc>
+	<RH_TET_Skaven_BellRingPositiveNoEffectDesc>Because no enemies are present, your bell ring has had no effect.</RH_TET_Skaven_BellRingPositiveNoEffectDesc>
+	<RH_TET_Skaven_BellRingNegativeLabel>Negative Bell Ring</RH_TET_Skaven_BellRingNegativeLabel>
+	<RH_TET_Skaven_BellRingNegativeToxicFalloutDesc>Your bell ring failed, and has caused a bad condition: Toxic Fallout</RH_TET_Skaven_BellRingNegativeToxicFalloutDesc>
+	<RH_TET_Skaven_BellRingNegativeEclipseDesc>Your bell ring failed, and has caused a bad condition: Toxic Fallout</RH_TET_Skaven_BellRingNegativeEclipseDesc>
+	<RH_TET_Skaven_BellRingNegativeDroneDesc>Your bell ring failed, and has caused a bad condition: Psychic Drone</RH_TET_Skaven_BellRingNegativeDroneDesc>
+	<RH_TET_Skaven_BellRingNegativeChaosStormDesc>Your bell ring failed, and has caused a bad condition: Chaos Storm</RH_TET_Skaven_BellRingNegativeChaosStormDesc>
+	<RH_TET_Skaven_BellRingNegativeSwarmDesc>Your bell ring failed, and has caused a bad condition: Angry Rat Swarm</RH_TET_Skaven_BellRingNegativeSwarmDesc>
+	<RH_TET_Skaven_BellRingPositiveJoiner>Your mighty bell ring was a success, and a new person will join you shortly.</RH_TET_Skaven_BellRingPositiveJoiner>
+	
+	<!-- Misc Buildings -->
+	<RH_TET_Skaven_NextToHopper>Must be placed next to a feed hopper.</RH_TET_Skaven_NextToHopper>
+	
+	<!-- Morskittar -->RH_TET_Skaven_MustPlaceOnMorskittar
+	<RH_TET_Skaven_CommandMorskittarReport>Show fire report</RH_TET_Skaven_CommandMorskittarReport>
+	<RH_TET_Skaven_CommandMorskittarReportDesc>Show a readiness report about the cannon's shoot capability.</RH_TET_Skaven_CommandMorskittarReportDesc>
+	<RH_TET_Skaven_CannonReportCannotShoot>Cannot fire.</RH_TET_Skaven_CannonReportCannotShoot>
+	<RH_TET_Skaven_CannonpReportCanShoot>Ready to fire.</RH_TET_Skaven_CannonpReportCanShoot>
+	<RH_TET_Skaven_MustPlaceOnMorskittar>Must be placed adjacent to Morskittar Engine.</RH_TET_Skaven_MustPlaceOnMorskittar>
+	<RH_TET_Skaven_CommandFireCannon>Fire cannon</RH_TET_Skaven_CommandFireCannon>
+	<RH_TET_Skaven_CommandFireCannonDesc>Fire the cannon, blow up the moon Morrslieb, win the game.</RH_TET_Skaven_CommandFireCannonDesc>
+	<RH_TET_Skaven_GameOverCannonShotIntro>You've fired the Morskittar Engine!</RH_TET_Skaven_GameOverCannonShotIntro>
+	<RH_TET_Skaven_CommandFireDescUnavailable>The Device must be fully charged in order to fire.</RH_TET_Skaven_CommandFireDescUnavailable>
+	<RH_TET_Skaven_GameOverCannonShot>Congratulations! You have fired the Morskittar Cannon, and the moon Morrslieb has been been destroyed! In yet another massive display of skaven superiority, you've succeeded!\n\nThe moon has exploded, and the warpstone will surely rain down!\n\nThis mod was developed by Johnny Hastings (@SickBoyWI). Special thanks to @Dino's Bar and Grill for the fantastic artwork he generously donated his time and skills for that went into this mod; it made up for my lack of graphics skills, and made the Rimhammer - The End Times mod series that much more great.\n\nThank you for playing.\n\nYou're free to call it a win for now, or keep playing and see what else happens in the world. If that's the case, hit the escape key to return to the game.\n\nPlease look me up on Patreon, or Ko-Fi and donate what you feel this was worth! I'm one guy who spends a whole lot of time on these mods. If you enjoyed it, then please show your love! I'll be encouraged to finish the other factions/races that much quicker if everyone contributes.</RH_TET_Skaven_GameOverCannonShot>
+	<RH_TET_Skaven_PoweringAlready>The Morskittar Engine is already powering.</RH_TET_Skaven_PoweringAlready>
+	<RH_TET_Skaven_MorskittarStarted>The Morskittar Engine has begun powering up.</RH_TET_Skaven_MorskittarStarted>
+	<RH_TET_Skaven_MorskittarAbortPowering>Aborting Morskittar Engine power up.</RH_TET_Skaven_MorskittarAbortPowering>
+	<RH_TET_Skaven_CommandPower>Begin powering</RH_TET_Skaven_CommandPower>
+	<RH_TET_Skaven_CommandPowerDesc>This will cause the Device to power up. You will be able to fire it once it is fully powered. The powering up will take 13 days, and once complete, you will have achieved victory. Be wary. Many foes will attempt to destroy the Morskittar Engine before it gets fully powered.</RH_TET_Skaven_CommandPowerDesc>
+	<RH_TET_Skaven_CommandPowerDescUnavailable>The Morskittar Engine is missing a required component in order start powering up.</RH_TET_Skaven_CommandPowerDescUnavailable>
+	<RH_TET_Skaven_CommandPowerDescUnavailablePowered>The Device is already fully powered.</RH_TET_Skaven_CommandPowerDescUnavailablePowered>
+	<RH_TET_Skaven_PoweringCancelled>Powering up of Morskittar Engine cancelled.</RH_TET_Skaven_PoweringCancelled>
+	<RH_TET_Skaven_Cancel>Cancel</RH_TET_Skaven_Cancel>
+	<RH_TET_Skaven_CommandCancelPowering>Cancel powering up of the Morskittar Engine. You can restart again later. This will release all energy, causing no damage, and stop additional extra raids from happening.</RH_TET_Skaven_CommandCancelPowering>
+	<RH_TET_Skaven_ReadyToFire>Ready to fire!</RH_TET_Skaven_ReadyToFire>
+	<RH_TET_Skaven_NotInUse>Awaiting power up.</RH_TET_Skaven_NotInUse>
+	<RH_TET_Skaven_Initiating>Begining power up.</RH_TET_Skaven_Initiating>
+	<RH_TET_Skaven_PoweringUp>Powering up</RH_TET_Skaven_PoweringUp>
+	<RH_TET_Skaven_RemoveBrain>Harvest</RH_TET_Skaven_RemoveBrain>
+	
+	<!-- Wall Vent / light -->
+	<RH_TET_Skaven_WallNeeded>Must be placed on walls.</RH_TET_Skaven_WallNeeded>
+	<RH_TET_Skaven_WarnBoth>Must be placed on a wall, facing an open tile.</RH_TET_Skaven_WarnBoth>
+	<RH_TET_Skaven_WarnNeedWall>Must be placed on a wall.</RH_TET_Skaven_WarnNeedWall>
+	<RH_TET_Skaven_WarnBlocked>Must be facing an open tile.</RH_TET_Skaven_WarnBlocked>
+	<RH_TET_Skaven_DestroyedBlocked>Light destroyed because it was blocked.</RH_TET_Skaven_DestroyedBlocked>
+	<RH_TET_Skaven_DestroyedWall>Light destroyed because wall was destroyed.</RH_TET_Skaven_DestroyedWall>
+	
+</LanguageData>

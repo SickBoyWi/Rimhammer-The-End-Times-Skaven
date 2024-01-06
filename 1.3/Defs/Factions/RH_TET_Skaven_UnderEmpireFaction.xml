@@ -1,0 +1,253 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <FactionDef ParentName="FactionBase">
+    <defName>RH_TET_Skaven_UnderEmpireFaction</defName>
+    <label>Skaven under empire</label>
+    <description>The united front of the Under-empire. Warlord clans under the great clans lead these straggling ratmen.</description>
+    <pawnsPlural>Skaven</pawnsPlural>
+    <pawnSingular>Skaven</pawnSingular>
+    <backstoryFilters>
+      <li>
+        <categories>
+          <li>RH_TET_SkavenClanrat</li>
+          <li>RH_TET_SkavenSlave</li>
+          <li>RH_TET_SkavenEducated</li>
+          <li>RH_TET_SkavenSeer</li>
+          <li>RH_TET_SkavenEngineer</li>
+          <li>RH_TET_SkavenStormvermin</li>
+          <li>RH_TET_SkavenMoulderPack</li>
+          <li>RH_TET_SkavenMoulder</li>
+          <li>RH_TET_SkavenPlagueMonk</li>
+        </categories>
+      </li>
+    </backstoryFilters>
+    <settlementGenerationWeight>1</settlementGenerationWeight>
+    <requiredCountAtGameStart>1</requiredCountAtGameStart>
+    <canSiege>false</canSiege>
+    <canStageAttacks>true</canStageAttacks>
+    <factionIconPath>World/SkavenIcon</factionIconPath>
+    <settlementTexturePath>World/WorldObjects/DefaultSettlement</settlementTexturePath>
+    <leaderTitle>Warlord</leaderTitle>
+    <techLevel>Medieval</techLevel>
+    <naturalEnemy>true</naturalEnemy>
+    <fixedName>Under-Empire</fixedName>
+    <settlementNameMaker>RH_TET_Skaven_NamerUnderEmpire</settlementNameMaker>
+    <earliestRaidDays>1</earliestRaidDays>
+	<allowedCultures><li>RH_TET_SkavenCulture</li></allowedCultures>
+    <allowedArrivalTemperatureRange>-45~45</allowedArrivalTemperatureRange>
+	<maxConfigurableAtWorldCreation IgnoreIfNoMatchingField="True">9999</maxConfigurableAtWorldCreation>
+    <configurationListOrderPriority IgnoreIfNoMatchingField="True">93</configurationListOrderPriority>
+    <caravanTraderKinds>
+      <li>RH_TET_Skaven_Caravan_BulkGoods</li><!-- Caravan_Skaven_BulkGoods-->
+      <li>RH_TET_Skaven_Caravan_MoulderPet</li><!-- Caravan_Skaven_MoulderPet-->
+    </caravanTraderKinds>
+    <visitorTraderKinds>
+      <li>RH_TET_Skaven_Visitor_Standard</li>
+    </visitorTraderKinds>
+    <baseTraderKinds>
+      <li>RH_TET_Skaven_Base_Standard</li><!-- Base_Skaven_Standard -->
+    </baseTraderKinds>
+    <maxPawnCostPerTotalPointsCurve>
+      <points>
+        <li>(0,35)</li>
+        <li>(70, 50)</li>
+        <li>(700, 100)</li>
+        <li>(1300, 150)</li>
+        <li>(100000, 10000)</li>
+      </points>
+    </maxPawnCostPerTotalPointsCurve>
+    <pawnGroupMakers>
+      <li>
+        <kindDef>Peaceful</kindDef>
+        <options>
+          <RH_TET_Skaven_SlaveRanged>7</RH_TET_Skaven_SlaveRanged>
+          <RH_TET_Skaven_SlaveRatMelee>7</RH_TET_Skaven_SlaveRatMelee>
+          <RH_TET_Skaven_TraderClan_Low>7</RH_TET_Skaven_TraderClan_Low>
+          <RH_TET_Skaven_PlagueMonkLow>7</RH_TET_Skaven_PlagueMonkLow>
+          <RH_TET_Skaven_ClanratRanged>5</RH_TET_Skaven_ClanratRanged>
+          <RH_TET_Skaven_ClanratHigh>5</RH_TET_Skaven_ClanratHigh>
+          <RH_TET_SkavenEngineer>3</RH_TET_SkavenEngineer>
+          <RH_TET_Skaven_PlagueMonkHigh>3</RH_TET_Skaven_PlagueMonkHigh>
+          <RH_TET_Skaven_Assassin>3</RH_TET_Skaven_Assassin>
+          <RH_TET_SkavenSeer>2</RH_TET_SkavenSeer>
+          <RH_TET_Skaven_RatOgreBladeUE>2</RH_TET_Skaven_RatOgreBladeUE>
+          <RH_TET_Skaven_WizardStandard>2</RH_TET_Skaven_WizardStandard>
+          <RH_TET_SkavenWarlord>1</RH_TET_SkavenWarlord>
+          <RH_TET_Skaven_WizardGreat>1</RH_TET_Skaven_WizardGreat>
+        </options>
+      </li>
+      <li>
+        <kindDef>Trader</kindDef>
+        <traders>
+          <RH_TET_Skaven_ClanratRanged>1</RH_TET_Skaven_ClanratRanged>
+        </traders>
+        <carriers>
+          <Muffalo>5</Muffalo>
+        </carriers>
+        <guards>
+          <RH_TET_Skaven_ClanratHighGun>1</RH_TET_Skaven_ClanratHighGun>
+          <RH_TET_Skaven_SlaveRanged>7</RH_TET_Skaven_SlaveRanged>
+          <RH_TET_Skaven_SlaveRatMelee>7</RH_TET_Skaven_SlaveRatMelee>
+          <RH_TET_Skaven_TraderClan_Low>7</RH_TET_Skaven_TraderClan_Low>
+          <RH_TET_Skaven_PlagueMonkLow>7</RH_TET_Skaven_PlagueMonkLow>
+          <RH_TET_Skaven_ClanratRanged>5</RH_TET_Skaven_ClanratRanged>
+          <RH_TET_Skaven_ClanratHigh>5</RH_TET_Skaven_ClanratHigh>
+          <RH_TET_Skaven_PlagueMonkHigh>3</RH_TET_Skaven_PlagueMonkHigh>
+          <RH_TET_Skaven_Assassin>3</RH_TET_Skaven_Assassin>
+          <RH_TET_SkavenEngineer>3</RH_TET_SkavenEngineer>
+          <RH_TET_SkavenSeer>2</RH_TET_SkavenSeer>
+          <RH_TET_Skaven_RatOgreBladeUE>2</RH_TET_Skaven_RatOgreBladeUE>
+          <RH_TET_Skaven_MoulderRatMid>2</RH_TET_Skaven_MoulderRatMid>
+          <RH_TET_Skaven_WizardStandard>2</RH_TET_Skaven_WizardStandard>
+          <RH_TET_Skaven_RatOgreAbomUE>1</RH_TET_Skaven_RatOgreAbomUE>
+          <RH_TET_Skaven_RatWolfUE>3</RH_TET_Skaven_RatWolfUE>
+          <RH_TET_Skaven_WizardGreat>1</RH_TET_Skaven_WizardGreat>
+        </guards>
+      </li>
+      <li>
+        <!-- Slave, mixed -->
+        <kindDef>Combat</kindDef>
+        <commonality>25</commonality>
+        <disallowedStrategies>
+          <li>Siege</li>
+        </disallowedStrategies>
+        <options>
+          <RH_TET_Skaven_SlaveRanged>50</RH_TET_Skaven_SlaveRanged>
+          <RH_TET_Skaven_SlaveRatMelee>50</RH_TET_Skaven_SlaveRatMelee>
+          <RH_TET_Skaven_WizardGreat>.01</RH_TET_Skaven_WizardGreat>
+        </options>
+      </li>
+      <li>
+        <!-- Slave, ranged only -->
+        <kindDef>Combat</kindDef>
+        <commonality>20</commonality>
+        <disallowedStrategies>
+          <li>Siege</li>
+        </disallowedStrategies>
+        <options>
+          <RH_TET_Skaven_SlaveRanged>80</RH_TET_Skaven_SlaveRanged>
+          <RH_TET_Skaven_Assassin>3</RH_TET_Skaven_Assassin>
+          <RH_TET_Skaven_WizardGreat>.01</RH_TET_Skaven_WizardGreat>
+        </options>
+      </li>
+      <li>
+        <!-- Mixed rats low -->
+        <kindDef>Combat</kindDef>
+        <commonality>70</commonality>
+        <disallowedStrategies>
+          <li>Siege</li>
+        </disallowedStrategies>
+        <options>
+          <RH_TET_Skaven_SlaveRanged>10</RH_TET_Skaven_SlaveRanged>
+          <RH_TET_Skaven_SlaveRatMelee>10</RH_TET_Skaven_SlaveRatMelee>
+          <RH_TET_Skaven_TraderClan_Low>7</RH_TET_Skaven_TraderClan_Low>
+          <RH_TET_Skaven_ClanratRanged>5</RH_TET_Skaven_ClanratRanged>
+          <RH_TET_Skaven_RatWolfUE>4</RH_TET_Skaven_RatWolfUE>
+          <RH_TET_Skaven_Assassin>3</RH_TET_Skaven_Assassin>
+          <RH_TET_Skaven_WizardStandard>2</RH_TET_Skaven_WizardStandard>
+          <RH_TET_Skaven_WizardGreat>1</RH_TET_Skaven_WizardGreat>
+        </options>
+      </li>
+      <li>
+        <!-- Mixed rats medium -->
+        <kindDef>Combat</kindDef>
+        <commonality>100</commonality>
+        <disallowedStrategies>
+          <li>Siege</li>
+        </disallowedStrategies>
+        <options>
+          <RH_TET_Skaven_SlaveRanged>10</RH_TET_Skaven_SlaveRanged>
+          <RH_TET_Skaven_SlaveRatMelee>10</RH_TET_Skaven_SlaveRatMelee>
+          <RH_TET_Skaven_TraderClan_Low>7</RH_TET_Skaven_TraderClan_Low>
+          <RH_TET_Skaven_PlagueMonkLow>7</RH_TET_Skaven_PlagueMonkLow>
+          <RH_TET_Skaven_ClanratRanged>5</RH_TET_Skaven_ClanratRanged>
+          <RH_TET_Skaven_PlagueMonkHigh>2</RH_TET_Skaven_PlagueMonkHigh>
+          <RH_TET_Skaven_ClanratHigh>2</RH_TET_Skaven_ClanratHigh>
+          <RH_TET_Skaven_ClanratHighGun>1</RH_TET_Skaven_ClanratHighGun>
+          <RH_TET_SkavenEngineer>3</RH_TET_SkavenEngineer>
+          <RH_TET_Skaven_Assassin>3</RH_TET_Skaven_Assassin>
+          <RH_TET_Skaven_RatOgreBladeUE>1</RH_TET_Skaven_RatOgreBladeUE>
+          <RH_TET_Skaven_MoulderRatMid>3</RH_TET_Skaven_MoulderRatMid>
+          <RH_TET_Skaven_RatWolfUE>2</RH_TET_Skaven_RatWolfUE>
+          <RH_TET_Skaven_WizardStandard>2</RH_TET_Skaven_WizardStandard>
+          <RH_TET_Skaven_WizardGreat>1</RH_TET_Skaven_WizardGreat>
+        </options>
+      </li>
+      <li>
+        <!-- Mixed rats high -->
+        <kindDef>Combat</kindDef>
+        <commonality>30</commonality>
+        <disallowedStrategies>
+          <li>Siege</li>
+        </disallowedStrategies>
+        <options>
+          <RH_TET_Skaven_SlaveRanged>7</RH_TET_Skaven_SlaveRanged>
+          <RH_TET_Skaven_SlaveRatMelee>7</RH_TET_Skaven_SlaveRatMelee>
+          <RH_TET_Skaven_TraderClan_Low>7</RH_TET_Skaven_TraderClan_Low>
+          <RH_TET_Skaven_PlagueMonkLow>7</RH_TET_Skaven_PlagueMonkLow>
+          <RH_TET_Skaven_ClanratRanged>5</RH_TET_Skaven_ClanratRanged>
+          <RH_TET_Skaven_ClanratHigh>5</RH_TET_Skaven_ClanratHigh>
+          <RH_TET_Skaven_PlagueMonkHigh>5</RH_TET_Skaven_PlagueMonkHigh>
+          <RH_TET_Skaven_Assassin>3</RH_TET_Skaven_Assassin>
+          <RH_TET_Skaven_ClanratHighGun>2</RH_TET_Skaven_ClanratHighGun>
+          <RH_TET_SkavenEngineer>3</RH_TET_SkavenEngineer>
+          <RH_TET_SkavenSeer>2</RH_TET_SkavenSeer>
+          <RH_TET_Skaven_RatOgreBladeUE>2</RH_TET_Skaven_RatOgreBladeUE>
+          <RH_TET_SkavenWarlord>1</RH_TET_SkavenWarlord>
+          <RH_TET_Skaven_MoulderRatMid>4</RH_TET_Skaven_MoulderRatMid>
+          <RH_TET_Skaven_RatWolfUE>2</RH_TET_Skaven_RatWolfUE>
+          <RH_TET_Skaven_WizardStandard>2</RH_TET_Skaven_WizardStandard>
+          <RH_TET_Skaven_MoulderRatHigh>1</RH_TET_Skaven_MoulderRatHigh>
+          <RH_TET_Skaven_WizardGreat>1</RH_TET_Skaven_WizardGreat>
+        </options>
+      </li>
+      <li>
+        <!-- Settlement -->
+        <kindDef>Settlement</kindDef>
+        <options>
+          <RH_TET_Skaven_SlaveRanged>10</RH_TET_Skaven_SlaveRanged>
+          <RH_TET_Skaven_SlaveRatMelee>10</RH_TET_Skaven_SlaveRatMelee>
+          <RH_TET_Skaven_TraderClan_Low>10</RH_TET_Skaven_TraderClan_Low>
+          <RH_TET_Skaven_ClanratRanged>7</RH_TET_Skaven_ClanratRanged>
+          <RH_TET_Skaven_PlagueMonkLow>7</RH_TET_Skaven_PlagueMonkLow>
+          <RH_TET_Skaven_ClanratHigh>5</RH_TET_Skaven_ClanratHigh>
+          <RH_TET_Skaven_PlagueMonkHigh>5</RH_TET_Skaven_PlagueMonkHigh>
+          <RH_TET_Skaven_Assassin>3</RH_TET_Skaven_Assassin>
+          <RH_TET_Skaven_ClanratHighGun>2</RH_TET_Skaven_ClanratHighGun>
+          <RH_TET_SkavenEngineer>3</RH_TET_SkavenEngineer>
+          <RH_TET_SkavenSeer>2</RH_TET_SkavenSeer>
+          <RH_TET_Skaven_RatOgreBladeUE>3</RH_TET_Skaven_RatOgreBladeUE>
+          <RH_TET_SkavenWarlord>1</RH_TET_SkavenWarlord>
+          <RH_TET_Skaven_MoulderRatMid>3</RH_TET_Skaven_MoulderRatMid>
+          <RH_TET_Skaven_WizardStandard>3</RH_TET_Skaven_WizardStandard>
+          <RH_TET_Skaven_MoulderRatHigh>1</RH_TET_Skaven_MoulderRatHigh>
+          <RH_TET_Skaven_RatWolfUE>4</RH_TET_Skaven_RatWolfUE>
+          <RH_TET_Skaven_WizardGreat>1</RH_TET_Skaven_WizardGreat>
+        </options>
+      </li>
+      <!-- Moulder -->
+      <li>
+        <kindDef>Combat</kindDef>
+        <commonality>30</commonality>
+        <disallowedStrategies>
+          <li>Siege</li>
+        </disallowedStrategies>
+        <options>
+          <RH_TET_Skaven_ClanratRanged>4</RH_TET_Skaven_ClanratRanged>
+          <RH_TET_SkavenEngineer>3</RH_TET_SkavenEngineer>
+          <RH_TET_Skaven_RatOgreBladeUE>3</RH_TET_Skaven_RatOgreBladeUE>
+          <RH_TET_Skaven_Assassin>1</RH_TET_Skaven_Assassin>
+          <RH_TET_Skaven_MoulderRatMid>4</RH_TET_Skaven_MoulderRatMid>
+          <RH_TET_Skaven_RatOgreAbomUE>5</RH_TET_Skaven_RatOgreAbomUE>
+          <RH_TET_Skaven_RatWolfUE>8</RH_TET_Skaven_RatWolfUE>
+          <RH_TET_Skaven_WizardStandard>2</RH_TET_Skaven_WizardStandard>
+          <RH_TET_Skaven_MoulderRatHigh>1</RH_TET_Skaven_MoulderRatHigh>
+          <RH_TET_Skaven_WizardGreat>1</RH_TET_Skaven_WizardGreat>
+        </options>
+      </li>
+    </pawnGroupMakers>
+    
+  </FactionDef>
+
+</Defs>

@@ -1,0 +1,374 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <ThingDef Name="RH_TET_Skaven_ApparelMakeableBaseSkaven" ParentName="ApparelBase" Abstract="True">
+    <recipeMaker>
+      <workSpeedStat>GeneralLaborSpeed</workSpeedStat>
+      <workSkill>Crafting</workSkill>
+      <effectWorking>Tailor</effectWorking>
+      <soundWorking>Recipe_Tailor</soundWorking>
+      <recipeUsers>
+        <li>RH_TET_Skaven_HandTailoringBench</li>
+        <li>ElectricTailoringBench</li>
+        <li>HandTailoringBench</li>
+        <li>CraftingSpot</li>
+      </recipeUsers>
+      <unfinishedThingDef>UnfinishedApparel</unfinishedThingDef>
+      <defaultIngredientFilter>
+        <categories>
+          <li>Root</li>
+        </categories>
+        <disallowedThingDefs>
+          <li>Gold</li>
+          <li>Silver</li>
+          <li>Plasteel</li>
+          <li>Jade</li>
+          <li>Uranium</li>
+        </disallowedThingDefs>
+      </defaultIngredientFilter>
+    </recipeMaker>
+	<tradeability>Sellable</tradeability>
+    <thingCategories Inherit="False">
+      <li>RH_TET_Skaven_Apparel</li>
+    </thingCategories>
+  </ThingDef>
+
+  <ThingDef ParentName="RH_TET_Skaven_ApparelMakeableBaseSkaven">
+    <defName>RH_TET_Skaven_Apparel_SkavenCloth</defName>
+    <label>skaven rag cloth</label>
+    <description>A simple cloth rag often worn by skaven to show that they are a clan rat. Often dyed or otherwise coloured to fit in with the rest of their clan's uniform.</description>
+    <graphicData>
+      <texPath>Things/Item/Apparel/SkavenCloth/RagCloth</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <costStuffCount>30</costStuffCount>
+    <stuffCategories>
+      <li>Fabric</li>
+      <li>Leathery</li>
+    </stuffCategories>
+    <statBases>
+      <MaxHitPoints>100</MaxHitPoints>
+      <WorkToMake>800</WorkToMake>
+      <Mass>0.2</Mass>
+      <StuffEffectMultiplierArmor>0.2</StuffEffectMultiplierArmor>
+      <StuffEffectMultiplierInsulation_Cold>0.2</StuffEffectMultiplierInsulation_Cold>
+      <StuffEffectMultiplierInsulation_Heat>0.4</StuffEffectMultiplierInsulation_Heat>
+      <EquipDelay>1.5</EquipDelay>
+    </statBases>
+    <apparel>
+      <bodyPartGroups>
+        <li>Torso</li>
+        <li>Shoulders</li>
+        <li>Neck</li>
+      </bodyPartGroups>
+      <wornGraphicPath>Things/Item/Apparel/SkavenCloth/RagCloth</wornGraphicPath>
+      <layers>
+        <li>Shell</li>
+      </layers>
+      <tags>
+        <li>RH_TET_SkavenClan</li>
+        <li>RH_TET_SkavenPack</li>
+      </tags>
+      <defaultOutfitTags>
+        <li>RH_TET_Skaven</li>
+      </defaultOutfitTags>
+    </apparel>
+    <recipeMaker>
+        <researchPrerequisite>RH_TET_SkavenApparel_Basic</researchPrerequisite>
+    </recipeMaker>
+  </ThingDef>
+
+ <ThingDef ParentName="RH_TET_Skaven_ApparelMakeableBaseSkaven">
+    <defName>RH_TET_Skaven_Apparel_Loincloth</defName>
+    <label>skaven loincloth</label>
+    <description>A crude loincloth fit for a skaven. Little more than a simple scrap of cloth with a matching scrap used as a rope to keep it on. Since clothing is a sign of status in the Under-Empire, needless to say this is most often worn by the lowliest skavenslaves.</description>
+    <techLevel>Neolithic</techLevel>
+   <costStuffCount>30</costStuffCount>
+   <stuffCategories>
+     <li>Fabric</li>
+     <li>Leathery</li>
+   </stuffCategories>
+    <graphicData>
+      <texPath>Things/Item/Apparel/SkavenLoinCloth/SkavenLoinCloth</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <statBases>
+      <WorkToMake>1000</WorkToMake>
+      <MaxHitPoints>80</MaxHitPoints>
+      <StuffEffectMultiplierArmor>0.05</StuffEffectMultiplierArmor>
+      <StuffEffectMultiplierInsulation_Cold>0.1</StuffEffectMultiplierInsulation_Cold>
+      <StuffEffectMultiplierInsulation_Heat>0.1</StuffEffectMultiplierInsulation_Heat>
+      <Mass>0.2</Mass>
+    </statBases>
+    <apparel>
+      <bodyPartGroups>
+        <li>Legs</li>
+      </bodyPartGroups>
+      <wornGraphicPath>Things/Item/Apparel/SkavenLoinCloth/SkavenLoinCloth</wornGraphicPath>
+      <layers>
+        <li>OnSkin</li>
+      </layers>
+      <tags>
+        <li>RH_TET_SkavenClanLow</li>
+        <li>RH_TET_SkavenSeer</li>
+        <li>RH_TET_SkavenMoulder</li>
+      </tags>
+      <defaultOutfitTags>
+        <li>RH_TET_SkavenClan</li>
+      </defaultOutfitTags>
+    </apparel>
+   <recipeMaker>
+     <researchPrerequisite>RH_TET_SkavenApparel_Basic</researchPrerequisite>
+   </recipeMaker>
+  </ThingDef>
+
+ <ThingDef ParentName="RH_TET_Skaven_ApparelMakeableBaseSkaven">
+    <defName>RH_TET_Skaven_Apparel_WaistRags</defName>
+    <label>skaven rags</label>
+    <description>A crude bundle of cloth or leather fit for a clanrat's lower body. Fashioned like a haphazard skirt or dress, it covers a bit more than a simple loincloth, with the added benefit of having a greater surface area for coloration and clan markings.</description>
+    <techLevel>Neolithic</techLevel>
+   <costStuffCount>20</costStuffCount>
+   <stuffCategories>
+     <li>Fabric</li>
+     <li>Leathery</li>
+   </stuffCategories>
+    <graphicData>
+      <texPath>Things/Item/Apparel/SkavenRags/SkavenRags</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <statBases>
+      <WorkToMake>700</WorkToMake>
+      <MaxHitPoints>70</MaxHitPoints>
+      <StuffEffectMultiplierArmor>0.03</StuffEffectMultiplierArmor>
+      <StuffEffectMultiplierInsulation_Cold>0.07</StuffEffectMultiplierInsulation_Cold>
+      <StuffEffectMultiplierInsulation_Heat>0.07</StuffEffectMultiplierInsulation_Heat>
+      <Mass>0.1</Mass>
+    </statBases>
+    <apparel>
+      <bodyPartGroups>
+        <li>Legs</li>
+      </bodyPartGroups>
+      <wornGraphicPath>Things/Item/Apparel/SkavenRags/SkavenRags</wornGraphicPath>
+      <layers>
+        <li>OnSkin</li>
+      </layers>
+      <tags>
+        <li>RH_TET_SkavenClanLow</li>
+        <li>RH_TET_SkavenSeer</li>
+        <li>RH_TET_SkavenMoulder</li>
+      </tags>
+      <defaultOutfitTags>
+        <li>RH_TET_SkavenClan</li>
+      </defaultOutfitTags>
+    </apparel>
+   <recipeMaker>
+     <researchPrerequisite>RH_TET_SkavenApparel_Basic</researchPrerequisite>
+   </recipeMaker>
+  </ThingDef>
+
+  <ThingDef ParentName="RH_TET_Skaven_ApparelMakeableBaseSkaven">
+    <defName>RH_TET_Skaven_Apparel_SkavenTunic</defName>
+    <label>skaven rag tunic</label>
+    <description>A simple ragged tunic cut to fit the wiry frame of a skaven. Often these are repurposed tunics used by the no-furs of the Old World, though the skaven will fashion these themselves out of scrap parts.</description>
+    <graphicData>
+      <texPath>Things/Item/Apparel/SkavenTunic/RatTunic</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <costStuffCount>40</costStuffCount>
+    <stuffCategories>
+      <li>Fabric</li>
+      <li>Leathery</li>
+    </stuffCategories>
+    <statBases>
+      <MaxHitPoints>75</MaxHitPoints>
+      <WorkToMake>1000</WorkToMake>
+      <Mass>0.2</Mass>
+      <StuffEffectMultiplierArmor>0.2</StuffEffectMultiplierArmor>
+      <StuffEffectMultiplierInsulation_Cold>0.2</StuffEffectMultiplierInsulation_Cold>
+      <StuffEffectMultiplierInsulation_Heat>0.17</StuffEffectMultiplierInsulation_Heat>
+      <EquipDelay>1.5</EquipDelay>
+    </statBases>
+    <apparel>
+      <bodyPartGroups>
+        <li>Torso</li>
+        <li>Shoulders</li>
+      </bodyPartGroups>
+      <wornGraphicPath>Things/Item/Apparel/SkavenTunic/RatTunic</wornGraphicPath>
+      <layers>
+        <li>OnSkin</li>
+      </layers>
+      <tags>
+        <li>RH_TET_SkavenClan</li>
+        <li>RH_TET_SkavenSlave</li>
+        <li>RH_TET_SkavenSeer</li>
+        <li>RH_TET_SkavenPack</li>
+        <li>RH_TET_SkavenMoulder</li>
+        <li>RH_TET_Skaven_Apparel_Wizard</li>
+        <li>RH_TET_Skaven_PlagueMonk</li>
+      </tags>
+      <defaultOutfitTags>
+        <li>RH_TET_Skaven</li>
+		<li>RH_TET_Skaven_WizardScenario</li>
+		<li>RH_TET_Skaven_WizardStandard</li>
+		<li>RH_TET_Empire_WizardGreat</li>
+      </defaultOutfitTags>
+    </apparel>
+    <recipeMaker>
+        <researchPrerequisite>RH_TET_SkavenApparel_Basic</researchPrerequisite>
+    </recipeMaker>
+  </ThingDef>
+
+  <ThingDef ParentName="RH_TET_Skaven_ApparelMakeableBaseSkaven">
+    <defName>RH_TET_Skaven_Apparel_SkavenRobe</defName>
+    <label>skaven robe</label>
+    <description>A robe fit for skaven. Representing a bit more material and craftsmanship than clanrat rags, these are most frequently worn by skaven of distinct status, such as the plague priests of Clan Pestilens, the sorcerers of Clan Eshin, and of course the grey seers.</description>
+    <graphicData>
+      <texPath>Things/Item/Apparel/SkavenRobe/SkavenRobe</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <costStuffCount>75</costStuffCount>
+    <stuffCategories>
+      <li>Fabric</li>
+      <li>Leathery</li>
+    </stuffCategories>
+    <statBases>
+      <MaxHitPoints>150</MaxHitPoints>
+      <WorkToMake>2000</WorkToMake>
+      <Mass>2</Mass>
+      <StuffEffectMultiplierArmor>0.5</StuffEffectMultiplierArmor>
+      <StuffEffectMultiplierInsulation_Cold>0.65</StuffEffectMultiplierInsulation_Cold>
+      <StuffEffectMultiplierInsulation_Heat>0.8</StuffEffectMultiplierInsulation_Heat>
+      <EquipDelay>3</EquipDelay>
+    </statBases>
+    <apparel>
+      <bodyPartGroups>
+        <li>Torso</li>
+        <li>Shoulders</li>
+        <li>Legs</li>
+        <li>Neck</li>
+      </bodyPartGroups>
+      <wornGraphicPath>Things/Item/Apparel/SkavenRobe/SkavenRobe</wornGraphicPath>
+      <layers>
+        <li>Shell</li>
+      </layers>
+      <tags>
+        <li>RH_TET_SkavenSeer</li>
+        <li>RH_TET_SkavenMoulder</li>
+        <li>RH_TET_Skaven_Apparel_Wizard</li>
+        <li>RH_TET_Skaven_PlagueMonk</li>
+      </tags>
+      <defaultOutfitTags>
+        <li>RH_TET_Skaven</li>
+		<li>RH_TET_Skaven_WizardScenario</li>
+		<li>RH_TET_Skaven_WizardStandard</li>
+		<li>RH_TET_Empire_WizardGreat</li>
+      </defaultOutfitTags>
+    </apparel>
+    <recipeMaker>
+        <researchPrerequisite>RH_TET_SkavenApparel_Advanced</researchPrerequisite>
+    </recipeMaker>  
+	<colorGenerator Class="ColorGenerator_Options">
+	 <options>
+	   <li>
+		 <weight>10</weight>
+		 <only>(1.0,1.0,1.0,1)</only>
+	   </li>
+	   <li>
+		 <weight>10</weight>
+		 <only>(0.1,0.1,0.1,1)</only>
+	   </li>
+	   <li>
+		 <weight>10</weight>
+		 <only>(0.75,0.75,0.75,1)</only>
+	   </li>
+	   <li><!-- Green -->
+		 <weight>10</weight>
+		 <only>(0.14,.25,0.05,1)</only>
+	   </li>
+	   <li><!-- Gray -->
+		 <weight>10</weight>
+		 <only>(.43,.43,.43,1)</only>
+	   </li>
+	   <li><!-- Yellow -->
+		 <weight>10</weight>
+		 <only>(.44,.45,0.11,1)</only>
+	   </li>
+	   <li><!-- Brown -->
+		 <weight>10</weight>
+		 <only>(0.16,0.02,0.02,1)</only>
+	   </li>
+	 </options>
+   </colorGenerator>
+  </ThingDef>
+
+  <!-- TODO - need images for these
+
+  <ThingDef ParentName="RH_TET_Skaven_ArmorSmithableBaseSkaven">
+    <defName>Apparel_SkavenMoulderRobe</defName>
+    <label>Moulder robe</label>
+    <description>A thick leather robe with steel lining and herbs sewn into it. Worn by skaven from clan Moulder to protect against the various bio-matter and monstrous creations.</description>
+    <recipeMaker>
+      <unfinishedThingDef>UnfinishedMetallicTechArmor</unfinishedThingDef>
+      <researchPrerequisite>RH_TET_SkavenApparel_ArmourHeavy</researchPrerequisite>
+      <skillRequirements>
+        <Crafting>8</Crafting>
+      </skillRequirements>
+    </recipeMaker>
+    <graphicData>
+      <texPath>Things/Item/Apparel/MoulderApron/MoulderApron</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <stuffCategories>
+      <li>Fabric</li>
+      <li>Leathery</li>
+    </stuffCategories>
+    <costStuffCount>100</costStuffCount>
+    <costList>
+      <Steel>75</Steel>
+      <PsychoidLeaves>75</PsychoidLeaves>
+    </costList>
+    <statBases>
+      <WorkToMake>40000</WorkToMake>
+      <MaxHitPoints>300</MaxHitPoints>
+      <Mass>5</Mass>
+      <StuffEffectMultiplierArmor>0.85</StuffEffectMultiplierArmor>
+      <StuffEffectMultiplierInsulation_Cold>0.65</StuffEffectMultiplierInsulation_Cold>
+      <StuffEffectMultiplierInsulation_Heat>0.8</StuffEffectMultiplierInsulation_Heat>
+      <EquipDelay>10</EquipDelay>
+    </statBases>
+    <equippedStatOffsets>
+      <MoveSpeed>-0.1</MoveSpeed>
+      <ToxicSensitivity>-0.75</ToxicSensitivity>
+      <ImmunityGainSpeed>0.25</ImmunityGainSpeed>
+      <MedicalSurgerySuccessChance>0.25</MedicalSurgerySuccessChance>
+    </equippedStatOffsets>
+    <thingCategories>
+      <li>RH_TET_Skaven_ApparelArmor</li>
+    </thingCategories>
+    <apparel>
+      <bodyPartGroups>
+        <li>Torso</li>
+        <li>Neck</li>
+        <li>Shoulders</li>
+        <li>Arms</li>
+        <li>Legs</li>
+        <li>Hands</li>
+        <li>Feet</li>
+      </bodyPartGroups>
+      <wornGraphicPath>Things/Item/Apparel/MoulderApron/MoulderApron</wornGraphicPath>
+      <layers>
+        <li>Middle</li>
+        <li>Shell</li>
+      </layers>
+      <tags>
+        <li>SkavenMoulder</li>
+      </tags>
+      <defaultOutfitTags>
+        <li>Skaven</li>
+      </defaultOutfitTags>
+    </apparel>
+  </ThingDef>
+  
+  Moulder-->
+
+</Defs>

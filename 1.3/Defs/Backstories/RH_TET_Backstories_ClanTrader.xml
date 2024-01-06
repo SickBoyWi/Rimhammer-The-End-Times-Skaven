@@ -1,0 +1,393 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+  
+  <!--===================== hireling =====================-->
+
+  <AlienRace.BackstoryDef>
+    <defName>RH_TET_Skaven_TraderRatHireling</defName>
+    <title>hireling</title>
+    <titleShort>hireling</titleShort>
+    <baseDescription>[PAWN_nameDef] offer their services for a price.</baseDescription>
+    <bodyTypeMale>Male</bodyTypeMale>
+    <bodyTypeFemale>Male</bodyTypeFemale>
+    <slot>Adulthood</slot>
+    <skillGains>
+      <li>
+        <defName>Social</defName>
+        <amount>2</amount>
+      </li>
+      <li>
+        <defName>Shooting</defName>
+        <amount>2</amount>
+      </li>
+      <li>
+        <defName>Melee</defName>
+        <amount>5</amount>
+      </li>
+    </skillGains>
+    <forcedTraits>
+      <li>
+        <defName>Nimble</defName>
+        <chance>12</chance>
+      </li>
+    </forcedTraits>
+    <spawnCategories>
+      <li>RH_TET_SkavenHireling</li>
+    </spawnCategories>
+    <requiredWorkTags>
+      <li>Violent</li>
+    </requiredWorkTags>
+  </AlienRace.BackstoryDef>
+
+  <AlienRace.BackstoryDef>
+    <defName>RH_TET_Skaven_TraderRatGladiator</defName>
+    <title>gladiator</title>
+    <titleShort>gladiator</titleShort>
+    <baseDescription>[PAWN_nameDef] is a former gladiator, now offering their services to whoever pays highest and most reliably.</baseDescription>
+    <bodyTypeMale>Male</bodyTypeMale>
+    <bodyTypeFemale>Male</bodyTypeFemale>
+    <slot>Adulthood</slot>
+    <skillGains>
+      <li>
+        <defName>Shooting</defName>
+        <amount>2</amount>
+      </li>
+      <li>
+        <defName>Melee</defName>
+        <amount>5</amount>
+      </li>
+    </skillGains>
+    <forcedTraits>
+      <li>
+        <defName>Tough</defName>
+        <chance>7</chance>
+      </li>
+      <li>
+        <defName>Nimble</defName>
+        <chance>7</chance>
+      </li>
+    </forcedTraits>
+    <spawnCategories>
+      <li>RH_TET_SkavenHireling</li>
+    </spawnCategories>
+    <requiredWorkTags>
+      <li>Violent</li>
+    </requiredWorkTags>
+  </AlienRace.BackstoryDef>
+
+  <AlienRace.BackstoryDef>
+    <defName>RH_TET_Skaven_TraderRatBruiser</defName>
+    <title>bruiser</title>
+    <titleShort>bruiser</titleShort>
+    <baseDescription>[PAWN_nameDef] keeps busy as a bruiser for hire.</baseDescription>
+    <bodyTypeMale>Male</bodyTypeMale>
+    <bodyTypeFemale>Male</bodyTypeFemale>
+    <slot>Adulthood</slot>
+    <skillGains>
+      <li>
+        <defName>Melee</defName>
+        <amount>5</amount>
+      </li>
+    </skillGains>
+    <forcedTraits>
+      <li>
+        <defName>Tough</defName>
+        <chance>7</chance>
+      </li>
+      <li>
+        <defName>Brawler</defName>
+        <chance>20</chance>
+      </li>
+    </forcedTraits>
+    <spawnCategories>
+      <li>RH_TET_SkavenHireling</li>
+    </spawnCategories>
+    <requiredWorkTags>
+      <li>Violent</li>
+    </requiredWorkTags>
+  </AlienRace.BackstoryDef>
+
+  <AlienRace.BackstoryDef>
+    <defName>RH_TET_Skaven_TraderRatMercenary</defName>
+    <title>mercenary</title>
+    <titleShort>mercenary</titleShort>
+    <baseDescription>[PAWN_nameDef] is a sellsword.</baseDescription>
+    <bodyTypeMale>Male</bodyTypeMale>
+    <bodyTypeFemale>Male</bodyTypeFemale>
+    <slot>Adulthood</slot>
+    <skillGains>
+      <li>
+        <defName>Melee</defName>
+        <amount>2</amount>
+      </li>
+      <li>
+        <defName>Shooting</defName>
+        <amount>4</amount>
+      </li>
+    </skillGains>
+    <forcedTraits>
+      <li>
+        <defName>ShootingAccuracy</defName>
+        <degree>1</degree>
+        <chance>20</chance>
+      </li>
+    </forcedTraits>
+    <spawnCategories>
+      <li>RH_TET_SkavenHireling</li>
+    </spawnCategories>
+    <requiredWorkTags>
+      <li>Violent</li>
+    </requiredWorkTags>
+  </AlienRace.BackstoryDef>
+  
+
+  <!--===================== trader =====================-->
+
+  <AlienRace.BackstoryDef>
+    <defName>RH_TET_Skaven_TraderRatAssistant</defName>
+    <title>trade assistant</title>
+    <titleShort>assistant</titleShort>
+    <baseDescription>[PAWN_nameDef] is a assistant of the clan leader.</baseDescription>
+    <bodyTypeMale>Male</bodyTypeMale>
+    <bodyTypeFemale>Male</bodyTypeFemale>
+    <slot>Adulthood</slot>
+    <skillGains>
+      <li>
+        <defName>Intellectual</defName>
+        <amount>2</amount>
+      </li>
+      <li>
+        <defName>Social</defName>
+        <amount>4</amount>
+      </li>
+      <li>
+        <defName>Medicine</defName>
+        <amount>2</amount>
+      </li>
+      <li>
+        <defName>Melee</defName>
+        <amount>2</amount>
+      </li>
+    </skillGains>
+    <spawnCategories>
+      <li>RH_TET_SkavenTrader</li>
+    </spawnCategories>
+    <requiredWorkTags>
+      <li>Social</li>
+    </requiredWorkTags>
+  </AlienRace.BackstoryDef>
+
+  <AlienRace.BackstoryDef>
+    <defName>RH_TET_Skaven_TraderRatClek</defName>
+    <title>trade clerk</title>
+    <titleShort>clerk</titleShort>
+    <baseDescription>[PAWN_nameDef] works as a clerk for one of the smaller clans.</baseDescription>
+    <bodyTypeMale>Male</bodyTypeMale>
+    <bodyTypeFemale>Male</bodyTypeFemale>
+    <slot>Adulthood</slot>
+    <skillGains>
+      <li>
+        <defName>Intellectual</defName>
+        <amount>3</amount>
+      </li>
+      <li>
+        <defName>Social</defName>
+        <amount>4</amount>
+      </li>
+      <li>
+        <defName>Shooting</defName>
+        <amount>2</amount>
+      </li>
+    </skillGains>
+    <spawnCategories>
+      <li>RH_TET_SkavenTrader</li>
+    </spawnCategories>
+    <requiredWorkTags>
+      <li>Social</li>
+    </requiredWorkTags>
+  </AlienRace.BackstoryDef>
+  
+  <AlienRace.BackstoryDef>
+    <defName>RH_TET_Skaven_TraderRatTrader</defName>
+    <title>trader</title>
+    <titleShort>trader</titleShort>
+    <baseDescription>[PAWN_nameDef] is one of the major traders of the free standing clans.</baseDescription>
+    <bodyTypeMale>Male</bodyTypeMale>
+    <bodyTypeFemale>Male</bodyTypeFemale>
+    <slot>Adulthood</slot>
+    <skillGains>
+      <li>
+        <defName>Social</defName>
+        <amount>5</amount>
+      </li>
+      <li>
+        <defName>Shooting</defName>
+        <amount>4</amount>
+      </li>
+      <li>
+        <defName>Melee</defName>
+        <amount>2</amount>
+      </li>
+    </skillGains>
+    <spawnCategories>
+      <li>RH_TET_SkavenTrader</li>
+    </spawnCategories>
+    <requiredWorkTags>
+      <li>Social</li>
+      <li>Violent</li>
+    </requiredWorkTags>
+  </AlienRace.BackstoryDef>
+
+  <AlienRace.BackstoryDef>
+	<defName>RH_TET_SkavenClanratCommon</defName>
+	<title>clanrat</title>
+	<titleShort>clanrat</titleShort>
+	<baseDescription>Just as the countless millions like [PAWN_nameDef], [PAWN_nameDef] took up arms to become a clan rat serving under one of thousands of clans scattered throughout the underground burrows, strongholds, and bursting cavern-cities that make up the whole of the Under-Empire. </baseDescription>
+	<bodyTypeMale>Male</bodyTypeMale>
+	<bodyTypeFemale>Male</bodyTypeFemale>
+	<slot>Adulthood</slot>
+    <spawnCategories>
+      <li>RH_TET_SkavenClanrat</li>
+      <li>RH_TET_SkavenMoulderPack</li>
+    </spawnCategories>
+	</AlienRace.BackstoryDef>
+
+  <AlienRace.BackstoryDef>
+	<defName>RH_TET_SkavenSkaar_Rat</defName>
+    <title>skaar rat</title>
+    <titleShort>skaar rat</titleShort>
+    <slot>Adulthood</slot>
+    <bodyTypeMale>Male</bodyTypeMale>
+    <bodyTypeFemale>Male</bodyTypeFemale>
+    <baseDescription>Clan Skaar is famous for it's extensive mining operations, supplying greater clans with raw warpstone for profit and personal gain. [PAWN_nameDef] gained plenty of experience working for the clan, intimately familiar with the fineries of both mining and haggling.</baseDescription>
+    <skillGains>
+      <li>
+        <defName>Mining</defName>
+        <amount>2</amount>
+      </li>
+      <li>
+        <defName>Social</defName>
+        <amount>2</amount>
+      </li>
+    </skillGains>
+    <spawnCategories>
+      <li>RH_TET_SkavenTrader</li>
+    </spawnCategories>
+    <requiredWorkTags>
+      <li>Mining</li>
+      <li>Social</li>
+    </requiredWorkTags>
+    <workDisables>
+        <li>PlantWork</li>
+    </workDisables>
+  </AlienRace.BackstoryDef>
+
+  <AlienRace.BackstoryDef>
+	<defName>RH_TET_SkavenSkaul_Rat</defName>
+    <title>skaul rat</title>
+    <titleShort>skaul rat</titleShort>
+    <slot>Adulthood</slot>
+    <bodyTypeMale>Male</bodyTypeMale>
+    <bodyTypeFemale>Male</bodyTypeFemale>
+    <baseDescription>Almost the entirety of Clan Skaul is full of hedonists and addicts like [PAWN_nameDef], as the clan's main export is various warpstone narcotics, sold to both Skaven and man-things alike. Whether it's for potential profits or a potential high, [PAWN_nameDef] sees more value in drugs than anything else.</baseDescription>
+    <skillGains>
+      <li>
+        <defName>Crafting</defName>
+        <amount>2</amount>
+      </li>
+      <li>
+        <defName>Social</defName>
+        <amount>2</amount>
+      </li>
+      <li>
+        <defName>Intellectual</defName>
+        <amount>2</amount>
+      </li>
+    </skillGains>
+    <spawnCategories>
+      <li>RH_TET_SkavenTrader</li>
+    </spawnCategories>
+    <requiredWorkTags>
+      <li>ManualSkilled</li>
+      <li>Caring</li>
+      <li>Social</li>
+    </requiredWorkTags>
+    <workDisables>
+        <li>ManualDumb</li>
+    </workDisables>
+  </AlienRace.BackstoryDef>
+
+  <AlienRace.BackstoryDef>
+	<defName>RH_TET_SkavenRiver_Rat</defName>
+    <title>river rat</title>
+    <titleShort>river rat</titleShort>
+    <slot>Adulthood</slot>
+    <bodyTypeMale>Male</bodyTypeMale>
+    <bodyTypeFemale>Male</bodyTypeFemale>
+    <baseDescription>[PAWN_nameDef] worked extensively with Clan Sleekit, navigators of the underground rivers and seas. [PAWN_nameDef] knows all too well the benefit of naval trade, along with the terrible secrets and horrors of the sunless world below.</baseDescription>
+    <skillGains>
+      <li>
+        <defName>Social</defName>
+        <amount>2</amount>
+      </li>
+    </skillGains>
+    <spawnCategories>
+      <li>RH_TET_SkavenTrader</li>
+    </spawnCategories>
+  </AlienRace.BackstoryDef>
+
+  <AlienRace.BackstoryDef>
+	<defName>RH_TET_SkavenScavenger_Rat</defName>
+    <title>scavenger rat</title>
+    <titleShort>scavenger rat</titleShort>
+    <slot>Adulthood</slot>
+    <bodyTypeMale>Male</bodyTypeMale>
+    <bodyTypeFemale>Male</bodyTypeFemale>
+    <baseDescription>[PAWN_nameDef] is a member of Clan Carrion, greatest scavengers in all of Skavendom. To [PAWN_nameDef], nothing is wasted. Anything truly unusuable can be sold, after all.</baseDescription>
+    <skillGains>
+      <li>
+        <defName>Crafting</defName>
+        <amount>3</amount>
+      </li>
+      <li>
+        <defName>Intellectual</defName>
+        <amount>2</amount>
+      </li>
+    </skillGains>
+    <spawnCategories>
+      <li>RH_TET_SkavenTrader</li>
+    </spawnCategories>
+    <requiredWorkTags>
+      <li>ManualSkilled</li>
+    </requiredWorkTags>
+  </AlienRace.BackstoryDef>
+
+  <AlienRace.BackstoryDef>
+	<defName>RH_TET_SkavenGritus_Rat</defName>
+    <title>gritus rat</title>
+    <titleShort>pit-fighter</titleShort>
+    <slot>Adulthood</slot>
+    <bodyTypeMale>Male</bodyTypeMale>
+    <bodyTypeFemale>Male</bodyTypeFemale>
+    <baseDescription>Clan Gritus is among one of the few Skaven clans to engage in pit-fighting bloodsports, using them to deal with surplus population and train warriors and captives alike for battle. [PAWN_nameDef] survived such games, their savagery and cunning earning their freedom, and a measure of power for a time.</baseDescription>
+    <skillGains>
+      <li>
+        <defName>Melee</defName>
+        <amount>3</amount>
+      </li>
+    </skillGains>
+    <spawnCategories>
+      <li>RH_TET_SkavenTrader</li>
+    </spawnCategories>
+    <requiredWorkTags>
+      <li>Violent</li>
+    </requiredWorkTags>
+    <forcedTraits>
+      <li>
+        <defName>Nimble</defName>
+        <chance>12</chance>
+      </li>
+    </forcedTraits>
+  </AlienRace.BackstoryDef>
+  
+</Defs>

@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+	<!-- Moulder Base-->
+	<ThingDef Name="RH_TET_Skaven_BodyPartBaseMoulder" Abstract="True">
+		<thingClass>ThingWithComps</thingClass>
+		<category>Item</category>
+		<useHitPoints>true</useHitPoints>
+		<selectable>true</selectable>
+		<altitudeLayer>Item</altitudeLayer>
+		<tickerType>Never</tickerType>
+		<alwaysHaulable>true</alwaysHaulable>
+		<isTechHediff>true</isTechHediff>
+		<pathCost>10</pathCost>
+		<statBases>
+			<MaxHitPoints>50</MaxHitPoints>
+			<Flammability>0.7</Flammability>
+			<Beauty>-4</Beauty>
+			<DeteriorationRate>2.0</DeteriorationRate>
+			<Mass>1</Mass>
+		</statBases>
+		<tradeTags>
+			<li>RH_TET_SkavenMoulderTrade</li>
+		</tradeTags>
+		<comps>
+			<li Class="CompProperties_Forbiddable"/>
+		</comps>
+		<tradeability>Sellable</tradeability>
+	</ThingDef>
+
+	<ThingDef Name="RH_TET_Skaven_ProstheticBaseMoulder" ParentName="RH_TET_Skaven_BodyPartBaseMoulder" Abstract="True">
+		<techLevel>Medieval</techLevel>
+		<thingCategories>
+			<li>RH_TET_Skaven_BodyPartsProsthetic</li>
+		</thingCategories>
+		<graphicData>
+			<texPath>Things/Item/Health/HealthItem</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+			<drawSize>0.80</drawSize>
+			<color>(154,124,104)</color>
+		</graphicData>
+		<statBases>
+			<WorkToMake>30000</WorkToMake>
+		</statBases>
+	</ThingDef>
+
+	<ThingDef Name="RH_TET_Skaven_ProstheticMakeableBaseMoulder" ParentName="RH_TET_Skaven_ProstheticBaseMoulder" Abstract="True">
+		<recipeMaker>
+			<workSpeedStat>GeneralLaborSpeed</workSpeedStat>
+			<workSkill>Crafting</workSkill>
+			<effectWorking>Smith</effectWorking>
+			<soundWorking>Recipe_Smith</soundWorking>
+			<recipeUsers>
+				<li>RH_TET_SkavenMoulderBench</li>
+			</recipeUsers>
+			<skillRequirements>
+				<Crafting>5</Crafting>
+			</skillRequirements>
+			<unfinishedThingDef>UnfinishedHealthItemProsthetic</unfinishedThingDef>
+		</recipeMaker>
+	</ThingDef>
+  
+
+	<!-- Blood-->
+
+	<ThingDef ParentName="BodyPartNaturalBase">
+		<defName>RH_TET_SkavenBloodSample</defName>
+		<label>skaven blood</label>
+		<description>A simple vial of extracted skaven blood.</description>
+		<graphicData>
+			<texPath>Things/Item/Blood/SkavenBlood/SkavenBlood</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+			<drawSize>1</drawSize>
+		</graphicData>
+		<statBases>
+			<Mass>1</Mass>
+			<MarketValue>100</MarketValue>
+		</statBases>
+		<techHediffsTags>
+			<li>SkavenNotUsed</li>
+		</techHediffsTags>
+		<thingCategories Inherit="False">
+			<li>RH_TET_Skaven_BodyPartsNatural</li>
+		</thingCategories>
+		<tradeability>Sellable</tradeability>
+	</ThingDef>
+
+	<ThingDef ParentName="RH_TET_Skaven_ProstheticMakeableBaseMoulder">
+		<defName>RH_TET_SkavenSerumSample</defName>
+		<label>warp-infused blood</label>
+		<description>A vile warp-infused mixture of skaven blood and warpstone extract. This blood can be used via injection to create hybrid animal monstrosities like the vicious wolf-rat.</description>
+		<graphicData>
+			<texPath>Things/Item/Blood/SkavenSerum/SkavenSerum</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+			<drawSize>1</drawSize>
+		</graphicData>
+		<costList>
+			<RH_TET_SkavenBloodSample>1</RH_TET_SkavenBloodSample>
+			<RH_TET_Skaven_Warpstone>5</RH_TET_Skaven_Warpstone>
+			<PsychoidLeaves>50</PsychoidLeaves>
+		</costList>
+		<statBases>
+			<Mass>1</Mass>
+			<MarketValue>400</MarketValue>
+		</statBases>
+		<recipeMaker>
+			<effectWorking>Cook</effectWorking>
+			<soundWorking>Recipe_Brewing</soundWorking>
+			<researchPrerequisite>RH_TET_SkavenMoulderBio</researchPrerequisite>
+		</recipeMaker>
+	</ThingDef>
+
+	<ThingDef ParentName="BodyPartNaturalBase">
+		<defName>RH_TET_SkavenLargeSerumSample</defName>
+		<label>warp-infused mixed blood</label>
+		<description>A larger and more potent mixture of skaven blood, warpstone extract, and animal remains. Injecting this twisted mixture into skaven and man-thing alike can create horrific hybrid creatures like the infamous rat ogre.</description>
+		<graphicData>
+			<texPath>Things/Item/Blood/SkavenAnimalSerum/SkavenLargeSerum</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+			<drawSize>1</drawSize>
+		</graphicData>
+		<statBases>
+			<Mass>1</Mass>
+			<MarketValue>500</MarketValue>
+		</statBases>
+		<thingCategories Inherit="False">
+			<li>RH_TET_Skaven_BodyPartsProsthetic</li>
+		</thingCategories>
+		<tradeability>Sellable</tradeability>
+	</ThingDef>
+
+	<!-- shared with beastmen -->
+	<ThingDef ParentName="MealBase">
+		<defName>RH_TET_Beastmen_SlopMeal</defName>
+		<label>disgusting slop</label>
+		<description>An unpleasant mix of meat, veggies, and whatever else was around when the last someone dumped a slop pail into a cauldron or feed hopper. Meets nutritional needs, but is absolutely disgusting.</description>
+		<graphicData>
+			<texPath>Things/Items/Meals/RH_TET_Beastmen_Slop</texPath>
+			<graphicClass>Graphic_StackCount</graphicClass>
+		</graphicData>
+		<statBases>
+			<MarketValue>5</MarketValue>
+			<Nutrition>0.9</Nutrition>
+		</statBases>
+		<ingestible>
+			<preferability>MealAwful</preferability>
+			<tasteThought>AteRottenFood</tasteThought>
+			<ingestEffect>EatVegetarian</ingestEffect>
+			<ingestSound>Meal_Eat</ingestSound>
+		</ingestible>
+		<tradeability>Buyable</tradeability>
+		<comps>
+			<li Class="CompProperties_Rottable">
+				<daysToRotStart>0.75</daysToRotStart><!-- short rot time, you want to make them as needed not store them -->
+				<rotDestroys>true</rotDestroys>
+			</li>
+		</comps>
+	</ThingDef>
+  
+</Defs>

@@ -1,0 +1,60 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+	<JoyGiverDef>
+		<defName>RH_TET_Skaven_ThrowStars</defName>
+		<giverClass>JoyGiver_WatchBuilding</giverClass>
+		<baseChance>2.5</baseChance>
+		<thingDefs>
+			<li>RH_TET_Skaven_StarTarget</li>
+		</thingDefs>
+		<jobDef>RH_TET_Skaven_ThrowStarsJoy</jobDef>
+		<desireSit>false</desireSit>
+		<joyKind>Gaming_Dexterity</joyKind>
+		<requiredCapacities>
+			<li>Sight</li>
+			<li>Manipulation</li>
+		</requiredCapacities>
+	</JoyGiverDef>
+  
+	<JobDef>
+		<defName>RH_TET_Skaven_ThrowStarsJoy</defName>
+		<driverClass>TheEndTimes_Skaven.JobDriver_ThrowStarsJoy</driverClass>
+		<reportString>throwing stars.</reportString>
+		<joyDuration>4000</joyDuration>
+		<joyMaxParticipants>3</joyMaxParticipants>
+		<joySkill>Shooting</joySkill>
+		<joyXpPerTick>0.003</joyXpPerTick>
+		<joyKind>Gaming_Dexterity</joyKind>
+		<taleOnCompletion>PlayedGame</taleOnCompletion>
+		<allowOpportunisticPrefix>true</allowOpportunisticPrefix>
+	</JobDef>
+
+	<JoyGiverDef>
+		<defName>RH_TET_Skaven_PlayGong</defName>
+		<giverClass>JoyGiver_InteractBuildingInteractionCell</giverClass>
+		<baseChance>2</baseChance>
+		<requireChair>false</requireChair>
+		<thingDefs>
+			<li>RH_TET_Skaven_Gong</li>
+		</thingDefs>
+		<jobDef>RH_TET_Skaven_PlayGong</jobDef>
+		<joyKind>RH_TET_Music</joyKind>
+		<requiredCapacities>
+			<li>Manipulation</li>
+		</requiredCapacities>
+	</JoyGiverDef>
+ 
+	<JobDef>
+		<defName>RH_TET_Skaven_PlayGong</defName>
+		<driverClass>TheEndTimes_Skaven.JobDriver_PlayGong</driverClass>
+		<reportString>playing TargetA.</reportString>
+		<joyDuration>4000</joyDuration>
+		<joyMaxParticipants>1</joyMaxParticipants>
+		<joySkill>Artistic</joySkill>
+		<joyXpPerTick>0.0015</joyXpPerTick>
+		<joyKind>RH_TET_Music</joyKind>
+		<allowOpportunisticPrefix>true</allowOpportunisticPrefix>
+	</JobDef>
+	
+</Defs>

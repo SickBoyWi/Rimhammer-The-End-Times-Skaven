@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?><Defs>
+
+	<SoundDef>
+		<defName>RH_TET_Skaven_BellRing_Combat</defName>  
+		<eventNames />  
+		<maxSimultaneous>1</maxSimultaneous>  
+		<subSounds>
+		  <li>
+			<onCamera>True</onCamera>      
+			<grains>
+			  <li Class="AudioGrain_Folder">
+				<clipFolderPath>Bell/skavenbell1</clipFolderPath>
+			  </li>
+			</grains>      
+			<volumeRange>
+			  <min>7.0</min>        
+			  <max>9.0</max>
+			</volumeRange>      
+			<pitchRange>
+			  <min>0.9311765</min>        
+			  <max>1</max>
+			</pitchRange>
+		  </li>
+		</subSounds>
+	</SoundDef>
+
+	<SoundDef>
+		<defName>RH_TET_Skaven_BellRing_Noncombat</defName>  
+		<eventNames />  
+		<maxSimultaneous>1</maxSimultaneous>  
+		<subSounds>
+		  <li>
+			<onCamera>True</onCamera>      
+			<grains>
+			  <li Class="AudioGrain_Folder">
+				<clipFolderPath>Bell/skavenbell2</clipFolderPath>
+			  </li>
+			</grains>      
+			<volumeRange>
+			  <min>7.0</min>        
+			  <max>9.0</max>
+			</volumeRange>      
+			<pitchRange>
+			  <min>0.9311765</min>        
+			  <max>1</max>
+			</pitchRange>
+		  </li>
+		</subSounds>
+	</SoundDef>
+
+	<SoundDef>
+		<defName>RH_TET_Skaven_BellRing_Mighty</defName>  
+		<eventNames />  
+		<maxSimultaneous>1</maxSimultaneous>  
+		<subSounds>
+		  <li>
+			<onCamera>True</onCamera>      
+			<grains>
+			  <li Class="AudioGrain_Folder">
+				<clipFolderPath>Bell/skavenbell3</clipFolderPath>
+			  </li>
+			</grains>      
+			<volumeRange>
+			  <min>8.0</min>        
+			  <max>11.0</max>
+			</volumeRange>      
+			<pitchRange>
+			  <min>0.9311765</min>        
+			  <max>1</max>
+			</pitchRange>
+		  </li>
+		</subSounds>
+	</SoundDef>
+  
+  	<SoundDef>
+		<defName>RH_TET_Skaven_GongPlay</defName>
+		<context>MapOnly</context>
+		<sustain>True</sustain>
+		<sustainFadeoutTime>0.1</sustainFadeoutTime>
+		<priorityMode>PrioritizeNearest</priorityMode>
+		<subSounds>
+		  <li>
+			<grains>
+			  <li Class="AudioGrain_Folder">
+				<clipPath>Gong/RH_TET_GongPlay</clipPath>
+			  </li>
+			</grains>
+			<volumeRange>15~30</volumeRange>
+			<distRange>5~50</distRange>
+			<sustainLoop>True</sustainLoop>
+		  </li>
+		</subSounds>
+	</SoundDef>
+ 
+   <SoundDef>
+    <defName>RH_TET_Skaven_HitWood</defName>  
+    <context>MapOnly</context>      
+    <maxSimultaneous>1</maxSimultaneous>  
+    <subSounds>
+      <li>
+        <grains>
+          <li Class="AudioGrain_Folder">
+            <clipFolderPath>RH_TET_Skaven_HitWood</clipFolderPath>
+          </li>
+        </grains>      
+        <volumeRange>8~12</volumeRange>      
+        <pitchRange>0.9~1.1</pitchRange>
+      </li>
+    </subSounds>
+  </SoundDef>
+
+  <SoundDef>
+    <defName>RH_TET_Skaven_MorskittarFire</defName>
+    <subSounds>
+      <li>
+        <onCamera>True</onCamera>
+        <grains>
+          <li Class="AudioGrain_Clip">
+            <clipPath>RH_TET_Skaven_Morskittar</clipPath>
+          </li>
+        </grains>
+        <volumeRange>50~50</volumeRange>
+      </li>
+    </subSounds>
+  </SoundDef>
+  
+</Defs>

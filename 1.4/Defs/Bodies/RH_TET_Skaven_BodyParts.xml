@@ -1,0 +1,47 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+	<BodyPartDef>
+		<defName>RH_TET_Skaven_Tail</defName>
+		<label>tail</label>
+		<hitPoints>15</hitPoints>
+		<frostbiteVulnerability>8</frostbiteVulnerability>
+		<skinCovered>true</skinCovered>
+	</BodyPartDef>
+
+	<BodyPartDef ParentName="RH_TET_Skaven_Horn">
+		<defName>RH_TET_Skaven_HornRight</defName>
+		<label>right horn</label>
+		<labelShort>horn</labelShort>
+	</BodyPartDef>
+
+	<BodyPartDef ParentName="RH_TET_Skaven_Horn">
+		<defName>RH_TET_Skaven_HornLeft</defName>
+		<label>left horn</label>
+		<labelShort>horn</labelShort>
+	</BodyPartDef>
+
+	<BodyPartDef Name="RH_TET_Skaven_Horn">
+		<defName>RH_TET_Skaven_Horn</defName>
+		<label>horn</label>
+		<hitPoints>13</hitPoints>
+		<frostbiteVulnerability>0.0</frostbiteVulnerability>
+		<permanentInjuryChanceFactor>0.05</permanentInjuryChanceFactor>
+		<skinCovered>false</skinCovered>
+	</BodyPartDef>
+
+	<BodyPartDef Name="RH_TET_Skaven_RatOgreBlade">
+		<defName>RH_TET_Skaven_RatOgreBlade</defName>
+		<label>rat ogre blade</label>
+		<hitPoints>25</hitPoints>
+		<frostbiteVulnerability>0.0</frostbiteVulnerability>
+		<permanentInjuryChanceFactor>0.05</permanentInjuryChanceFactor>
+		<skinCovered>false</skinCovered>
+	</BodyPartDef>
+
+	<BodyPartGroupDef>
+		<defName>RH_TET_Skaven_RatOgreBladeG</defName>
+		<label>right blade</label>
+	</BodyPartGroupDef>
+  
+</Defs>

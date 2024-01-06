@@ -1,0 +1,1448 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <ThingDef Name="RH_TET_Skaven_FurnitureBase" ParentName="BuildingBase" Abstract="True">
+    <designationCategory>Furniture</designationCategory>
+    <minifiedDef>MinifiedThing</minifiedDef>
+    <thingCategories>
+      <li>RH_TET_Skaven_BuildingsFurniture</li>
+    </thingCategories>
+    <stuffCategories>
+      <li>Metallic</li>
+      <li>Stony</li>
+    </stuffCategories>
+    <tradeability>Sellable</tradeability>
+  </ThingDef>
+  
+  <ThingDef Name="RH_TET_Skaven_FurnitureWithQualityBase" ParentName="RH_TET_Skaven_FurnitureBase" Abstract="True">
+    <comps>
+      <li>
+        <compClass>CompQuality</compClass>
+      </li>
+    </comps>
+  </ThingDef>  
+  
+  <ThingDef Abstract="True" ParentName="RH_TET_Skaven_FurnitureWithQualityBase" Name="RH_TET_Skaven_TableBase">
+    <thingClass>Building</thingClass>
+    <altitudeLayer>Building</altitudeLayer>
+    <passability>PassThroughOnly</passability>
+    <castEdgeShadows>true</castEdgeShadows>
+    <pathCost>60</pathCost>
+    <fillPercent>0.4</fillPercent>
+    <socialPropernessMatters>true</socialPropernessMatters>
+    <canOverlapZones>false</canOverlapZones>
+    <leaveResourcesWhenKilled>true</leaveResourcesWhenKilled>
+    <staticSunShadowHeight>0.20</staticSunShadowHeight>
+    <surfaceType>Eat</surfaceType>
+	<comps>
+      <li>
+        <compClass>CompGatherSpot</compClass>
+      </li>
+    </comps>
+    <designationCategory>Furniture</designationCategory>
+  </ThingDef>
+
+  <ThingDef ParentName="RH_TET_Skaven_FurnitureBase" Name="RH_TET_Skaven_BedBase" Abstract="True">
+    <thingClass>Building_Bed</thingClass>
+    <altitudeLayer>Building</altitudeLayer>
+    <comps>
+      <li Class="CompProperties_AssignableToPawn">
+        <drawAssignmentOverlay>false</drawAssignmentOverlay>
+        <compClass>CompAssignableToPawn_Bed</compClass>
+      </li>
+    </comps>
+    <drawGUIOverlay>true</drawGUIOverlay>
+    <canOverlapZones>false</canOverlapZones>
+    <placeWorkers>
+      <li>PlaceWorker_ShowFacilitiesConnections</li>
+    </placeWorkers>
+    <passability>PassThroughOnly</passability>
+    <defaultPlacingRot>South</defaultPlacingRot>
+    <building>
+      <buildingTags>
+        <li>Bed</li>
+      </buildingTags>
+    </building>
+  </ThingDef>  
+  
+   <ThingDef Name="RH_TET_Skaven_BedWithQualityBase" ParentName="RH_TET_Skaven_BedBase" Abstract="True">
+    <comps>
+      <li>
+        <compClass>CompQuality</compClass>
+      </li>
+    </comps>
+  </ThingDef>
+
+  <ThingDef Name="RH_TET_Skaven_ArtableBedBase" ParentName="RH_TET_Skaven_BedWithQualityBase" Abstract="True">
+    <comps>
+      <li Class="CompProperties_Art">
+        <nameMaker>NamerArtFurniture</nameMaker>
+        <descriptionMaker>ArtDescription_Furniture</descriptionMaker>
+        <minQualityForArtistic>Excellent</minQualityForArtistic>
+      </li>
+    </comps>
+    <inspectorTabs>
+      <li>ITab_Art</li>
+    </inspectorTabs>
+  </ThingDef>
+  
+  <ThingDef ParentName="RH_TET_Skaven_FurnitureWithQualityBase">
+    <defName>RH_TET_Skaven_Stool</defName>
+    <label>skaven stool</label>
+    <description>A stool for sitting on. Not very comfortable, but much better than nothing. It is skaven craftsmanship, so it&apos;s shoddier than most. Not meant for dining or relaxing; it is more of an item you&apos;d find in a tunnel or a workroom. Can be used at tables, work stations, and elsewhere.\n\nA good place to rest while working is important, no skaven would argue with that logic.</description>
+    <graphicData>
+      <texPath>Things/Building/Furniture/RH_TET_Skaven_Stool</texPath>
+      <graphicClass>Graphic_Multi</graphicClass>
+      <damageData>
+        <rectN>(0.125,0.296875,0.734375,0.421875)</rectN>
+        <rectS>(0.125,0.296875,0.734375,0.421875)</rectS>
+        <rectE>(0.234375,0.296875,0.5,0.546875)</rectE>
+        <rectW>(0.234375,0.296875,0.5,0.546875)</rectW>
+        <cornerTL>Damage/Corner</cornerTL>
+        <cornerTR>Damage/Corner</cornerTR>
+        <cornerBL>Damage/Corner</cornerBL>
+        <cornerBR>Damage/Corner</cornerBR>
+      </damageData>
+      <shadowData>
+        <volume>(0.18, 0.23, 0.18)</volume>
+      </shadowData>
+	  <drawSize>.9</drawSize>
+    </graphicData>
+    <altitudeLayer>Building</altitudeLayer>
+    <statBases>
+      <MaxHitPoints>70</MaxHitPoints>
+      <WorkToBuild>400</WorkToBuild>
+      <Mass>2</Mass>
+      <Flammability>1.0</Flammability>
+      <Beauty>0.25</Beauty>
+      <Comfort>0.5</Comfort>
+    </statBases>
+    <socialPropernessMatters>true</socialPropernessMatters>
+    <stuffCategories  Inherit="False" />
+    <costList>
+      <WoodLog>25</WoodLog>
+    </costList>
+    <pathCost>30</pathCost>
+    <designationHotKey>Misc6</designationHotKey>
+    <researchPrerequisites>
+      <li>RH_TET_SkavenFurniture</li>
+    </researchPrerequisites>
+    <fillPercent>0.20</fillPercent>
+    <building>
+      <isSittable>true</isSittable>
+    </building>
+    <uiIconOffset>(0, -0.05)</uiIconOffset>
+    <designationCategory>Furniture</designationCategory>
+	<tradeTags>
+	  <li>RH_TET_Skaven_Furniture</li>
+	</tradeTags>
+  </ThingDef>
+  
+  <ThingDef ParentName="RH_TET_Skaven_FurnitureWithQualityBase">
+    <defName>RH_TET_Skaven_Bench1x2c</defName>
+    <label>skaven bench (1x2)</label>
+    <description>A bench for sitting on. Two seats wide. Not very comfortable, but much better than nothing. Shoddy skaven craftsmanship means it made of scrap material, and worse than most.\n\nThe massive hordes of skaven need places to sit, and they're not opposed to sitting next to each other.</description>
+    <graphicData>
+      <texPath>Things/Building/Furniture/RH_TET_Skaven_Bench1x2</texPath>
+      <graphicClass>Graphic_Multi</graphicClass>
+	  <shaderType>CutoutComplex</shaderType>
+      <damageData>
+        <rectN>(0.125,0.296875,0.734375,0.421875)</rectN>
+        <rectS>(0.125,0.296875,0.734375,0.421875)</rectS>
+        <rectE>(0.234375,0.296875,0.5,0.546875)</rectE>
+        <rectW>(0.234375,0.296875,0.5,0.546875)</rectW>
+        <cornerTL>Damage/Corner</cornerTL>
+        <cornerTR>Damage/Corner</cornerTR>
+        <cornerBL>Damage/Corner</cornerBL>
+        <cornerBR>Damage/Corner</cornerBR>
+      </damageData>
+      <shadowData>
+        <volume>(0.18, 0.23, 0.18)</volume>
+      </shadowData>
+      <drawSize>(1,2)</drawSize>
+    </graphicData>
+    <altitudeLayer>Building</altitudeLayer>
+    <statBases>
+      <MaxHitPoints>85</MaxHitPoints>
+      <WorkToBuild>500</WorkToBuild>
+      <Mass>2</Mass>
+      <Flammability>1.0</Flammability>
+      <Beauty>.5</Beauty>
+      <Comfort>1.0</Comfort>
+    </statBases>
+    <size>(1,2)</size>
+    <socialPropernessMatters>true</socialPropernessMatters>
+    <stuffCategories>
+      <li>Metallic</li>
+      <li>Stony</li>
+    </stuffCategories>
+    <costStuffCount>10</costStuffCount>
+    <costList>
+      <WoodLog>30</WoodLog>
+    </costList>
+    <pathCost>30</pathCost>
+    <designationHotKey>Misc6</designationHotKey>
+    <researchPrerequisites>
+      <li>RH_TET_SkavenFurniture</li>
+    </researchPrerequisites>
+    <fillPercent>0.20</fillPercent>
+    <building>
+      <isSittable>true</isSittable>
+    </building>
+    <uiIconOffset>(0, -0.05)</uiIconOffset>
+    <designationCategory>Furniture</designationCategory>
+    <constructionSkillPrerequisite>3</constructionSkillPrerequisite>
+	<tradeTags>
+	  <li>RH_TET_Skaven_Furniture</li>
+	</tradeTags>
+  </ThingDef>  
+
+  <ThingDef ParentName="RH_TET_Skaven_FurnitureWithQualityBase">
+    <defName>RH_TET_Skaven_Bench1x3c</defName>
+    <label>skaven bench (1x3)</label>
+    <description>A ough bench for sitting on. Three seats wide. Not very comfortable, but much better than nothing. It is skaven craftsmanship, so it's shoddier than most.\n\Longer tables meant that longer benches were required. Skaven typically build their crude furniture out of whatever they find laying around.</description>
+    <graphicData>
+      <texPath>Things/Building/Furniture/RH_TET_Skaven_Bench1x3</texPath>
+      <graphicClass>Graphic_Multi</graphicClass>
+	  <shaderType>CutoutComplex</shaderType>
+      <damageData>
+        <rectN>(0.125,0.296875,0.734375,0.421875)</rectN>
+        <rectS>(0.125,0.296875,0.734375,0.421875)</rectS>
+        <rectE>(0.234375,0.296875,0.5,0.546875)</rectE>
+        <rectW>(0.234375,0.296875,0.5,0.546875)</rectW>
+        <cornerTL>Damage/Corner</cornerTL>
+        <cornerTR>Damage/Corner</cornerTR>
+        <cornerBL>Damage/Corner</cornerBL>
+        <cornerBR>Damage/Corner</cornerBR>
+      </damageData>
+      <shadowData>
+        <volume>(0.18, 0.23, 0.18)</volume>
+      </shadowData>
+      <drawSize>(2.1,3.4)</drawSize>
+    </graphicData>
+    <altitudeLayer>Building</altitudeLayer>
+    <statBases>
+      <MaxHitPoints>90</MaxHitPoints>
+      <WorkToBuild>600</WorkToBuild>
+      <Mass>4</Mass>
+      <Flammability>1.0</Flammability>
+      <Beauty>.5</Beauty>
+      <Comfort>1.0</Comfort>
+    </statBases>
+    <size>(1,3)</size>
+    <socialPropernessMatters>true</socialPropernessMatters>    
+	<stuffCategories>
+      <li>Metallic</li>
+      <li>Stony</li>
+    </stuffCategories>
+    <costStuffCount>15</costStuffCount>
+    <costList>
+      <WoodLog>35</WoodLog>
+    </costList>
+    <pathCost>30</pathCost>
+    <designationHotKey>Misc6</designationHotKey>
+    <researchPrerequisites>
+      <li>RH_TET_SkavenFurniture</li>
+    </researchPrerequisites>
+    <fillPercent>0.20</fillPercent>
+    <building>
+      <isSittable>true</isSittable>
+    </building>
+    <uiIconOffset>(0, -0.05)</uiIconOffset>
+    <designationCategory>Furniture</designationCategory>
+    <constructionSkillPrerequisite>3</constructionSkillPrerequisite>
+	<tradeTags>
+	  <li>RH_TET_Skaven_Furniture</li>
+	</tradeTags>
+  </ThingDef>
+
+  <ThingDef ParentName="RH_TET_Skaven_FurnitureWithQualityBase">
+    <defName>RH_TET_Skaven_Bench1x4c</defName>
+    <label>skaven bench (1x4)</label>
+    <description>A bench for sitting on. Four seats wide. Not very comfortable, but better than nothing. It is skaven craftsmanship, so it's not as nice than most.\n\nBigger tables and larger skaven hordes meant that bigger benches were required. Skaven use whatever is laying around to make their furniture. There's no concern for how it looks, simply that it is functional.</description>
+    <graphicData>
+      <texPath>Things/Building/Furniture/RH_TET_Skaven_Bench1x4</texPath>
+      <graphicClass>Graphic_Multi</graphicClass>
+	  <shaderType>CutoutComplex</shaderType>
+      <damageData>
+        <rectN>(0.125,0.296875,0.734375,0.421875)</rectN>
+        <rectS>(0.125,0.296875,0.734375,0.421875)</rectS>
+        <rectE>(0.234375,0.296875,0.5,0.546875)</rectE>
+        <rectW>(0.234375,0.296875,0.5,0.546875)</rectW>
+        <cornerTL>Damage/Corner</cornerTL>
+        <cornerTR>Damage/Corner</cornerTR>
+        <cornerBL>Damage/Corner</cornerBL>
+        <cornerBR>Damage/Corner</cornerBR>
+      </damageData>
+      <shadowData>
+        <volume>(0.18, 0.23, 0.18)</volume>
+      </shadowData>
+      <drawSize>(3.5,4.6)</drawSize>
+    </graphicData>
+    <altitudeLayer>Building</altitudeLayer>
+    <statBases>
+      <MaxHitPoints>100</MaxHitPoints>
+      <WorkToBuild>750</WorkToBuild>
+      <Mass>5.5</Mass>
+      <Flammability>1.0</Flammability>
+      <Beauty>.5</Beauty>
+      <Comfort>1.0</Comfort>
+    </statBases>
+    <size>(1,4)</size>
+    <socialPropernessMatters>true</socialPropernessMatters> 
+	<stuffCategories>
+      <li>Metallic</li>
+      <li>Stony</li>
+    </stuffCategories>
+    <costStuffCount>20</costStuffCount>
+    <costList>
+      <WoodLog>40</WoodLog>
+    </costList>
+    <pathCost>30</pathCost>
+    <designationHotKey>Misc6</designationHotKey>
+    <researchPrerequisites>
+      <li>RH_TET_SkavenFurniture_Advanced</li>
+    </researchPrerequisites>
+    <fillPercent>0.20</fillPercent>
+    <building>
+      <isSittable>true</isSittable>
+    </building>
+    <uiIconOffset>(0, -0.05)</uiIconOffset>
+    <designationCategory>Furniture</designationCategory>
+    <constructionSkillPrerequisite>3</constructionSkillPrerequisite>
+	<tradeTags>
+	  <li>RH_TET_Skaven_Furniture</li>
+	</tradeTags>
+  </ThingDef>
+
+  <ThingDef ParentName="RH_TET_Skaven_FurnitureWithQualityBase">
+    <defName>RH_TET_Skaven_Bench1x5c</defName>
+    <label>skaven bench (1x5)</label>
+    <description>A bench for sitting on. Five seats wide. Not very comfortable, but better than nothing. It is skaven craftsmanship, so it's not as nice than most.\n\nBigger tables and larger skaven hordes meant that bigger benches were required. Skaven use whatever is laying around to make their furniture. There's no concern for how it looks, simply that it is functional.</description>
+    <graphicData>
+      <texPath>Things/Building/Furniture/RH_TET_Skaven_Bench1x5</texPath>
+      <graphicClass>Graphic_Multi</graphicClass>
+	  <shaderType>CutoutComplex</shaderType>
+      <damageData>
+        <rectN>(0.125,0.296875,0.734375,0.421875)</rectN>
+        <rectS>(0.125,0.296875,0.734375,0.421875)</rectS>
+        <rectE>(0.234375,0.296875,0.5,0.546875)</rectE>
+        <rectW>(0.234375,0.296875,0.5,0.546875)</rectW>
+        <cornerTL>Damage/Corner</cornerTL>
+        <cornerTR>Damage/Corner</cornerTR>
+        <cornerBL>Damage/Corner</cornerBL>
+        <cornerBR>Damage/Corner</cornerBR>
+      </damageData>
+      <shadowData>
+        <volume>(0.18, 0.23, 0.18)</volume>
+      </shadowData>
+      <drawSize>(1,5)</drawSize>
+    </graphicData>
+    <altitudeLayer>Building</altitudeLayer>
+    <statBases>
+      <MaxHitPoints>115</MaxHitPoints>
+      <WorkToBuild>800</WorkToBuild>
+      <Mass>10</Mass>
+      <Flammability>1.0</Flammability>
+      <Beauty>.5</Beauty>
+      <Comfort>1.0</Comfort>
+    </statBases>
+    <size>(1,5)</size>
+    <socialPropernessMatters>true</socialPropernessMatters>
+	<stuffCategories>
+      <li>Metallic</li>
+      <li>Stony</li>
+    </stuffCategories>
+    <costStuffCount>30</costStuffCount>
+    <costList>
+      <WoodLog>40</WoodLog>
+    </costList>
+    <pathCost>30</pathCost>
+    <designationHotKey>Misc6</designationHotKey>
+    <researchPrerequisites>
+      <li>RH_TET_SkavenFurniture_Advanced</li>
+    </researchPrerequisites>
+    <fillPercent>0.20</fillPercent>
+    <building>
+      <isSittable>true</isSittable>
+    </building>
+    <uiIconOffset>(0, -0.05)</uiIconOffset>
+    <designationCategory>Furniture</designationCategory>
+    <constructionSkillPrerequisite>3</constructionSkillPrerequisite>
+	<tradeTags>
+	  <li>RH_TET_Skaven_Furniture</li>
+	</tradeTags>
+  </ThingDef>
+
+  <ThingDef ParentName="RH_TET_Skaven_FurnitureWithQualityBase">
+    <defName>RH_TET_Skaven_DiningChair</defName>
+    <label>skaven dining chair</label>
+    <description>A comfortable yet crude skaven chair. Can be used at tables, work stations, and elsewhere. Perfect for the skaven form, as it sports an opening in the back for the tail to go through.\n\nLike everything else, skaven chairs are crudely made of whatever resources they can find laying around.</description>
+    <graphicData>
+      <texPath>Things/Building/Furniture/RH_TET_Skaven_DiningChair</texPath>
+      <graphicClass>Graphic_Multi</graphicClass>
+      <drawSize>(1.5)</drawSize>
+      <damageData>
+        <rectN>(0.25,0.234375,0.5,0.28125)</rectN>
+        <rectS>(0.25,0.234375,0.5,0.28125)</rectS>
+        <rectE>(0.28125,0.25,0.453125,0.25)</rectE>
+        <rectW>(0.28125,0.25,0.453125,0.25)</rectW>
+      </damageData>
+      <shadowData>
+        <volume>(0.23, 0.26, 0.23)</volume>
+      </shadowData>
+    </graphicData>
+    <uiIconScale>0.7</uiIconScale>
+    <altitudeLayer>Building</altitudeLayer>
+    <statBases>
+      <MaxHitPoints>100</MaxHitPoints>
+      <WorkToBuild>8000</WorkToBuild>
+      <Mass>5</Mass>
+      <Flammability>1.0</Flammability>
+      <Beauty>3</Beauty>
+      <Comfort>0.7</Comfort>
+    </statBases>
+    <socialPropernessMatters>true</socialPropernessMatters>
+    <costList>
+      <Steel>10</Steel>
+      <WoodLog>35</WoodLog>
+    </costList>
+    <stuffCategories Inherit="False" />
+    <pathCost>30</pathCost>
+    <designationHotKey>Misc7</designationHotKey>
+    <fillPercent>0.35</fillPercent>
+    <defaultPlacingRot>South</defaultPlacingRot>
+    <building>
+      <isSittable>true</isSittable>
+    </building>
+    <constructionSkillPrerequisite>4</constructionSkillPrerequisite>
+    <researchPrerequisites>
+      <li>RH_TET_SkavenFurniture_Advanced</li>
+    </researchPrerequisites>
+    <designationCategory>Furniture</designationCategory>
+	<tradeTags>
+	  <li>RH_TET_Skaven_Furniture</li>
+	</tradeTags>
+  </ThingDef>
+
+  <ThingDef ParentName="RH_TET_Skaven_TableBase">
+    <defName>RH_TET_Skaven_Table1x1c</defName>
+    <label>skaven table (1x1)</label>
+	<description>A small, and rather shoddy, skaven table for eating at. Cobbled together from whatever material the ratmen can find around.\n\nSmall tables are very useful things to have around. They give the skaven a place to eat when they can grab a free moment, and can be placed in hallway alcoves or work rooms in order to grant the skaven more options on where to rest. Don't forget to place a chair or stool nearby.</description>
+    <graphicData>
+      <texPath>Things/Building/Furniture/RH_TET_Skaven_Tabe1x1</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+	  <shaderType>CutoutComplex</shaderType>
+      <drawSize>1.2</drawSize>
+      <damageData>
+        <cornerTL>Damage/Corner</cornerTL>
+        <cornerTR>Damage/Corner</cornerTR>
+        <cornerBL>Damage/Corner</cornerBL>
+        <cornerBR>Damage/Corner</cornerBR>
+      </damageData>
+    </graphicData>
+    <uiIconScale>0.8</uiIconScale>
+    <statBases>
+      <MaxHitPoints>80</MaxHitPoints>
+      <WorkToBuild>750</WorkToBuild>
+      <Mass>3.5</Mass>
+      <Flammability>1</Flammability>
+      <Beauty>0.5</Beauty>
+    </statBases>    
+    <costStuffCount>10</costStuffCount>
+    <costList>
+      <WoodLog>20</WoodLog>
+    </costList>
+    <rotatable>false</rotatable>    
+    <researchPrerequisites>
+      <li>RH_TET_SkavenFurniture</li>
+    </researchPrerequisites>
+    <constructionSkillPrerequisite>3</constructionSkillPrerequisite>
+	<tradeTags>
+	  <li>RH_TET_Skaven_Furniture</li>
+	</tradeTags>
+  </ThingDef>
+
+  <ThingDef ParentName="RH_TET_Skaven_TableBase">
+    <defName>RH_TET_Skaven_Table1x2c</defName>
+    <label>skaven table (1x2)</label>
+	<description>A rough skaven table for eating at.\n\nEating is important to skaven, as it's one of their few personal joys. Skaven build their furniture out of whatever they find laying around. They're never nice, but they're functional.</description>
+    <graphicData>
+      <texPath>Things/Building/Furniture/RH_TET_Skaven_Table1x2</texPath>
+      <graphicClass>Graphic_Multi</graphicClass>
+	  <shaderType>CutoutComplex</shaderType>
+      <drawSize>(3,4)</drawSize>
+      <damageData>
+        <cornerTL>Damage/Corner</cornerTL>
+        <cornerTR>Damage/Corner</cornerTR>
+        <cornerBL>Damage/Corner</cornerBL>
+        <cornerBR>Damage/Corner</cornerBR>
+      </damageData>
+    </graphicData>
+    <uiIconScale>0.8</uiIconScale>
+    <statBases>
+      <MaxHitPoints>70</MaxHitPoints>
+      <WorkToBuild>750</WorkToBuild>
+      <Mass>5</Mass>
+      <Flammability>1.0</Flammability>
+      <Beauty>.7</Beauty>
+    </statBases>
+    <size>(1,2)</size>
+    <costStuffCount>15</costStuffCount>
+    <costList>
+      <WoodLog>20</WoodLog>
+    </costList>
+    <researchPrerequisites>
+      <li>RH_TET_SkavenFurniture</li>
+    </researchPrerequisites>
+    <constructionSkillPrerequisite>3</constructionSkillPrerequisite>
+	<tradeTags>
+	  <li>RH_TET_Skaven_Furniture</li>
+	</tradeTags>
+  </ThingDef>
+
+  <ThingDef ParentName="RH_TET_Skaven_TableBase">
+    <defName>RH_TET_Skaven_Table1x3c</defName>
+    <label>skaven table (1x3)</label>
+	<description>A rough long skaven table for eating at.\n\nEating is important to skaven, as it's one of their few personal joys. Skaven build their furniture out of whatever they find laying around. They're never nice, but they're functional.</description>
+    <graphicData>
+      <texPath>Things/Building/Furniture/RH_TET_Skaven_Table1x3</texPath>
+      <graphicClass>Graphic_Multi</graphicClass>
+	  <shaderType>CutoutComplex</shaderType>
+      <drawSize>(3,5)</drawSize>
+      <damageData>
+        <cornerTL>Damage/Corner</cornerTL>
+        <cornerTR>Damage/Corner</cornerTR>
+        <cornerBL>Damage/Corner</cornerBL>
+        <cornerBR>Damage/Corner</cornerBR>
+      </damageData>
+    </graphicData>
+    <uiIconScale>0.8</uiIconScale>
+    <statBases>
+      <MaxHitPoints>80</MaxHitPoints>
+      <WorkToBuild>825</WorkToBuild>
+      <Mass>6.5</Mass>
+      <Flammability>1.0</Flammability>
+      <Beauty>.7</Beauty>
+    </statBases>
+    <size>(1,3)</size>
+    <costStuffCount>15</costStuffCount>
+    <costList>
+      <WoodLog>30</WoodLog>
+    </costList>
+    <researchPrerequisites>
+      <li>RH_TET_SkavenFurniture</li>
+    </researchPrerequisites>
+    <constructionSkillPrerequisite>3</constructionSkillPrerequisite>
+	<tradeTags>
+	  <li>RH_TET_Skaven_Furniture</li>
+	</tradeTags>
+  </ThingDef>
+
+  <ThingDef ParentName="RH_TET_Skaven_TableBase">
+    <defName>RH_TET_Skaven_Table1x4c</defName>
+    <label>skaven table (1x4)</label>
+	<description>A rough long skaven table for eating at.\n\nEating is important to skaven, as it's one of their few personal joys. Skaven build their furniture out of whatever they find laying around. They're never nice, but they're functional.</description>
+    <graphicData>
+      <texPath>Things/Building/Furniture/RH_TET_Skaven_Table1x4</texPath>
+      <graphicClass>Graphic_Multi</graphicClass>
+	  <shaderType>CutoutComplex</shaderType>
+      <drawSize>(3,6)</drawSize>
+      <damageData>
+        <cornerTL>Damage/Corner</cornerTL>
+        <cornerTR>Damage/Corner</cornerTR>
+        <cornerBL>Damage/Corner</cornerBL>
+        <cornerBR>Damage/Corner</cornerBR>
+      </damageData>
+    </graphicData>
+    <uiIconScale>0.8</uiIconScale>
+    <statBases>
+      <MaxHitPoints>90</MaxHitPoints>
+      <WorkToBuild>875</WorkToBuild>
+      <Mass>7</Mass>
+      <Flammability>1.0</Flammability>
+      <Beauty>.7</Beauty>
+    </statBases>
+    <size>(1,4)</size>
+    <costStuffCount>20</costStuffCount>
+    <costList>
+      <WoodLog>35</WoodLog>
+    </costList>
+    <researchPrerequisites>
+      <li>RH_TET_SkavenFurniture_Advanced</li>
+    </researchPrerequisites>
+    <constructionSkillPrerequisite>3</constructionSkillPrerequisite>
+	<tradeTags>
+	  <li>RH_TET_Skaven_Furniture</li>
+	</tradeTags>
+  </ThingDef>
+
+  <ThingDef ParentName="RH_TET_Skaven_TableBase">
+    <defName>RH_TET_Skaven_Table1x5c</defName>
+    <label>skaven table (1x5)</label>
+	<description>A rough very long skaven table for eating at.\n\nEating is important to skaven, as it's one of their few personal joys. Skaven build their furniture out of whatever they find laying around. They're never nice, but they're functional.</description>
+    <graphicData>
+      <texPath>Things/Building/Furniture/RH_TET_Skaven_Table1x5</texPath>
+      <graphicClass>Graphic_Multi</graphicClass>
+	  <shaderType>CutoutComplex</shaderType>
+      <drawSize>(3,7)</drawSize>
+      <damageData>
+        <cornerTL>Damage/Corner</cornerTL>
+        <cornerTR>Damage/Corner</cornerTR>
+        <cornerBL>Damage/Corner</cornerBL>
+        <cornerBR>Damage/Corner</cornerBR>
+      </damageData>
+    </graphicData>
+    <uiIconScale>0.8</uiIconScale>
+    <statBases>
+      <MaxHitPoints>105</MaxHitPoints>
+      <WorkToBuild>950</WorkToBuild>
+      <Mass>8.5</Mass>
+      <Flammability>1.0</Flammability>
+      <Beauty>.7</Beauty>
+    </statBases>
+    <size>(1,5)</size>
+    <costStuffCount>25</costStuffCount>
+    <costList>
+      <WoodLog>40</WoodLog>
+    </costList>
+    <researchPrerequisites>
+      <li>RH_TET_SkavenFurniture_Advanced</li>
+    </researchPrerequisites>
+    <constructionSkillPrerequisite>3</constructionSkillPrerequisite>
+	<tradeTags>
+	  <li>RH_TET_Skaven_Furniture</li>
+	</tradeTags>
+  </ThingDef>
+  
+  <ThingDef ParentName="RH_TET_Skaven_TableBase">
+    <defName>RH_TET_Skaven_Table2x2c</defName>
+    <label>skaven table (2x2)</label>
+	<description>A shoddy skaven table for eating at.\n\nAs skaven hordes grow and have more space to build, larger tables are an item that gets built sooner rather than later. The skaven generally prefer to eat alone, but in a crowded rat hole that is rarely possible.</description>
+    <graphicData>
+      <texPath>Things/Building/Furniture/RH_TET_Skaven_Tabe2x2</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+	  <shaderType>CutoutComplex</shaderType>
+      <drawSize>(3.1,3.1)</drawSize>
+      <damageData>
+        <cornerTL>Damage/Corner</cornerTL>
+        <cornerTR>Damage/Corner</cornerTR>
+        <cornerBL>Damage/Corner</cornerBL>
+        <cornerBR>Damage/Corner</cornerBR>
+      </damageData>
+    </graphicData>
+    <uiIconScale>0.8</uiIconScale>
+    <statBases>
+      <MaxHitPoints>110</MaxHitPoints>
+      <WorkToBuild>1500</WorkToBuild>
+      <Mass>6</Mass>
+      <Flammability>1</Flammability>
+      <Beauty>1</Beauty>
+    </statBases>
+    <size>(2,2)</size>
+    <stuffCategories>
+      <li>Metallic</li>
+      <li>Stony</li>
+    </stuffCategories>
+    <costStuffCount>10</costStuffCount>
+    <costList>
+      <WoodLog>50</WoodLog>
+    </costList>
+    <rotatable>false</rotatable>    
+    <researchPrerequisites>
+      <li>RH_TET_SkavenFurniture_Advanced</li>
+    </researchPrerequisites>
+    <constructionSkillPrerequisite>3</constructionSkillPrerequisite>
+	<tradeTags>
+	  <li>RH_TET_Skaven_Furniture</li>
+	</tradeTags>
+  </ThingDef>  
+  
+  <ThingDef ParentName="RH_TET_Skaven_TableBase">
+    <defName>RH_TET_Skaven_Table2x4c</defName>
+    <label>skaven table (2x4)</label>
+	<description>A large crude skaven table for eating at.\n\nFeed rooms in skaven warrens everywhere include large skaven tables. They're crude, but functional. They are typically popular gathering places around the warrens.</description>
+    <graphicData>
+      <texPath>Things/Building/Furniture/RH_TET_Skaven_Tabe2x4</texPath>
+      <graphicClass>Graphic_Multi</graphicClass>
+	  <shaderType>CutoutComplex</shaderType>
+      <drawSize>(3.4,4.0)</drawSize>
+      <damageData>
+        <cornerTL>Damage/Corner</cornerTL>
+        <cornerTR>Damage/Corner</cornerTR>
+        <cornerBL>Damage/Corner</cornerBL>
+        <cornerBR>Damage/Corner</cornerBR>
+      </damageData>
+    </graphicData>
+    <statBases>
+      <MaxHitPoints>160</MaxHitPoints>
+      <WorkToBuild>3000</WorkToBuild>
+      <Mass>12</Mass>
+      <Flammability>1.0</Flammability>
+      <Beauty>2</Beauty>
+    </statBases>
+    <size>(2,4)</size>
+    <stuffCategories>
+      <li>Metallic</li>
+      <li>Stony</li>
+    </stuffCategories>
+    <costStuffCount>20</costStuffCount>   
+    <costList>
+      <WoodLog>75</WoodLog>
+    </costList>
+    <researchPrerequisites>
+      <li>RH_TET_SkavenFurniture_Advanced</li>
+    </researchPrerequisites>
+    <constructionSkillPrerequisite>3</constructionSkillPrerequisite>
+	<tradeTags>
+	  <li>RH_TET_Skaven_Furniture</li>
+	</tradeTags>
+  </ThingDef>
+  
+  <ThingDef ParentName="RH_TET_Skaven_TableBase">
+    <defName>RH_TET_Skaven_Table3x3c</defName>
+    <label>skaven table (3x3)</label>
+	<description>A huge crude skaven table for eating at.\n\nFeed rooms in skaven warrens everywhere include large skaven tables. They're crude, but functional. They are typically popular gathering places around the warrens.</description>
+    <graphicData>
+      <texPath>Things/Building/Furniture/RH_TET_Skaven_Tabe2x2</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+	  <shaderType>CutoutComplex</shaderType>
+      <drawSize>(4.9,4.9)</drawSize>
+      <damageData>
+        <cornerTL>Damage/Corner</cornerTL>
+        <cornerTR>Damage/Corner</cornerTR>
+        <cornerBL>Damage/Corner</cornerBL>
+        <cornerBR>Damage/Corner</cornerBR>
+      </damageData>
+    </graphicData>
+    <uiIconScale>0.8</uiIconScale>
+    <statBases>
+      <MaxHitPoints>175</MaxHitPoints>
+      <WorkToBuild>3300</WorkToBuild>
+      <Mass>15</Mass>
+      <Flammability>1.0</Flammability>
+      <Beauty>3</Beauty>
+    </statBases>
+    <size>(3,3)</size>
+    <stuffCategories>
+      <li>Metallic</li>
+      <li>Stony</li>
+    </stuffCategories>
+    <costStuffCount>10</costStuffCount>
+    <costList>
+      <WoodLog>90</WoodLog>
+    </costList>
+    <rotatable>false</rotatable>    
+    <researchPrerequisites>
+      <li>RH_TET_SkavenFurniture_Advanced</li>
+    </researchPrerequisites>
+    <constructionSkillPrerequisite>3</constructionSkillPrerequisite>
+	<tradeTags>
+	  <li>RH_TET_Skaven_Furniture</li>
+	</tradeTags>
+  </ThingDef>
+  
+  <ThingDef ParentName="RH_TET_Skaven_BedWithQualityBase" Name="RH_TET_Skaven_Bed">
+    <defName>RH_TET_Skaven_Bed</defName>
+    <label>skaven bed</label>
+    <description>A dirty mattress, an animal hide virtually covered with skaven hair, on a frame and supports for resting.</description>
+    <graphicData>
+      <texPath>Things/Building/Furniture/RH_TET_Skaven_Bed</texPath>
+      <graphicClass>Graphic_Multi</graphicClass>
+      <shaderType>CutoutComplex</shaderType>
+      <drawSize>(2,2)</drawSize>
+      <damageData>
+        <rect>(0,0.05,1,1.95)</rect>
+      </damageData>
+    </graphicData>
+    <comps>
+      <li Class="CompProperties_AffectedByFacilities">
+        <linkableFacilities>
+          <li>EndTable</li>
+          <li>Dresser</li>
+          <li MayRequire="Ludeon.RimWorld.Ideology">SleepAccelerator</li>
+          <li>RH_TET_Skaven_EndTable</li>
+          <li>RH_TET_Skaven_Dresser</li>
+        </linkableFacilities>
+      </li>
+    </comps>
+    <statBases>
+      <MaxHitPoints>130</MaxHitPoints>
+      <Flammability>1.0</Flammability>
+      <Beauty>.5</Beauty>
+      <WorkToBuild>700</WorkToBuild>
+      <Mass>30</Mass>
+      <BedRestEffectiveness>1</BedRestEffectiveness>
+      <Comfort>0.75</Comfort>
+      <ImmunityGainSpeedFactor>1.07</ImmunityGainSpeedFactor>
+      <SurgerySuccessChanceFactor>1</SurgerySuccessChanceFactor>
+    </statBases>
+    <size>(1,2)</size>
+    <costStuffCount>20</costStuffCount>
+    <costList>
+      <Steel>5</Steel>
+      <WoodLog>20</WoodLog>
+    </costList>
+    <building>
+      <bed_showSleeperBody>False</bed_showSleeperBody>
+      <bed_healPerDay>4</bed_healPerDay>
+    </building>
+    <fillPercent>0.4</fillPercent>
+    <pathCost>42</pathCost>
+    <staticSunShadowHeight>0.17</staticSunShadowHeight>
+    <castEdgeShadows>True</castEdgeShadows>
+    <designationHotKey>Misc2</designationHotKey>
+    <techLevel>Medieval</techLevel>
+    <researchPrerequisites>
+      <li>RH_TET_SkavenFurniture_Advanced</li>
+    </researchPrerequisites>
+    <uiIconScale>0.90</uiIconScale>
+  </ThingDef>  
+
+  <ThingDef ParentName="RH_TET_Skaven_BedWithQualityBase">
+    <defName>RH_TET_Skaven_DoubleBed</defName>
+    <label>skaven double bed</label>
+    <description>A large dirty mattress, an few animal hides sewn together, and virtually covered with skaven hair, on a frame and supports for resting.</description>
+    <graphicData>
+      <texPath>Things/Building/Furniture/RH_TET_Skaven_DoubleBed</texPath>
+      <graphicClass>Graphic_Multi</graphicClass>
+      <shaderType>CutoutComplex</shaderType>
+      <drawSize>(2.0,2.0)</drawSize>
+      <damageData>
+        <rect>(0,0.05,2,1.95)</rect>
+      </damageData>
+    </graphicData>
+    <comps>
+      <li Class="CompProperties_AffectedByFacilities">
+        <linkableFacilities>
+          <li>EndTable</li>
+          <li>Dresser</li>
+          <li>RH_TET_Skaven_EndTable</li>
+          <li>RH_TET_Skaven_Dresser</li>
+          <li MayRequire="Ludeon.RimWorld.Ideology">SleepAccelerator</li>
+        </linkableFacilities>
+      </li>
+    </comps>
+    <statBases>
+      <MaxHitPoints>180</MaxHitPoints>
+      <Flammability>1.0</Flammability>
+      <WorkToBuild>1400</WorkToBuild>
+      <Mass>55</Mass>
+      <Comfort>0.75</Comfort>
+      <BedRestEffectiveness>1</BedRestEffectiveness>
+      <ImmunityGainSpeedFactor>1.07</ImmunityGainSpeedFactor>
+      <SurgerySuccessChanceFactor>1</SurgerySuccessChanceFactor>
+    </statBases>
+    <size>(2,2)</size>
+    <costStuffCount>40</costStuffCount>
+    <costList>
+      <Steel>10</Steel>
+      <WoodLog>40</WoodLog>
+    </costList>
+    <building>
+      <bed_showSleeperBody>False</bed_showSleeperBody>
+      <bed_healPerDay>4</bed_healPerDay>
+    </building>
+    <fillPercent>0.4</fillPercent>
+    <pathCost>60</pathCost>
+    <leaveResourcesWhenKilled>True</leaveResourcesWhenKilled>
+    <staticSunShadowHeight>0.13</staticSunShadowHeight>
+    <castEdgeShadows>True</castEdgeShadows>
+    <designationHotKey>Misc3</designationHotKey>
+    <techLevel>Medieval</techLevel>
+    <researchPrerequisites>
+      <li>RH_TET_SkavenFurniture_Advanced</li>
+    </researchPrerequisites>
+    <uiIconScale>0.90</uiIconScale>
+  </ThingDef>
+
+  <ThingDef ParentName="RH_TET_Skaven_ArtableBedBase">
+    <defName>RH_TET_Skaven_RoyalBed</defName>
+    <label>skaven warlord's bed</label>
+    <description>An elaborate bed fit for the highest echelon of skaven. Very comfy and beautiful if in a warlike way. Fits two.\n\nSkaven seek to mimic the more civilized races of the Old World, and the making of such beds is but one example of a skaven attempting to make themselves feel like more than they may actually be.</description>
+    <graphicData>
+      <texPath>Things/Building/Furniture/RH_TET_Skaven_RoyalBed</texPath>
+      <graphicClass>Graphic_Multi</graphicClass>
+      <shaderType>CutoutComplex</shaderType>
+      <drawSize>(2.05,2.05)</drawSize>
+      <damageData>
+        <rect>(0,0.05,2,1.95)</rect>
+      </damageData>
+    </graphicData>
+    <comps>
+      <li Class="CompProperties_AffectedByFacilities">
+        <linkableFacilities>
+          <li>EndTable</li>
+          <li>Dresser</li>
+          <li>RH_TET_Skaven_EndTable</li>
+          <li>RH_TET_Skaven_Dresser</li>
+          <li MayRequire="Ludeon.RimWorld.Ideology">SleepAccelerator</li>
+        </linkableFacilities>
+      </li>
+      <li Class="CompProperties_Glower">
+        <glowRadius>3</glowRadius>
+        <glowColor>(113,141,117,0)</glowColor>
+      </li>
+    </comps>
+    <thingSetMakerTags><li>RewardStandardQualitySuper</li></thingSetMakerTags>
+    <statBases>
+      <MaxHitPoints>200</MaxHitPoints>
+      <Flammability>1.0</Flammability>
+      <WorkToBuild>50000</WorkToBuild>
+      <Mass>60</Mass>
+      <Beauty>75</Beauty>
+      <BedRestEffectiveness>1.05</BedRestEffectiveness>
+      <Comfort>0.90</Comfort>
+      <ImmunityGainSpeedFactor>1.07</ImmunityGainSpeedFactor>
+      <SurgerySuccessChanceFactor>1</SurgerySuccessChanceFactor>
+    </statBases>
+    <size>(2,2)</size>
+    <stuffCategories Inherit="False">
+      <li>Metallic</li>
+    </stuffCategories>
+    <costStuffCount>100</costStuffCount>
+    <costList>
+      <RH_TET_Skaven_Warpstone>10</RH_TET_Skaven_Warpstone>
+    </costList>
+    <building>
+      <bed_showSleeperBody>False</bed_showSleeperBody>
+      <bed_healPerDay>4</bed_healPerDay>
+    </building>
+    <terrainAffordanceNeeded>Light</terrainAffordanceNeeded>
+    <fillPercent>0.4</fillPercent>
+    <pathCost>42</pathCost>
+    <leaveResourcesWhenKilled>True</leaveResourcesWhenKilled>
+    <staticSunShadowHeight>0.17</staticSunShadowHeight>
+    <castEdgeShadows>True</castEdgeShadows>
+    <designationHotKey>Misc4</designationHotKey>
+    <techLevel>Medieval</techLevel>
+    <constructionSkillPrerequisite>8</constructionSkillPrerequisite>
+    <researchPrerequisites>
+      <li>RH_TET_SkavenFurniture_Advanced</li>
+    </researchPrerequisites>
+    <uiIconScale>0.90</uiIconScale>
+  </ThingDef>
+ 
+  <ThingDef ParentName="RH_TET_Skaven_FurnitureWithQualityBase">
+    <defName>RH_TET_Skaven_EndTable</defName>
+    <label>skaven end table</label>
+    <description>A small shoddy bedside table which makes nearby beds a little bit more comfortable. Must be placed directly adjacent to the head of the bed. Placing more than one end table near the same bed has no effect.\n\nBuilt by skaven using scrap materials. Not very nice looking, but effective.</description>
+    <surfaceType>Item</surfaceType>
+    <graphicData>
+      <texPath>Things/Building/Furniture/RH_TET_Skaven_EndTable</texPath>
+      <graphicClass>Graphic_Multi</graphicClass>
+      <shadowData>
+        <volume>(0.3, 0.6, 0.3)</volume>
+      </shadowData>
+	  <drawSize>.9</drawSize>
+    </graphicData>
+    <statBases>
+      <MaxHitPoints>55</MaxHitPoints>
+      <WorkToBuild>900</WorkToBuild>
+      <Mass>3.5</Mass>
+      <Flammability>1.0</Flammability>
+      <Beauty>1.5</Beauty>
+    </statBases>
+    <pathCost>30</pathCost>
+    <defaultPlacingRot>South</defaultPlacingRot>
+    <stuffCategories Inherit="False" />
+    <costList>
+      <WoodLog>30</WoodLog>
+    </costList>
+    <placeWorkers>
+      <li>PlaceWorker_ShowFacilitiesConnections</li>
+    </placeWorkers>
+    <researchPrerequisites>
+      <li>RH_TET_SkavenFurniture_Advanced</li>
+    </researchPrerequisites>
+    <comps>
+      <li Class="CompProperties_Facility">
+        <statOffsets>
+          <Comfort>0.05</Comfort>
+        </statOffsets>
+        <maxSimultaneous>1</maxSimultaneous>
+        <mustBePlacedAdjacentCardinalToBedHead>true</mustBePlacedAdjacentCardinalToBedHead>
+      </li>
+    </comps>
+    <staticSunShadowHeight>0</staticSunShadowHeight>
+    <castEdgeShadows>false</castEdgeShadows>
+	
+	<thingClass>Building</thingClass>
+    <altitudeLayer>Building</altitudeLayer>
+    <passability>PassThroughOnly</passability>
+    <fillPercent>0.4</fillPercent>
+    <socialPropernessMatters>false</socialPropernessMatters>
+    <canOverlapZones>false</canOverlapZones>
+    <leaveResourcesWhenKilled>true</leaveResourcesWhenKilled>
+    <designationCategory>Furniture</designationCategory>
+  </ThingDef>
+  
+   <ThingDef ParentName="RH_TET_Skaven_FurnitureWithQualityBase">
+    <defName>RH_TET_Skaven_Dresser</defName>
+    <label>skaven dresser</label>
+    <description>A rough dresser clearly built from scavenged materials. Gives a small comfort bonus to all nearby beds. Placing more than one dresser near the same bed has no effect.</description>
+    <graphicData>
+      <texPath>Things/Building/Furniture/RH_TET_Skaven_Dresser</texPath>
+      <graphicClass>Graphic_Multi</graphicClass>
+	  <shaderType>CutoutComplex</shaderType>
+      <drawSize>(2,1)</drawSize>
+      <damageData>
+        <cornerTL>Damage/Corner</cornerTL>
+        <cornerTR>Damage/Corner</cornerTR>
+        <cornerBL>Damage/Corner</cornerBL>
+        <cornerBR>Damage/Corner</cornerBR>
+      </damageData>
+    </graphicData>
+    <altitudeLayer>Building</altitudeLayer>
+    <passability>PassThroughOnly</passability>
+    <fillPercent>0.4</fillPercent>
+    <castEdgeShadows>true</castEdgeShadows>
+    <pathCost>42</pathCost>
+    <defaultPlacingRot>South</defaultPlacingRot>
+    <stuffCategories Inherit="False" />
+    <costList>
+      <WoodLog>50</WoodLog>
+    </costList>
+    <statBases>
+      <MaxHitPoints>110</MaxHitPoints>
+      <Mass>13</Mass>
+      <WorkToBuild>1800</WorkToBuild>
+      <Flammability>1.0</Flammability>
+      <Beauty>3</Beauty>
+    </statBases>
+    <size>(2,1)</size>
+    <designationHotKey>Misc12</designationHotKey>
+    <staticSunShadowHeight>0.5</staticSunShadowHeight>
+    <surfaceType>Item</surfaceType>
+    <canOverlapZones>false</canOverlapZones>
+    <placeWorkers>
+      <li>PlaceWorker_ShowFacilitiesConnections</li>
+    </placeWorkers>
+    <researchPrerequisites>
+      <li>RH_TET_SkavenFurniture_Advanced</li>
+    </researchPrerequisites>
+    <comps>
+      <li Class="CompProperties_Facility">
+        <statOffsets>
+          <Comfort>0.05</Comfort>
+        </statOffsets>
+        <maxSimultaneous>1</maxSimultaneous>
+        <maxDistance>6</maxDistance>
+      </li>
+    </comps>
+  </ThingDef> 
+
+  <ThingDef ParentName="RH_TET_Skaven_FurnitureWithQualityBase" >
+    <defName>RH_TET_Skaven_Shelf</defName>
+    <label>skaven shelf</label>
+    <description>A roughly built shelf for storing things. Items stored in this will not affect room beauty and they won&apos;t deteriorate, even if outside.\n\nSkaven don't build anything to be nice, they build it for function from whatever materials they can find laying around. This shelf is a great example of that.\n\nEXTENDED STORAGE NOTE: If you&apos;re using the Extended Storage mod, this shelf will automatically have the ability to store six times more than a normal shelf can store. It can hold anything you&apos;d like, except buildings. Make sure you set what you want it to hold, as it defaults to Raw Resources. If you are not using the Extended Storage mod, this will function like a normal shelf.</description>
+	<thingClass>Building_Storage</thingClass>
+    <size>(2,1)</size>
+	<graphicData>
+      <texPath>Things/Building/Furniture/RH_TET_Skaven_Shelf</texPath>
+      <graphicClass>Graphic_Multi</graphicClass>
+      <shaderType>CutoutComplex</shaderType>
+      <drawSize>(2.2,1)</drawSize>
+    </graphicData>
+    <uiIconScale>0.75</uiIconScale>
+    <altitudeLayer>Building</altitudeLayer>
+    <passability>PassThroughOnly</passability>
+    <fillPercent>0.9</fillPercent>
+    <castEdgeShadows>true</castEdgeShadows>
+    <staticSunShadowHeight>0.75</staticSunShadowHeight>
+    <pathCost>90</pathCost>  
+    <stuffCategories>
+      <li>Stony</li>
+    </stuffCategories>
+    <costStuffCount>10</costStuffCount>
+    <costList>
+      <WoodLog>30</WoodLog>
+    </costList>   
+	<statBases>
+      <MaxHitPoints>200</MaxHitPoints>
+      <Mass>17</Mass>
+      <WorkToBuild>750</WorkToBuild>
+      <Flammability>1.0</Flammability>
+      <Beauty>2</Beauty>
+    </statBases>
+    <defaultPlacingRot>South</defaultPlacingRot>    
+	<building>
+      <preventDeteriorationOnTop>true</preventDeteriorationOnTop>
+      <ignoreStoredThingsBeauty>true</ignoreStoredThingsBeauty>
+      <defaultStorageSettings>
+        <priority>Important</priority>
+        <filter>
+          <categories>
+            <li>ResourcesRaw</li>
+          </categories>
+        </filter>
+      </defaultStorageSettings>
+		<fixedStorageSettings>
+			<priority>Important</priority>
+			<filter>
+				<categories>
+					<li>Foods</li>
+					<li>Manufactured</li>
+					<li>ResourcesRaw</li>
+					<li>Items</li>
+					<li>Weapons</li>
+					<li>Apparel</li>
+					<li>Chunks</li>
+					<li>Corpses</li>
+				</categories>
+			</filter>
+		</fixedStorageSettings>
+    </building>
+    <tickerType>Normal</tickerType>
+    <drawGUIOverlay>False</drawGUIOverlay>
+    <inspectorTabs>
+        <li>ITab_Storage</li>
+    </inspectorTabs>
+    <designationHotKey>Misc12</designationHotKey>
+    <surfaceType>Item</surfaceType>
+    <canOverlapZones>false</canOverlapZones>
+    <researchPrerequisites>
+        <li>RH_TET_SkavenFurniture_Advanced</li>
+    </researchPrerequisites>
+    <designationCategory>Furniture</designationCategory>
+    <minifiedDef>MinifiedThing</minifiedDef>
+  </ThingDef>
+ 
+  <ThingDef ParentName="BedWithQualityBase">
+    <defName>RH_TET_Skaven_SlaveBedroll</defName>
+    <label>skaven slave bedroll</label>
+    <description>An unclean scrap of leather pegged to the ground; used as a simple bed that lays on the floor. It is lightweight and can be rolled up for easy transport, but it is not quite as comfortable as a typical bed. Caravans can use bedrolls while traveling for better sleep.\n\nNo one cares where skaven slaves sleep; including the slaves themselves most the time. This bedroll would be a blessing for any skaven slave.</description>
+    <graphicData>
+      <texPath>Things/Building/Furniture/RH_TET_Skaven_Slaverat_Sleepingspot</texPath>
+      <graphicClass>Graphic_Multi</graphicClass>
+      <shaderType>CutoutComplex</shaderType>
+      <drawSize>(1.5,2.1)</drawSize>
+    </graphicData>
+    <castEdgeShadows>False</castEdgeShadows>
+    <statBases>
+      <MaxHitPoints>75</MaxHitPoints>
+      <Flammability>1.0</Flammability>
+      <Mass>2.0</Mass>
+      <BedRestEffectiveness>0.90</BedRestEffectiveness>
+      <ImmunityGainSpeedFactor>1.01</ImmunityGainSpeedFactor>
+      <Comfort>0.60</Comfort>
+      <WorkToBuild>500</WorkToBuild>
+    </statBases>
+    <comps>
+      <li Class="CompProperties_AffectedByFacilities">
+        <linkableFacilities>
+          <li>Dresser</li>
+          <li>EndTable</li>
+          <li>RH_TET_Skaven_Dresser</li>
+          <li>RH_TET_Skaven_EndTable</li>
+          <li MayRequire="Ludeon.RimWorld.Ideology">SleepAccelerator</li>
+        </linkableFacilities>
+      </li>
+    </comps>
+    <size>(1,2)</size>
+    <stuffCategories>
+      <li>Leathery</li>
+    </stuffCategories>
+    <costStuffCount>35</costStuffCount>
+    <building>
+      <bed_showSleeperBody>true</bed_showSleeperBody>
+      <bed_healPerDay>4</bed_healPerDay>
+      <bed_caravansCanUse>true</bed_caravansCanUse>
+      <destroySound>BuildingDestroyed_Soft_Medium</destroySound>
+      <destroyShakeAmount>0</destroyShakeAmount>
+    </building>
+    <pathCost>14</pathCost>
+    <passability>Standable</passability>
+    <designationHotKey>Misc2</designationHotKey>
+    <researchPrerequisites>
+        <li>RH_TET_SkavenFurniture</li>
+    </researchPrerequisites>
+  </ThingDef>
+  
+  <ThingDef ParentName="BedWithQualityBase">
+    <defName>RH_TET_Skaven_ClanratBedroll</defName>
+    <label>skaven bedroll</label>
+    <description>A large piece of leather pegged to the ground; used as a simple bed that lays on the floor. It is lightweight and can be rolled up for easy transport, but it is not quite as comfortable as a typical bed. Caravans can use bedrolls while traveling for better sleep.\n\nClanrats are abundant, and like to have a tiny place to call their own.</description>
+    <graphicData>
+      <texPath>Things/Building/Furniture/RH_TET_Skaven_Clanrat_Sleepingspot</texPath>
+      <graphicClass>Graphic_Multi</graphicClass>
+      <shaderType>CutoutComplex</shaderType>
+      <drawSize>(1.6,2.1)</drawSize>
+    </graphicData>
+    <castEdgeShadows>False</castEdgeShadows>
+    <statBases>
+      <MaxHitPoints>75</MaxHitPoints>
+      <Flammability>1.0</Flammability>
+      <Mass>2.5</Mass>
+      <BedRestEffectiveness>0.98</BedRestEffectiveness>
+      <ImmunityGainSpeedFactor>1.05</ImmunityGainSpeedFactor>
+      <Comfort>0.70</Comfort>
+      <WorkToBuild>600</WorkToBuild>
+    </statBases>
+    <comps>
+      <li Class="CompProperties_AffectedByFacilities">
+        <linkableFacilities>
+          <li>Dresser</li>
+          <li>EndTable</li>
+          <li>RH_TET_Skaven_Dresser</li>
+          <li>RH_TET_Skaven_EndTable</li>
+          <li MayRequire="Ludeon.RimWorld.Ideology">SleepAccelerator</li>
+        </linkableFacilities>
+      </li>
+    </comps>
+    <size>(1,2)</size>
+    <stuffCategories>
+      <li>Leathery</li>
+    </stuffCategories>
+    <costStuffCount>45</costStuffCount>
+    <building>
+      <bed_showSleeperBody>false</bed_showSleeperBody>
+      <bed_healPerDay>4</bed_healPerDay>
+      <bed_caravansCanUse>true</bed_caravansCanUse>
+      <destroySound>BuildingDestroyed_Soft_Medium</destroySound>
+      <destroyShakeAmount>0</destroyShakeAmount>
+    </building>
+    <pathCost>14</pathCost>
+    <passability>Standable</passability>
+    <designationHotKey>Misc2</designationHotKey>
+    <researchPrerequisites>
+        <li>RH_TET_SkavenFurniture_Advanced</li>
+    </researchPrerequisites>
+  </ThingDef> 
+ 
+  <ThingDef ParentName="FurnitureBase">
+    <defName>RH_TET_SkavenWarpBrazier</defName>
+    <label>warp brazier</label>
+    <description>The stone in the center emits a bright green light. It is rare for a skaven to need interior lighting, but many powerful skaven will decorate their warren homes with these braziers as a sign of status. As an added bonus, the shadows they can cast with clever placement often aid in attempts to intimidate their fellow skaven, making this a favourite of both Clan Eshin and the Grey Seers.</description>
+    <category>Building</category>
+    <graphicData>
+      <texPath>Things/Building/Furniture/SkavenWarpBrazier</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <shaderType>CutoutComplex</shaderType>
+      <drawRotated>false</drawRotated>
+      <damageData>
+        <rect>(0.35,0.35,0.3,0.3)</rect>
+      </damageData>
+      <drawSize>(1.7)</drawSize>
+    </graphicData>
+	<thingCategories Inherit="False">
+		<li>RH_TET_Skaven_BuildingsFurniture</li>
+	</thingCategories>
+    <uiIconPath>Things/Building/Furniture/SkavenWarpBrazier</uiIconPath>
+    <uiIconScale>0.9</uiIconScale>
+    <rotatable>false</rotatable>
+    <altitudeLayer>Building</altitudeLayer>
+    <passability>PassThroughOnly</passability>
+    <pathCost>15</pathCost>
+    <tickerType>Normal</tickerType>
+    <drawerType>RealtimeOnly</drawerType>
+    <fillPercent>0.15</fillPercent>
+    <statBases>
+      <MarketValue>100</MarketValue>
+      <MaxHitPoints>120</MaxHitPoints>
+      <WorkToBuild>1500</WorkToBuild>
+      <Flammability>0</Flammability>
+      <Beauty>10</Beauty>
+      <Mass>6</Mass>
+    </statBases>
+    <selectable>true</selectable>
+    <costList>
+      <RH_TET_Skaven_Warpstone>5</RH_TET_Skaven_Warpstone>
+      <Steel>30</Steel>
+    </costList>
+    <soundImpactDefault>BulletImpact_Ground</soundImpactDefault>
+    <leaveResourcesWhenKilled>true</leaveResourcesWhenKilled>
+    <resourcesFractionWhenDeconstructed>6</resourcesFractionWhenDeconstructed>
+    <drawPlaceWorkersWhileSelected>true</drawPlaceWorkersWhileSelected>
+    <comps>
+      <li Class="CompProperties_Glower">
+        <glowRadius>14</glowRadius>
+        <glowColor>(113,141,117,0)</glowColor>
+      </li>
+    </comps>
+    <designationCategory>Furniture</designationCategory>
+    <designationHotKey>Misc10</designationHotKey>
+    <researchPrerequisites>
+      <li>RH_TET_SkavenFurniture_Skryre</li>
+    </researchPrerequisites>
+  </ThingDef>
+
+	<ThingDef ParentName="BuildingBase">
+		<defName>RH_TET_Skaven_MeditationFur</defName>
+		<thingClass>TheEndTimes_Magic.Building_MagicMeditationSpot</thingClass>
+		<label>Medidation hide</label>
+		<graphicData>
+			<texPath>Things/Building/Furniture/RH_TET_Magic_MeditationHides</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+			<drawSize>(1.2)</drawSize>
+			<shadowData>
+				<volume>(0.6, 0.6, 0.6)</volume>
+			</shadowData>
+		</graphicData>
+		<altitudeLayer>FloorEmplacement</altitudeLayer>
+		<useHitPoints>true</useHitPoints>
+		<size>(1,1)</size>
+		<statBases>
+			<MaxHitPoints>50</MaxHitPoints>
+			<WorkToBuild>300</WorkToBuild>
+			<Comfort>0.6</Comfort>
+			<MarketValue>10</MarketValue>
+			<Mass>3</Mass>
+			<Flammability>1.0</Flammability>
+			<Beauty>0</Beauty>
+		</statBases>
+		<description>A place to medidate that offers comfort. Will restore magic and faith needs to those medidating on them.</description>
+		<socialPropernessMatters>true</socialPropernessMatters>
+		<stuffCategories>
+			<li>Leathery</li>
+		</stuffCategories>
+		<costStuffCount>25</costStuffCount>
+		<pathCost>1</pathCost>
+		<fillPercent>0.40</fillPercent>
+		<building>
+			<isSittable>true</isSittable>
+			<ai_chillDestination>false</ai_chillDestination>
+		</building>
+		<rotatable>false</rotatable>
+		<designationCategory>RH_TET_Skaven_Buildings</designationCategory>
+		<minifiedDef>MinifiedThing</minifiedDef>
+		<researchPrerequisites>
+			<li>RH_TET_SkavenFurniture</li>
+		</researchPrerequisites>
+		<category>Building</category>    
+		<thingCategories>
+		  <li>RH_TET_Skaven_BuildingsFurniture</li>
+		</thingCategories>
+		<passability>Standable</passability>
+		<drawGUIOverlay>True</drawGUIOverlay>
+		<defaultPlacingRot>South</defaultPlacingRot>
+	</ThingDef>
+
+  <ThingDef ParentName="BuildingBase">
+    <defName>RH_TET_Skaven_WarpSconce</defName>
+    <label>warpstone wall sconce</label>
+    <description>A piece of wood with warpstone attached to the end. The whole thing is attached to the wall for lighting an area. Even skaven need light to move and work at full speed. Will produce light forever, without the need for refueling.</description>
+	<thingClass>TheEndTimes_Skaven.Building_WallSconce</thingClass>
+    <category>Building</category>
+	<thingCategories><li>RH_TET_Skaven_BuildingsFurniture</li></thingCategories>
+    <building>
+      <isEdifice>false</isEdifice>
+    </building>
+    <clearBuildingArea>false</clearBuildingArea>
+    <graphicData>
+      <texPath>Things/Building/Furniture/RH_TET_Skaven_Wall_Light</texPath>
+      <graphicClass>Graphic_Multi</graphicClass>
+      <drawRotated>true</drawRotated>
+      <damageData>
+        <rect>(0.35,0.35,0.3,0.3)</rect>
+      </damageData>
+    </graphicData>
+    <researchPrerequisites>
+      <li>RH_TET_SkavenFurniture_Skryre</li>
+    </researchPrerequisites>
+	<minifiedDef>MinifiedThing</minifiedDef>
+    <uiIconPath>Things/Building/Furniture/RH_TET_Skaven_Wall_Light</uiIconPath>
+    <uiIconScale>0.85</uiIconScale>
+    <rotatable>true</rotatable>
+    <altitudeLayer>MoteOverhead</altitudeLayer>
+    <passability>PassThroughOnly</passability>
+    <pathCost>8</pathCost>
+    <constructEffect>ConstructMetal</constructEffect>
+    <tickerType>Normal</tickerType>
+    <drawerType>RealtimeOnly</drawerType>
+    <fillPercent>0.15</fillPercent>
+    <statBases>
+      <Mass>10</Mass>
+      <MaxHitPoints>90</MaxHitPoints>
+      <WorkToBuild>250</WorkToBuild>
+      <Flammability>0</Flammability>
+    </statBases>
+    <selectable>true</selectable>
+    <costList>
+      <WoodLog>15</WoodLog>
+      <Steel>10</Steel>
+      <RH_TET_Skaven_Warpstone>3</RH_TET_Skaven_Warpstone>
+    </costList>
+    <soundImpactDefault>BulletImpact_Ground</soundImpactDefault>
+    <leaveResourcesWhenKilled>false</leaveResourcesWhenKilled>
+    <resourcesFractionWhenDeconstructed>0</resourcesFractionWhenDeconstructed>
+    <placeWorkers>
+      <li>TheEndTimes_Skaven.PlaceWorker_OnTopOfWalls</li>
+    </placeWorkers>
+    <drawPlaceWorkersWhileSelected>true</drawPlaceWorkersWhileSelected>
+    <comps>
+      <li Class="CompProperties_Glower">
+        <glowRadius>14</glowRadius>
+        <glowColor>(113,141,117,0)</glowColor>
+      </li>
+    </comps>
+    <designationCategory>Furniture</designationCategory>
+    <designationHotKey>Misc10</designationHotKey>
+  </ThingDef>
+
+  <ThingDef Name="RH_TET_Skaven_WallSconce_On" ParentName="BuildingBase">
+    <defName>RH_TET_Skaven_WallSconce_On</defName>
+    <graphicData>
+	  <texPath>Things/Building/Furniture/RH_TET_Skaven_Wall_Light</texPath>
+	  <graphicClass>Graphic_Multi</graphicClass>
+      <drawSize>1.1,1.1</drawSize>
+    </graphicData>
+	<thingClass>TheEndTimes_Skaven.Building_WallSconce</thingClass>
+	<label>Wall sconce (On)</label>
+	<description>None.</description>
+	<category>Mote</category>
+	<building>
+		<isEdifice>false</isEdifice>
+	</building>
+	<statBases>
+		<Flammability>0</Flammability>
+	</statBases>
+	<altitudeLayer>ItemImportant</altitudeLayer>
+	<passability>Standable</passability>
+	<destroyable>false</destroyable>
+	<rotatable>false</rotatable>
+	<clearBuildingArea>false</clearBuildingArea>
+	<selectable>false</selectable>
+	<coversFloor>false</coversFloor>
+	<useHitPoints>false</useHitPoints>
+	<tradeability>None</tradeability>
+	<isAutoAttackableMapObject>false</isAutoAttackableMapObject>
+  </ThingDef>
+  
+  <ThingDef Name="RH_TET_SconceGlower">
+    <defName>RH_TET_Skaven_SconceGlower</defName>
+	<thingClass>TheEndTimes_Skaven.WallSconceGlower</thingClass>
+	<label>Wall sconce</label>
+	<description>A piece of wood with warpstone attached to the end. The whole thing is attached to the wall for lighting an area. Even skaven need light to move and work at full speed. Will produce light forever, without the need for refueling.</description>
+	<category>Attachment</category>
+    <graphicData>
+	  <texPath>Things/Building/Furniture/RH_TET_Sconce_Blank</texPath>
+	  <graphicClass>Graphic_Single</graphicClass>
+      <drawSize>1,1</drawSize>
+    </graphicData>
+	<building>
+		<isEdifice>false</isEdifice>
+	</building>
+	<statBases>
+		<Flammability>0</Flammability>
+	</statBases>
+	<altitudeLayer>Floor</altitudeLayer>
+	<passability>Standable</passability>
+	<destroyable>false</destroyable>
+	<rotatable>false</rotatable>
+	<clearBuildingArea>false</clearBuildingArea>
+	<selectable>false</selectable>
+	<coversFloor>false</coversFloor>
+	<useHitPoints>false</useHitPoints>
+	<tradeability>None</tradeability>
+	<isAutoAttackableMapObject>false</isAutoAttackableMapObject>
+    <comps>
+	  <li Class="CompProperties_Flickable" />
+      <li Class="CompProperties_Glower">
+        <glowRadius>14</glowRadius>
+        <glowColor>(113,141,117,0)</glowColor>
+      </li>
+    </comps>
+  </ThingDef>
+  
+</Defs>

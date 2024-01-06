@@ -1,0 +1,282 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <AlienRace.BackstoryDef>
+    <defName>RH_TET_Skaven_MasterMoulder</defName>
+    <title>master moulder</title>
+    <titleShort>master moulder</titleShort>
+    <baseDescription>[PAWN_nameDef] is among the most skilled among those in Clan Moulder. [PAWN_pronoun] is a true master at [PAWN_possessive] vile and gruesome work.</baseDescription>
+    <bodyTypeMale>Male</bodyTypeMale>
+    <bodyTypeFemale>Male</bodyTypeFemale>
+    <slot>Adulthood</slot>
+    <skillGains>
+      <li>
+        <defName>Intellectual</defName>
+        <amount>4</amount>
+      </li>
+      <li>
+        <defName>Crafting</defName>
+        <amount>3</amount>
+      </li>
+      <li>
+        <defName>Animals</defName>
+        <amount>1</amount>
+      </li>
+      <li>
+        <defName>Medicine</defName>
+        <amount>6</amount>
+      </li>
+    </skillGains>
+    <forcedTraits>
+      <li>
+        <defName>Psychopath</defName>
+        <chance>90</chance>
+      </li>
+      <li>
+        <defName>Industriousness</defName>
+        <degree>2</degree>
+        <chance>50</chance>
+      </li>
+    </forcedTraits>
+    <forcedHediffs>
+      <li>RH_TET_SkavenMoulderWarpSpine</li>
+    </forcedHediffs>
+    <spawnCategories>
+      <li>RH_TET_SkavenMoulder</li>
+    </spawnCategories>
+    <requiredWorkTags>
+      <li>Intellectual</li>
+      <li>Violent</li>
+    </requiredWorkTags>
+  </AlienRace.BackstoryDef>
+
+  <AlienRace.BackstoryDef>
+    <defName>RH_TET_Skaven_Moulder</defName>
+    <title>moulder</title>
+    <titleShort>moulder</titleShort>
+    <baseDescription>[PAWN_nameDef] is a Clan Moulder bio-engineer. Successfully earning [PAWN_possessive] place in the clan, moulding vile creations deep under the surface.</baseDescription>
+    <bodyTypeMale>Male</bodyTypeMale>
+    <bodyTypeFemale>Male</bodyTypeFemale>
+    <slot>Adulthood</slot>
+    <skillGains>
+      <li>
+        <defName>Intellectual</defName>
+        <amount>3</amount>
+      </li>
+      <li>
+        <defName>Crafting</defName>
+        <amount>3</amount>
+      </li>
+      <li>
+        <defName>Animals</defName>
+        <amount>1</amount>
+      </li>
+      <li>
+        <defName>Medicine</defName>
+        <amount>5</amount>
+      </li>
+    </skillGains>
+    <spawnCategories>
+      <li>RH_TET_SkavenMoulder</li>
+    </spawnCategories>
+    <requiredWorkTags>
+      <li>Intellectual</li>
+      <li>Violent</li>
+    </requiredWorkTags>
+  </AlienRace.BackstoryDef>
+
+	<AlienRace.BackstoryDef>
+		<defName>RH_TET_Skaven_MoulderGuard</defName>
+		<title>moulder guard</title>
+		<titleShort>guard</titleShort>
+		<baseDescription>[PAWN_nameDef] guards the master moulders' laboratories, and often finds [PAWN_objective]self fighting off whatever monstrous creature created there that has gotten loose.</baseDescription>
+		<bodyTypeMale>Male</bodyTypeMale>
+		<bodyTypeFemale>Male</bodyTypeFemale>
+		<slot>Adulthood</slot>
+		<skillGains>
+		  <li>
+			<defName>Shooting</defName>
+			<amount>2</amount>
+		  </li>
+		  <li>
+			<defName>Melee</defName>
+			<amount>2</amount>
+		  </li>
+		  <li>
+			<defName>Animals</defName>
+			<amount>2</amount>
+		  </li>
+		</skillGains>
+		<spawnCategories>
+		  <li>RH_TET_SkavenMoulder</li>
+		  <li>RH_TET_SkavenMoulderPack</li>
+		</spawnCategories>
+		<requiredWorkTags>
+		  <li>Violent</li>
+		</requiredWorkTags>
+		<workDisables>
+		  <li>Artistic</li>
+		</workDisables>
+	</AlienRace.BackstoryDef>
+
+  <AlienRace.BackstoryDef>
+    <defName>RH_TET_Skaven_MoulderAssistant</defName>
+    <title>moulder assistant</title>
+    <titleShort>assistant</titleShort>
+    <baseDescription>[PAWN_nameDef] helps out the Master Moulders in their well guarded laboratories. Though [PAWN_possessive] masters guard their research, [PAWN_pronoun] has managed to steal what knowledge [PAWN_pronoun] can. Often spending [PAWN_possessive] short spare time reverse engineering tools, and experimenting on [PAWN_possessive] own.</baseDescription>
+    <bodyTypeMale>Male</bodyTypeMale>
+    <bodyTypeFemale>Male</bodyTypeFemale>
+    <slot>Adulthood</slot>
+    <skillGains>
+      <li>
+        <defName>Intellectual</defName>
+        <amount>2</amount>
+      </li>
+      <li>
+        <defName>Animals</defName>
+        <amount>1</amount>
+      </li>
+      <li>
+        <defName>Crafting</defName>
+        <amount>3</amount>
+      </li>
+      <li>
+        <defName>Medicine</defName>
+        <amount>3</amount>
+      </li>
+    </skillGains>
+    <spawnCategories>
+      <li>RH_TET_SkavenMoulder</li>
+      <li>RH_TET_SkavenMoulderPack</li>
+    </spawnCategories>
+    <requiredWorkTags>
+      <li>Violent</li>
+    </requiredWorkTags>
+  </AlienRace.BackstoryDef>
+
+
+  <!--===================== childhood =====================-->
+
+  <AlienRace.BackstoryDef>
+    <defName>RH_TET_Skaven_MoulderChildAssistant</defName>
+    <title>young assistant</title>
+    <titleShort>assistant</titleShort>
+    <baseDescription>[PAWN_nameDef] was taken when young to act as an assistant to one of the Master Moulders. [PAWN_pronoun] mostly ran errands, and wrestled with experiments to keep them under control. Still [PAWN_pronoun] managed to learn one or two things from handling [PAWN_possessive] masters tools.</baseDescription>
+    <bodyTypeMale>Male</bodyTypeMale>
+    <bodyTypeFemale>Male</bodyTypeFemale>
+    <slot>Childhood</slot>
+    <skillGains>
+      <li>
+        <defName>Crafting</defName>
+        <amount>2</amount>
+      </li>
+      <li>
+        <defName>Animals</defName>
+        <amount>1</amount>
+      </li>
+      <li>
+        <defName>Medicine</defName>
+        <amount>2</amount>
+      </li>
+    </skillGains>
+    <requiredWorkTags>
+      <li>Social</li>
+      <li>Violent</li>
+    </requiredWorkTags>
+    <spawnCategories>
+      <li>RH_TET_SkavenMoulder</li>
+      <li>RH_TET_SkavenMoulderPack</li>
+    </spawnCategories>
+  </AlienRace.BackstoryDef>
+
+  <AlienRace.BackstoryDef>
+	<defName>RH_TET_Skaven_MoulderSlaveBorn</defName>
+	<title>lowborn</title>
+	<titleShort>lowborn</titleShort>
+	<baseDescription>[PAWN_nameDef] was born in the pits with the majority of the rats, where one must fend for themself, and obey the whims of the clan leaders. [PAWN_pronoun] managed to survive in clan Moulders hold. Living on scraps and managing to avoid some of the moulders experiments.</baseDescription>
+	<bodyTypeMale>Male</bodyTypeMale>
+	<bodyTypeFemale>Male</bodyTypeFemale>
+	<slot>Childhood</slot>
+    <skillGains>
+      <li>
+        <defName>Animals</defName>
+        <amount>2</amount>
+      </li>
+      <li>
+        <defName>Social</defName>
+        <amount>-2</amount>
+      </li>
+    </skillGains>
+    <requiredWorkTags>
+      <li>Violent</li>
+    </requiredWorkTags>
+	<spawnCategories>
+      <li>RH_TET_SkavenMoulder</li>
+      <li>RH_TET_SkavenMoulderPack</li>
+	</spawnCategories>
+    <workDisables>
+      <li>Artistic</li>
+    </workDisables>
+  </AlienRace.BackstoryDef>
+
+  <AlienRace.BackstoryDef>
+    <defName>RH_TET_Skaven_MoulderClanBorn</defName>
+    <title>clan born</title>
+    <titleShort>clan</titleShort>
+    <baseDescription>[PAWN_nameDef] was clan born, living under Clan Moulder. [PAWN_pronoun] was tossed out to handle the monstrous creations with the rest of the pack. Learning how to wrangle wolf rats, and rat ogres.</baseDescription>
+    <bodyTypeMale>Male</bodyTypeMale>
+    <bodyTypeFemale>Male</bodyTypeFemale>
+    <slot>Childhood</slot>
+    <skillGains>
+      <li>
+        <defName>Melee</defName>
+        <amount>1</amount>
+      </li>
+      <li>
+        <defName>Animals</defName>
+        <amount>2</amount>
+      </li>
+    </skillGains>
+    <requiredWorkTags>
+      <li>Violent</li>
+      <li>Intellectual</li>
+    </requiredWorkTags>
+    <spawnCategories>
+      <li>RH_TET_SkavenMoulder</li>
+      <li>RH_TET_SkavenMoulderPack</li>
+    </spawnCategories>
+  </AlienRace.BackstoryDef>
+
+  <AlienRace.BackstoryDef>
+    <defName>RH_TET_Skaven_MoulderPromising</defName>
+    <title>promising</title>
+    <titleShort>promising</titleShort>
+    <baseDescription>[PAWN_nameDef] was clan born, but [PAWN_pronoun] showed promise from young age. [PAWN_pronoun] handled the various beasts, studied them, and tinkered on [PAWN_possessive] own creations.</baseDescription>
+    <bodyTypeMale>Male</bodyTypeMale>
+    <bodyTypeFemale>Male</bodyTypeFemale>
+    <slot>Childhood</slot>
+    <skillGains>
+      <li>
+        <defName>Crafting</defName>
+        <amount>1</amount>
+      </li>
+      <li>
+        <defName>Animals</defName>
+        <amount>1</amount>
+      </li>
+      <li>
+        <defName>Intellectual</defName>
+        <amount>2</amount>
+      </li>
+    </skillGains>
+    <requiredWorkTags>
+      <li>Violent</li>
+      <li>Intellectual</li>
+    </requiredWorkTags>
+    <spawnCategories>
+      <li>RH_TET_SkavenMoulder</li>
+      <li>RH_TET_SkavenMoulderPack</li>
+    </spawnCategories>
+  </AlienRace.BackstoryDef>
+
+</Defs>

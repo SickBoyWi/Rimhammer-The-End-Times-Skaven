@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Defs>
+
+  <ThingDef ParentName="BaseGunWithQuality">
+    <defName>RH_TET_Skaven_Gun_CracklingDoom</defName>
+    <label>scroll of Crackling Doom</label>
+    <description>A potent scroll that channels the Lore Of Warp magic used by the Grey Seers to cast arcs of green energy.</description>
+    <graphicData>
+      <texPath>Things/Item/Weapon/SkavenScroll/CracklingDoom</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+	  <drawSize>(.7,.7)</drawSize>
+    </graphicData>
+    <thingCategories Inherit="False">
+      <li>RH_TET_Skaven_WeaponsRanged</li>
+    </thingCategories>
+    <soundInteract>Interact_ChargeLance</soundInteract>
+    <!--<menuHidden>true</menuHidden>-->
+    <destroyOnDrop>true</destroyOnDrop>
+    <tradeability>None</tradeability>
+    <statBases>
+      <MarketValue>500</MarketValue>
+      <AccuracyTouch>0.25</AccuracyTouch>
+      <AccuracyShort>0.6</AccuracyShort>
+      <AccuracyMedium>0.70</AccuracyMedium>
+      <AccuracyLong>0.75</AccuracyLong>
+      <RangedWeapon_Cooldown>7</RangedWeapon_Cooldown>
+      <Mass>1</Mass>
+    </statBases>
+    <weaponTags>
+      <li>RH_TET_SkavenScroll</li>
+    </weaponTags>
+    <verbs>
+      <li>
+        <verbClass>Verb_Shoot</verbClass>
+        <hasStandardCommand>true</hasStandardCommand>
+        <defaultProjectile>RH_TET_Skaven_Bullet_Crackling</defaultProjectile>
+        <warmupTime>3</warmupTime>
+        <minRange>3</minRange>
+        <range>42</range>
+        <burstShotCount>1</burstShotCount>
+        <muzzleFlashScale>1</muzzleFlashScale>
+        <forcedMissRadius>0.5</forcedMissRadius>
+      </li>
+    </verbs>
+  </ThingDef>
+
+  <ThingDef ParentName="BaseBullet">
+    <defName>RH_TET_Skaven_Bullet_Crackling</defName>
+    <label>crackling doom</label>
+    <graphicData>
+      <texPath>Things/Projectile/WarpCannonBullet</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <shaderType>TransparentPostLight</shaderType>
+      <drawSize>(1, 5)</drawSize>
+    </graphicData>
+    <thingClass>Projectile_Explosive</thingClass>
+    <projectile>
+      <damageDef>Flame</damageDef>
+      <explosionRadius>1</explosionRadius>
+      <damageAmountBase>25</damageAmountBase>
+      <speed>200</speed>
+    </projectile>
+  </ThingDef>
+  
+</Defs>

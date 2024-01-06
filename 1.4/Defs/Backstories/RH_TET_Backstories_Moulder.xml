@@ -1,0 +1,282 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+	<AlienRace.AlienBackstoryDef>
+		<defName>RH_TET_Skaven_MasterMoulder</defName>
+		<title>master moulder</title>
+		<titleShort>master moulder</titleShort>
+		<baseDesc>[PAWN_nameDef] is among the most skilled among those in Clan Moulder. [PAWN_pronoun] is a true master at [PAWN_possessive] vile and gruesome work.</baseDesc>
+		<bodyTypeMale>Male</bodyTypeMale>
+		<bodyTypeFemale>Male</bodyTypeFemale>
+		<slot>Adulthood</slot>
+		<skillGains>
+			<li>
+				<key>Intellectual</key>
+				<value>4</value>
+			</li>
+			<li>
+				<key>Crafting</key>
+				<value>3</value>
+			</li>
+			<li>
+				<key>Animals</key>
+				<value>1</value>
+			</li>
+			<li>
+				<key>Medicine</key>
+				<value>6</value>
+			</li>
+		</skillGains>
+		<forcedTraitsChance>
+			<li>
+				<defName>Psychopath</defName>
+				<chance>90</chance>
+			</li>
+			<li>
+				<defName>Industriousness</defName>
+				<degree>2</degree>
+				<chance>50</chance>
+			</li>
+		</forcedTraitsChance>
+		<forcedHediffs>
+			<li>RH_TET_SkavenMoulderWarpSpine</li>
+		</forcedHediffs>
+		<spawnCategories>
+			<li>RH_TET_SkavenMoulder</li>
+		</spawnCategories>
+		<requiredWorkTags>
+			<li>Intellectual</li>
+			<li>Violent</li>
+		</requiredWorkTags>
+	</AlienRace.AlienBackstoryDef>
+
+	<AlienRace.AlienBackstoryDef>
+		<defName>RH_TET_Skaven_Moulder</defName>
+		<title>moulder</title>
+		<titleShort>moulder</titleShort>
+		<baseDesc>[PAWN_nameDef] is a Clan Moulder bio-engineer. Successfully earning [PAWN_possessive] place in the clan, moulding vile creations deep under the surface.</baseDesc>
+		<bodyTypeMale>Male</bodyTypeMale>
+		<bodyTypeFemale>Male</bodyTypeFemale>
+		<slot>Adulthood</slot>
+		<skillGains>
+			<li>
+				<key>Intellectual</key>
+				<value>3</value>
+			</li>
+			<li>
+				<key>Crafting</key>
+				<value>3</value>
+			</li>
+			<li>
+				<key>Animals</key>
+				<value>1</value>
+			</li>
+			<li>
+				<key>Medicine</key>
+				<value>5</value>
+			</li>
+		</skillGains>
+		<spawnCategories>
+			<li>RH_TET_SkavenMoulder</li>
+		</spawnCategories>
+		<requiredWorkTags>
+			<li>Intellectual</li>
+			<li>Violent</li>
+		</requiredWorkTags>
+	</AlienRace.AlienBackstoryDef>
+
+	<AlienRace.AlienBackstoryDef>
+		<defName>RH_TET_Skaven_MoulderGuard</defName>
+		<title>moulder guard</title>
+		<titleShort>guard</titleShort>
+		<baseDesc>[PAWN_nameDef] guards the master moulders' laboratories, and often finds [PAWN_objective]self fighting off whatever monstrous creature created there that has gotten loose.</baseDesc>
+		<bodyTypeMale>Male</bodyTypeMale>
+		<bodyTypeFemale>Male</bodyTypeFemale>
+		<slot>Adulthood</slot>
+		<skillGains>
+			<li>
+				<key>Shooting</key>
+				<value>2</value>
+			</li>
+			<li>
+				<key>Melee</key>
+				<value>2</value>
+			</li>
+			<li>
+				<key>Animals</key>
+				<value>2</value>
+			</li>
+		</skillGains>
+		<spawnCategories>
+			<li>RH_TET_SkavenMoulder</li>
+			<li>RH_TET_SkavenMoulderPack</li>
+		</spawnCategories>
+		<requiredWorkTags>
+			<li>Violent</li>
+		</requiredWorkTags>
+		<workDisables>
+			<li>Artistic</li>
+		</workDisables>
+	</AlienRace.AlienBackstoryDef>
+
+	<AlienRace.AlienBackstoryDef>
+		<defName>RH_TET_Skaven_MoulderAssistant</defName>
+		<title>moulder assistant</title>
+		<titleShort>assistant</titleShort>
+		<baseDesc>[PAWN_nameDef] helps out the Master Moulders in their well guarded laboratories. Though [PAWN_possessive] masters guard their research, [PAWN_pronoun] has managed to steal what knowledge [PAWN_pronoun] can. Often spending [PAWN_possessive] short spare time reverse engineering tools, and experimenting on [PAWN_possessive] own.</baseDesc>
+		<bodyTypeMale>Male</bodyTypeMale>
+		<bodyTypeFemale>Male</bodyTypeFemale>
+		<slot>Adulthood</slot>
+		<skillGains>
+			<li>
+				<key>Intellectual</key>
+				<value>2</value>
+			</li>
+			<li>
+				<key>Animals</key>
+				<value>1</value>
+			</li>
+			<li>
+				<key>Crafting</key>
+				<value>3</value>
+			</li>
+			<li>
+				<key>Medicine</key>
+				<value>3</value>
+			</li>
+		</skillGains>
+		<spawnCategories>
+			<li>RH_TET_SkavenMoulder</li>
+			<li>RH_TET_SkavenMoulderPack</li>
+		</spawnCategories>
+		<requiredWorkTags>
+			<li>Violent</li>
+		</requiredWorkTags>
+	</AlienRace.AlienBackstoryDef>
+
+
+	<!--===================== childhood =====================-->
+
+	<AlienRace.AlienBackstoryDef>
+		<defName>RH_TET_Skaven_MoulderChildAssistant</defName>
+		<title>young assistant</title>
+		<titleShort>assistant</titleShort>
+		<baseDesc>[PAWN_nameDef] was taken when young to act as an assistant to one of the Master Moulders. [PAWN_pronoun] mostly ran errands, and wrestled with experiments to keep them under control. Still [PAWN_pronoun] managed to learn one or two things from handling [PAWN_possessive] masters tools.</baseDesc>
+		<bodyTypeMale>Male</bodyTypeMale>
+		<bodyTypeFemale>Male</bodyTypeFemale>
+		<slot>Childhood</slot>
+		<skillGains>
+			<li>
+				<key>Crafting</key>
+				<value>2</value>
+			</li>
+			<li>
+				<key>Animals</key>
+				<value>1</value>
+			</li>
+			<li>
+				<key>Medicine</key>
+				<value>2</value>
+			</li>
+		</skillGains>
+		<requiredWorkTags>
+			<li>Social</li>
+			<li>Violent</li>
+		</requiredWorkTags>
+		<spawnCategories>
+			<li>RH_TET_SkavenMoulder</li>
+			<li>RH_TET_SkavenMoulderPack</li>
+		</spawnCategories>
+	</AlienRace.AlienBackstoryDef>
+
+	<AlienRace.AlienBackstoryDef>
+		<defName>RH_TET_Skaven_MoulderSlaveBorn</defName>
+		<title>lowborn</title>
+		<titleShort>lowborn</titleShort>
+		<baseDesc>[PAWN_nameDef] was born in the pits with the majority of the rats, where one must fend for themself, and obey the whims of the clan leaders. [PAWN_pronoun] managed to survive in clan Moulders hold. Living on scraps and managing to avoid some of the moulders experiments.</baseDesc>
+		<bodyTypeMale>Male</bodyTypeMale>
+		<bodyTypeFemale>Male</bodyTypeFemale>
+		<slot>Childhood</slot>
+		<skillGains>
+			<li>
+				<key>Animals</key>
+				<value>2</value>
+			</li>
+			<li>
+				<key>Social</key>
+				<value>-2</value>
+			</li>
+		</skillGains>
+		<requiredWorkTags>
+			<li>Violent</li>
+		</requiredWorkTags>
+		<spawnCategories>
+			<li>RH_TET_SkavenMoulder</li>
+			<li>RH_TET_SkavenMoulderPack</li>
+		</spawnCategories>
+		<workDisables>
+			<li>Artistic</li>
+		</workDisables>
+	</AlienRace.AlienBackstoryDef>
+
+	<AlienRace.AlienBackstoryDef>
+		<defName>RH_TET_Skaven_MoulderClanBorn</defName>
+		<title>clan born</title>
+		<titleShort>clan</titleShort>
+		<baseDesc>[PAWN_nameDef] was clan born, living under Clan Moulder. [PAWN_pronoun] was tossed out to handle the monstrous creations with the rest of the pack. Learning how to wrangle wolf rats, and rat ogres.</baseDesc>
+		<bodyTypeMale>Male</bodyTypeMale>
+		<bodyTypeFemale>Male</bodyTypeFemale>
+		<slot>Childhood</slot>
+		<skillGains>
+			<li>
+				<key>Melee</key>
+				<value>1</value>
+			</li>
+			<li>
+				<key>Animals</key>
+				<value>2</value>
+			</li>
+		</skillGains>
+		<requiredWorkTags>
+			<li>Violent</li>
+			<li>Intellectual</li>
+		</requiredWorkTags>
+		<spawnCategories>
+			<li>RH_TET_SkavenMoulder</li>
+			<li>RH_TET_SkavenMoulderPack</li>
+		</spawnCategories>
+	</AlienRace.AlienBackstoryDef>
+
+	<AlienRace.AlienBackstoryDef>
+		<defName>RH_TET_Skaven_MoulderPromising</defName>
+		<title>promising</title>
+		<titleShort>promising</titleShort>
+		<baseDesc>[PAWN_nameDef] was clan born, but [PAWN_pronoun] showed promise from young age. [PAWN_pronoun] handled the various beasts, studied them, and tinkered on [PAWN_possessive] own creations.</baseDesc>
+		<bodyTypeMale>Male</bodyTypeMale>
+		<bodyTypeFemale>Male</bodyTypeFemale>
+		<slot>Childhood</slot>
+		<skillGains>
+			<li>
+				<key>Crafting</key>
+				<value>1</value>
+			</li>
+			<li>
+				<key>Animals</key>
+				<value>1</value>
+			</li>
+			<li>
+				<key>Intellectual</key>
+				<value>2</value>
+			</li>
+		</skillGains>
+		<requiredWorkTags>
+			<li>Violent</li>
+			<li>Intellectual</li>
+		</requiredWorkTags>
+		<spawnCategories>
+			<li>RH_TET_SkavenMoulder</li>
+			<li>RH_TET_SkavenMoulderPack</li>
+		</spawnCategories>
+	</AlienRace.AlienBackstoryDef>
+
+</Defs>

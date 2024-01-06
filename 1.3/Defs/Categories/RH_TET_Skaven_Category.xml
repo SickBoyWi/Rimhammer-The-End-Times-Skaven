@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+    <ThingCategoryDef>
+      <defName>RH_TET_Skaven_BuildingsArt</defName>
+      <label>Skaven</label>
+      <parent>BuildingsArt</parent>
+    </ThingCategoryDef>
+	
+    <ThingCategoryDef>
+      <defName>RH_TET_Skaven_BuildingsJoy</defName>
+      <label>skaven</label>
+      <parent>BuildingsJoy</parent>
+    </ThingCategoryDef>
+	
+    <ThingCategoryDef>
+      <defName>RH_TET_Skaven_BuildingsFurniture</defName>
+      <label>skaven</label>
+      <parent>BuildingsFurniture</parent>
+    </ThingCategoryDef>
+
+    <ThingCategoryDef>
+      <defName>RH_TET_Skaven_BuildingsPower</defName>
+      <label>skaven</label>
+      <parent>BuildingsPower</parent>
+    </ThingCategoryDef>
+
+    <ThingCategoryDef>
+      <defName>RH_TET_Skaven_BuildingsProduction</defName>
+      <label>skaven</label>
+      <parent>BuildingsProduction</parent>
+    </ThingCategoryDef>
+
+    <ThingCategoryDef>
+      <defName>RH_TET_Skaven_BuildingsSecurity</defName>
+      <label>skaven</label>
+      <parent>BuildingsSecurity</parent>
+    </ThingCategoryDef>
+
+    <ThingCategoryDef>
+      <defName>RH_TET_Skaven_Apparel</defName>
+      <label>skaven</label>
+      <parent>Apparel</parent>
+    </ThingCategoryDef>
+
+    <ThingCategoryDef>
+      <defName>RH_TET_Skaven_Headgear</defName>
+      <label>skaven</label>
+      <parent>Headgear</parent>
+    </ThingCategoryDef>
+
+    <ThingCategoryDef>
+      <defName>RH_TET_Skaven_ArmorHeadgear</defName>
+      <label>skaven</label>
+      <parent>ArmorHeadgear</parent>
+    </ThingCategoryDef>
+
+    <ThingCategoryDef>
+      <defName>RH_TET_Skaven_BodyPartsNatural</defName>
+      <label>skaven</label>
+      <parent>BodyPartsNatural</parent>
+    </ThingCategoryDef>
+
+    <ThingCategoryDef>
+      <defName>RH_TET_Skaven_BodyPartsProsthetic</defName>
+      <label>skaven</label>
+      <parent>BodyPartsProsthetic</parent>
+    </ThingCategoryDef>
+
+    <ThingCategoryDef>
+      <defName>RH_TET_Skaven_WeaponsRanged</defName>
+      <label>skaven</label>
+      <parent>WeaponsRanged</parent>
+    </ThingCategoryDef>
+
+    <ThingCategoryDef>
+      <defName>RH_TET_Skaven_WeaponsMelee</defName>
+      <label>skaven</label>
+      <parent>WeaponsMelee</parent>
+    </ThingCategoryDef>
+
+    <ThingCategoryDef>
+      <defName>RH_TET_Skaven_Shields</defName>
+      <label>shields</label>
+      <parent>RH_TET_Skaven_WeaponsMelee</parent>
+    </ThingCategoryDef>
+
+    <ThingCategoryDef>
+      <defName>RH_TET_Skaven_ApparelArmor</defName>
+      <label>skaven</label>
+      <parent>ApparelArmor</parent>
+    </ThingCategoryDef>
+
+</Defs>

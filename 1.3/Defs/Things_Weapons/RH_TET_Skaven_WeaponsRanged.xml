@@ -1,0 +1,868 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Defs>
+
+  <ThingDef Name="RH_TET_Skaven_BaseRangedSkaven" Abstract="True" ParentName="BaseWeapon">
+    <techLevel>Neolithic</techLevel>
+    <weaponTags>
+      <li>RH_TET_Skaven</li>
+    </weaponTags>
+    <thingCategories>
+      <li>RH_TET_Skaven_WeaponsRanged</li>
+    </thingCategories>
+    <comps>
+      <li>
+        <compClass>CompQuality</compClass>
+      </li>
+    </comps>
+    <recipeMaker>
+      <workSpeedStat>GeneralLaborSpeed</workSpeedStat>
+      <workSkill>Crafting</workSkill>
+      <unfinishedThingDef>UnfinishedWeapon</unfinishedThingDef>
+    </recipeMaker>
+  </ThingDef>
+
+  <ThingDef ParentName="RH_TET_Skaven_BaseRangedSkaven">
+    <defName>RH_TET_Skaven_Slingshot</defName>
+    <label>skaven sling</label>
+    <description>A simple sling for launching stones. Typically carried by skavenslaves and members of Clan Eshin. Cheap to produce, plentiful ammunition, these may not seem particularly devastating compared any other ranged weapon...but when fielded in large numbers, they can create a devastating 'hailstorm'.</description>
+    <graphicData>
+      <texPath>Things/Item/Weapon/SkavenSlingshot/Slingshot</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+ 	  <shaderType>CutoutComplex</shaderType>
+    </graphicData>
+    <soundInteract>Interact_BeatFire</soundInteract>
+    <costStuffCount>25</costStuffCount>
+    <stuffCategories>
+      <li>Leathery</li>
+    </stuffCategories>
+    <equippedAngleOffset>-20</equippedAngleOffset>
+    <statBases>
+      <WorkToMake>1000</WorkToMake>
+      <Mass>0.4</Mass>
+      <AccuracyTouch>0.80</AccuracyTouch>
+      <AccuracyShort>0.75</AccuracyShort>
+      <AccuracyMedium>0.50</AccuracyMedium>
+      <AccuracyLong>0.32</AccuracyLong>
+      <RangedWeapon_Cooldown>1.0</RangedWeapon_Cooldown>
+    </statBases>
+    <weaponTags>
+      <li>RH_TET_SkavenSlaveRanged</li>
+    </weaponTags>
+    <recipeMaker>
+      <recipeUsers>
+        <li>CraftingSpot</li>
+        <li>RH_TET_Skaven_HandTailoringBench</li>
+      </recipeUsers>
+      <researchPrerequisite>RH_TET_SkavenWeaponryRanged_Basic</researchPrerequisite>
+    </recipeMaker>
+    <verbs>
+      <li>
+        <verbClass>Verb_Shoot</verbClass>
+        <hasStandardCommand>true</hasStandardCommand>
+        <defaultProjectile>RH_TET_Skaven_Slingshot_Bullet</defaultProjectile>
+        <warmupTime>1.2</warmupTime>
+        <range>20</range>
+        <soundCast>Interact_BeatFire</soundCast>
+        <rangedFireRulepack>Combat_RangedFire_Thrown</rangedFireRulepack>
+      </li>
+    </verbs>
+    <tools>
+      <li>
+        <label>strap</label>
+        <capacities>
+          <li>Blunt</li>
+        </capacities>
+        <power>5</power>
+        <cooldownTime>2</cooldownTime>
+      </li>
+    </tools>
+  </ThingDef>
+  
+  <ThingDef ParentName="BaseProjectileNeolithic">
+    <defName>RH_TET_Skaven_Slingshot_Bullet</defName>
+    <label>rock</label>
+    <graphicData>
+      <texPath>Things/Projectile/SlingshotBullet</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <projectile>
+      <flyOverhead>false</flyOverhead>
+      <damageDef>RH_TET_SkavenBlunt</damageDef>
+      <damageAmountBase>8</damageAmountBase>
+      <stoppingPower>1.2</stoppingPower>
+      <armorPenetrationBase>0.1</armorPenetrationBase>
+      <speed>40</speed>
+    </projectile>
+  </ThingDef>
+
+  <ThingDef ParentName="RH_TET_Skaven_BaseRangedSkaven">
+    <defName>RH_TET_Skaven_Crossbow</defName>
+    <label>skaven crossbow</label>
+    <description>A simple crossbow. It's capable of delivering deadly shots, but is slower on the reload time than a normal bow, and lacks a bit in the range department.</description>
+    <graphicData>
+      <texPath>Things/Item/Weapon/SkavenCrossbow/Crossbow</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+	  <drawSize>(.6)</drawSize>
+    </graphicData>
+    <soundInteract>Bow_Recurve</soundInteract>
+    <costList>
+      <WoodLog>40</WoodLog>
+      <Steel>10</Steel>
+    </costList>
+    <statBases>
+      <WorkToMake>14000</WorkToMake>
+      <Mass>2.5</Mass>
+      <AccuracyTouch>0.65</AccuracyTouch>
+      <AccuracyShort>0.80</AccuracyShort>
+      <AccuracyMedium>0.70</AccuracyMedium>
+      <AccuracyLong>0.5</AccuracyLong>
+      <RangedWeapon_Cooldown>2.0</RangedWeapon_Cooldown>
+    </statBases>
+    <weaponTags>
+      <li>RH_TET_SkavenRanged</li>
+    </weaponTags>
+    <!--<equippedAngleOffset>60</equippedAngleOffset>-->
+    <recipeMaker>
+      <recipeUsers>
+        <li>ElectricSmithy</li>
+        <li>FueledSmithy</li>
+        <li>RH_TET_TableSmithy</li>
+        <li>RH_TET_Skaven_TableSmithy</li>
+      </recipeUsers>
+      <skillRequirements>
+        <Crafting>3</Crafting>
+      </skillRequirements>
+      <researchPrerequisite>RH_TET_SkavenWeaponryRanged_Improved</researchPrerequisite>
+      <effectWorking>Smelt</effectWorking>
+      <unfinishedThingDef>UnfinishedWeapon</unfinishedThingDef>
+    </recipeMaker>
+    <verbs>
+      <li>
+        <verbClass>Verb_Shoot</verbClass>
+        <hasStandardCommand>true</hasStandardCommand>
+        <defaultProjectile>Arrow_Recurve</defaultProjectile>
+        <warmupTime>2</warmupTime>
+        <range>31</range>
+        <soundCast>Bow_Recurve</soundCast>
+      </li>
+    </verbs>
+    <tools>
+      <li>
+        <label>handle</label>
+        <capacities>
+          <li>Blunt</li>
+          <li>Poke</li>
+        </capacities>
+        <power>9</power>
+        <cooldownTime>1.6</cooldownTime>
+      </li>
+    </tools>
+  </ThingDef>
+  
+  <!-- TODO This seems to be unused 
+  <ThingDef ParentName="BaseProjectileNeolithic">
+    <defName>RH_TET_Skaven_Arrow_SkavenCrossbow</defName>
+    <label>crossbow arrow</label>
+    <graphicData>
+      <texPath>Things/Projectile/Arrow_Small</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <projectile>
+      <flyOverhead>false</flyOverhead>
+      <damageDef>ArrowHighVelocity</damageDef>
+      <damageAmountBase>22</damageAmountBase>
+      <speed>60</speed>
+      <stoppingPower>1.25</stoppingPower>
+      <armorPenetrationBase>0.13</armorPenetrationBase>
+    </projectile>
+  </ThingDef>-->
+
+  <ThingDef Name="RH_TET_SkavenBaseGun" Abstract="True" ParentName="BaseWeapon">
+    <techLevel>Medieval</techLevel>
+    <smeltable>true</smeltable>
+    <thingCategories>
+      <li>RH_TET_Skaven_WeaponsRanged</li>
+    </thingCategories>
+    <inspectorTabs>
+      <li>ITab_Art</li>
+    </inspectorTabs>
+    <statBases>
+      <Flammability>0.5</Flammability>
+    </statBases>
+    <comps>
+      <li Class="CompProperties_Art">
+        <nameMaker>NamerArtWeaponGun</nameMaker>
+        <descriptionMaker>ArtDescription_WeaponGun</descriptionMaker>
+        <minQualityForArtistic>Excellent</minQualityForArtistic>
+      </li>
+    </comps>
+  </ThingDef>
+
+  <ThingDef Name="RH_TET_BaseSkavenGunWithQuality" Abstract="True" ParentName="RH_TET_SkavenBaseGun"> 
+    <comps>
+      <li>
+        <compClass>CompQuality</compClass>
+      </li>
+    </comps>
+  </ThingDef>
+
+  <ThingDef Name="RH_TET_BaseMakeableSkavenGun" ParentName="RH_TET_BaseSkavenGunWithQuality" Abstract="True">
+    <recipeMaker>
+      <workSpeedStat>GeneralLaborSpeed</workSpeedStat>
+      <workSkill>Crafting</workSkill>
+      <effectWorking>Smith</effectWorking>
+      <soundWorking>Recipe_Smith</soundWorking>
+      <recipeUsers>
+        <li>ElectricSmithy</li>
+        <li>FueledSmithy</li>
+        <li>RH_TET_TableSmithy</li>
+        <li>RH_TET_Skaven_TableSmithy</li>
+      </recipeUsers>
+      <unfinishedThingDef>RH_TET_Skaven_UnfinishedSkavenGun</unfinishedThingDef>
+    </recipeMaker>
+  </ThingDef>
+
+  <ThingDef Name="RH_TET_BaseSkavenMakeableGun" ParentName="RH_TET_BaseMakeableSkavenGun" Abstract="True">
+    <weaponTags>
+      <li>SkavenGun</li>
+    </weaponTags>
+  </ThingDef>
+
+  <ThingDef ParentName="UnfinishedBase">
+    <defName>RH_TET_Skaven_UnfinishedSkavenGun</defName>
+    <label>unfinished weapon</label>
+    <graphicData>
+      <texPath>Things/Item/Unfinished/UnfinishedWeapon</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <stuffCategories Inherit="false" />
+  </ThingDef>
+  
+  <ThingDef ParentName="RH_TET_BaseSkavenMakeableGun">
+    <defName>RH_TET_Skaven_Gun_SkavenSprayer</defName>
+    <label>skaven warpfire thrower</label>
+    <description>A wide-barreled hose connected to a tank of volatile chemicals. With a flick of a switch, this weapon unleashes a torrent of fuel that ignites into a greenish flame. The warpfire sticks to any surface, and can't be put out by any mundane means, and even twists and mutates the flesh of whatever it burns at a rapid rate, ensuring that any who survive the fires will certainly wish they hadn't. This particular variant is akin to those used by the Fire Rats, burdening a single skaven with both the weapon and the fuel tank needed to operate it.</description>
+    <graphicData>
+      <texPath>Things/Item/Weapon/SkavenFlamer/Flamer</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+	  <drawSize>(1.2)</drawSize>
+    </graphicData>
+    <soundInteract>Interact_Rifle</soundInteract>
+    <!--<equippedAngleOffset>45</equippedAngleOffset>-->
+    <statBases>
+      <WorkToMake>11000</WorkToMake>
+      <Mass>10</Mass>
+      <RangedWeapon_Cooldown>6</RangedWeapon_Cooldown>
+    </statBases>
+    <costList>
+      <Steel>60</Steel>
+      <ComponentIndustrial>3</ComponentIndustrial>
+      <PsychoidLeaves>50</PsychoidLeaves>
+      <RH_TET_BlackPowder>100</RH_TET_BlackPowder>
+    </costList>
+    <equippedStatOffsets>
+      <MoveSpeed>-0.2</MoveSpeed>
+    </equippedStatOffsets>
+    <recipeMaker>
+      <skillRequirements>
+        <Crafting>6</Crafting>
+      </skillRequirements>
+      <researchPrerequisite>RH_TET_SkavenWeaponsRanged_SkryreAdvanced</researchPrerequisite>
+      <recipeUsers>
+        <li>RH_TET_Skaven_BlastingBench</li>
+      </recipeUsers>
+    </recipeMaker>
+    <tickerType>Normal</tickerType>
+    <comps>
+      <li Class="CompProperties_Explosive">
+        <explosiveRadius>2.9</explosiveRadius>
+        <explosiveDamageType>RH_TET_SkavenPoison</explosiveDamageType>
+        <requiredDamageTypeToExplode>Flame</requiredDamageTypeToExplode>
+      </li>
+	  <li Class="CompOversizedWeapon.CompProperties_OversizedWeapon">
+		  <verticalFlipNorth>true</verticalFlipNorth>
+		  <!--
+		  <angleAdjustmentWest>-45</angleAdjustmentWest>
+		  <angleAdjustmentEast>40</angleAdjustmentEast>
+		  <northOffset>(0.1,0,0.7)</northOffset>
+		  <eastOffset>(0,0,0.2)</eastOffset>
+		  <westOffset>(0,0,0.2)</westOffset>
+		  <southOffset>(0.25,0,0.7)</southOffset>
+		  -->
+	  </li>
+    </comps>
+    <verbs>
+      <li>
+        <verbClass>Verb_Shoot</verbClass>
+        <hasStandardCommand>true</hasStandardCommand>
+        <defaultProjectile>RH_TET_Skaven_Bullet_SkavenSprayer</defaultProjectile>
+        <warmupTime>3</warmupTime>
+        <range>16</range>
+        <forcedMissRadius>2.5</forcedMissRadius>
+        <burstShotCount>4</burstShotCount>
+        <soundCast>Shot_IncendiaryLauncher</soundCast>
+        <soundCastTail>GunTail_Medium</soundCastTail>
+        <muzzleFlashScale>40</muzzleFlashScale>
+        <targetParams>
+          <canTargetLocations>true</canTargetLocations>
+        </targetParams>
+      </li>
+    </verbs>
+    <tools>
+      <li>
+        <label>stock</label>
+        <capacities>
+          <li>Blunt</li>
+        </capacities>
+        <power>9</power>
+        <cooldownTime>2</cooldownTime>
+      </li>
+      <li>
+        <label>barrel</label>
+        <capacities>
+          <li>Blunt</li>
+          <li>Poke</li>
+        </capacities>
+        <power>9</power>
+        <cooldownTime>2</cooldownTime>
+      </li>
+    </tools>
+  </ThingDef>
+  
+  <ThingDef ParentName="BaseBullet">
+    <defName>RH_TET_Skaven_Bullet_SkavenSprayer</defName>
+    <label>chemical spray</label>
+    <graphicData>
+      <texPath>Things/Projectile/HoseProjectile</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <shaderType>TransparentPostLight</shaderType>
+    </graphicData>
+    <thingClass>Projectile_Explosive</thingClass>
+    <projectile>
+      <speed>30</speed>
+      <damageDef>RH_TET_SkavenPoison</damageDef>
+      <explosionRadius>1.5</explosionRadius>
+      <preExplosionSpawnThingDef>Filth_Fuel</preExplosionSpawnThingDef>
+      <preExplosionSpawnChance>0.6</preExplosionSpawnChance>
+      <ai_IsIncendiary>false</ai_IsIncendiary>
+    </projectile>
+  </ThingDef>
+  
+<!-- TODO RENAME THE WEAPON DEFS IN THIS FILE -->
+  <ThingDef ParentName="RH_TET_BaseSkavenMakeableGun">
+    <defName>RH_TET_Skaven_Gun_MinigunSkaven</defName>
+    <label>skaven ratling gun</label>
+    <description>A multi-barrel machine gun, inspired largely by the Repeating Rifle used by the human engineers of Nuln. Powered by warp-steam and a handcrank, this weapon's six barrels begin to spin before unleashing a devastating payload of warpstone bullets. Inaccurate, unwieldy, and in desperate need of a stationary firing platform, this weapon isn't without it's downsides. Still, when a single ratling gunner can scythe down a mob of Orc Boar Boyz in the middle of their charge, it's hard for this weapon's users to not feel a euphoric rush of power.</description>
+    <graphicData>
+      <texPath>Things/Item/Weapon/SkavenMinigun/Ratling</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+	  <drawSize>(1.2)</drawSize>
+    </graphicData>
+    <soundInteract>Interact_Rifle</soundInteract>
+    <equippedAngleOffset>-10</equippedAngleOffset>
+    <statBases>
+      <WorkToMake>45000</WorkToMake>
+      <Mass>10</Mass>
+      <AccuracyTouch>0.50</AccuracyTouch>
+      <AccuracyShort>0.50</AccuracyShort>
+      <AccuracyMedium>0.35</AccuracyMedium>
+      <AccuracyLong>0.26</AccuracyLong>
+      <RangedWeapon_Cooldown>3</RangedWeapon_Cooldown>
+    </statBases>
+    <costList>
+      <Steel>150</Steel>
+      <ComponentIndustrial>4</ComponentIndustrial>
+    </costList>
+	<comps>
+	  <li Class="CompOversizedWeapon.CompProperties_OversizedWeapon">
+		  <verticalFlipNorth>true</verticalFlipNorth>
+		  <!--
+		  <angleAdjustmentWest>-45</angleAdjustmentWest>
+		  <angleAdjustmentEast>40</angleAdjustmentEast>
+		  <northOffset>(0.1,0,0.7)</northOffset>
+		  <eastOffset>(0,0,0.2)</eastOffset>
+		  <westOffset>(0,0,0.2)</westOffset>
+		  <southOffset>(0.25,0,0.7)</southOffset>
+		  -->
+	  </li>
+	</comps>
+    <recipeMaker>
+      <skillRequirements>
+        <Crafting>8</Crafting>
+      </skillRequirements>
+      <researchPrerequisite>RH_TET_SkavenWeaponsRanged_SkryreAdvanced</researchPrerequisite>
+      <recipeUsers>
+        <li>RH_TET_Skaven_BlastingBench</li>
+      </recipeUsers>
+    </recipeMaker>
+    <equippedStatOffsets>
+      <MoveSpeed>-0.3</MoveSpeed>
+    </equippedStatOffsets>
+    <verbs>
+      <li>
+        <verbClass>Verb_Shoot</verbClass>
+        <hasStandardCommand>true</hasStandardCommand>
+        <defaultProjectile>RH_TET_Skaven_Bullet_MinigunSkaven</defaultProjectile>
+        <warmupTime>2.5</warmupTime>
+        <range>24.9</range>
+        <burstShotCount>15</burstShotCount>
+        <ticksBetweenBurstShots>5</ticksBetweenBurstShots>
+        <soundCast>Shot_Minigun</soundCast>
+        <soundCastTail>GunTail_Heavy</soundCastTail>
+        <muzzleFlashScale>15</muzzleFlashScale>
+      </li>
+    </verbs>
+    <tools>
+      <li>
+        <label>barrels</label>
+        <capacities>
+          <li>Blunt</li>
+        </capacities>
+        <power>8</power>
+        <cooldownTime>2.6</cooldownTime>
+      </li>
+    </tools>
+  </ThingDef>
+  
+  <ThingDef ParentName="BaseBullet">
+    <defName>RH_TET_Skaven_Bullet_MinigunSkaven</defName>
+    <label>minigun bullet</label>
+    <graphicData>
+      <texPath>Things/Projectile/Bullet_Small</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <projectile>
+      <damageDef>Bullet</damageDef>
+      <damageAmountBase>8</damageAmountBase>
+      <stoppingPower>2</stoppingPower>
+      <armorPenetrationBase>0.3</armorPenetrationBase>
+      <speed>70</speed>
+    </projectile>
+  </ThingDef>
+
+  <ThingDef Name="RH_TET_BaseMakeableSkavenBomb" ParentName="BaseWeapon" Abstract="True">
+    <recipeMaker>
+      <workSpeedStat>GeneralLaborSpeed</workSpeedStat>
+      <workSkill>Crafting</workSkill>
+      <effectWorking>Smith</effectWorking>
+      <soundWorking>Recipe_Smith</soundWorking>
+      <recipeUsers>
+        <li>RH_TET_Skaven_BlastingBench</li>
+      </recipeUsers>
+      <unfinishedThingDef>UnfinishedGun</unfinishedThingDef>
+    </recipeMaker>
+    <thingCategories>
+      <li>Grenades</li>
+      <li>RH_TET_Skaven_WeaponsRanged</li>
+    </thingCategories>
+  </ThingDef>
+
+  <ThingDef ParentName="RH_TET_BaseMakeableSkavenBomb">
+    <defName>RH_TET_Skaven_Weapon_SkavenPoisonBottle</defName>
+    <label>skaven poisoned-wind globe</label>
+    <description>A glass bottle filled with poisoned-wind, a devastating warpstone-forged chemical weapon. The gas inside the bottle is so lethal that mere skin contact can cause severe pain, and breathing the substance can cause an imment and painful death by means of suffocation. The gas will rapidly build up toxins in the bodies of any who stand within the cloud of poisoned gas, encouraging the victims to either retreat from their entrenched position or perish.</description>
+    <tickerType>Normal</tickerType>
+    <techLevel>Medieval</techLevel>
+    <graphicData>
+      <texPath>Things/Item/Weapon/PlagueBottle/PlagueBottle</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <drawSize>(0.7)</drawSize>
+    </graphicData>
+    <soundInteract>Interact_MolotovCocktail</soundInteract>
+    <statBases>
+      <Mass>1</Mass>
+      <RangedWeapon_Cooldown>2.66</RangedWeapon_Cooldown>
+      <WorkToMake>8000</WorkToMake>
+    </statBases>
+    <costList>
+      <PsychoidLeaves>20</PsychoidLeaves>
+      <RH_TET_BlackPowder>80</RH_TET_BlackPowder>
+    </costList>
+    <weaponTags>
+      <li>RH_TET_SkavenGrenade</li>
+    </weaponTags>
+    <verbs>
+      <li>
+        <label>throw bottle</label>
+        <verbClass>Verb_LaunchProjectile</verbClass>
+        <hasStandardCommand>true</hasStandardCommand>
+        <range>12.9</range>
+        <forcedMissRadius>1.2</forcedMissRadius>
+        <warmupTime>1.5</warmupTime>
+        <noiseRadius>4</noiseRadius>
+        <ai_IsBuildingDestroyer>false</ai_IsBuildingDestroyer>
+        <soundCast>ThrowMolotovCocktail</soundCast>
+        <targetParams>
+          <canTargetLocations>true</canTargetLocations>
+        </targetParams>
+        <defaultProjectile>RH_TET_Skaven_Proj_PoisonBottle</defaultProjectile>
+        <rangedFireRulepack>Combat_RangedFire_Thrown</rangedFireRulepack>
+      </li>
+    </verbs>
+    <comps>
+      <li Class="CompProperties_Explosive">
+        <explosiveRadius>2.2</explosiveRadius>
+        <explosiveDamageType>RH_TET_SkavenPoison</explosiveDamageType>
+        <requiredDamageTypeToExplode>Flame</requiredDamageTypeToExplode>
+      </li>
+    </comps>       
+	<recipeMaker>
+      <researchPrerequisite>RH_TET_SkavenWeaponsRanged_Skryre</researchPrerequisite>
+    </recipeMaker> 
+  </ThingDef>
+
+  <ThingDef ParentName="BaseGrenadeProjectile">
+    <defName>RH_TET_Skaven_Proj_PoisonBottle</defName>
+    <label>posion bottle</label>
+    <graphicData>
+      <texPath>Things/Item/Weapon/PlagueBottle/PlagueBottle</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <projectile>
+      <explosionRadius>1.5</explosionRadius>
+      <damageDef>RH_TET_SkavenPoison</damageDef>
+      <!-- Use default damage from explosion def -->
+      <preExplosionSpawnThingDef>Filth_Fuel</preExplosionSpawnThingDef>
+      <ai_IsIncendiary>false</ai_IsIncendiary>
+    </projectile>
+  </ThingDef>
+
+  <ThingDef ParentName="RH_TET_BaseSkavenMakeableGun">
+    <defName>RH_TET_Skaven_Gun_SkavenSmallWindMortar</defName>
+    <label>skaven poisoned-wind mortar</label>
+    <description>A man-portable mortar designed to lob a much larger payload of poisoned-wind globes at long range. The weapon is strapped to the back of a skaven globadier, making it awkward to move with, inaccurate, and uncomfortably heavy. Despite those issues, it's portability, indirect fire, and devastating chemical payload often prove invaluable.</description>
+    <graphicData>
+      <texPath>Things/Item/Weapon/SkavenSmallMortar/SmallWindMortar</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+	  <drawSize>(1.2)</drawSize>
+    </graphicData>
+    <soundInteract>Interact_Rifle</soundInteract>
+    <equippedAngleOffset>-40</equippedAngleOffset>
+    <statBases>
+      <WorkToMake>11000</WorkToMake>
+      <Mass>25</Mass>
+      <RangedWeapon_Cooldown>9</RangedWeapon_Cooldown>
+    </statBases>
+    <costList>
+      <Steel>100</Steel>
+      <ComponentIndustrial>2</ComponentIndustrial>
+      <PsychoidLeaves>50</PsychoidLeaves>
+      <RH_TET_BlackPowder>100</RH_TET_BlackPowder>
+    </costList>
+    <equippedStatOffsets>
+      <MoveSpeed>-0.45</MoveSpeed>
+    </equippedStatOffsets>
+    <recipeMaker>
+      <skillRequirements>
+        <Crafting>6</Crafting>
+      </skillRequirements>
+      <researchPrerequisite>RH_TET_SkavenWeaponsRanged_SkryreAdvanced</researchPrerequisite>
+      <recipeUsers>
+        <li>RH_TET_Skaven_BlastingBench</li>
+      </recipeUsers>
+    </recipeMaker>
+    <tickerType>Normal</tickerType>
+    <comps>
+      <li Class="CompProperties_Explosive">
+        <explosiveRadius>2.9</explosiveRadius>
+        <explosiveDamageType>RH_TET_SkavenPoison</explosiveDamageType>
+        <requiredDamageTypeToExplode>Flame</requiredDamageTypeToExplode>
+      </li>
+	  <li Class="CompOversizedWeapon.CompProperties_OversizedWeapon">
+		  <verticalFlipNorth>true</verticalFlipNorth>
+		  <!--
+		  <angleAdjustmentWest>-45</angleAdjustmentWest>
+		  <angleAdjustmentEast>40</angleAdjustmentEast>
+		  <northOffset>(0.1,0,0.7)</northOffset>
+		  <eastOffset>(0,0,0.2)</eastOffset>
+		  <westOffset>(0,0,0.2)</westOffset>
+		  <southOffset>(0.25,0,0.7)</southOffset>
+		  -->
+	  </li>
+    </comps>
+    <verbs>
+      <li>
+        <verbClass>Verb_LaunchProjectile</verbClass>
+        <hasStandardCommand>true</hasStandardCommand>
+        <defaultProjectile>RH_TET_Bullet_SkavenSmallWindMortar</defaultProjectile>
+        <warmupTime>5</warmupTime>
+        <range>50</range>
+        <forcedMissRadius>8</forcedMissRadius>
+        <requireLineOfSight>false</requireLineOfSight>
+        <minRange>5</minRange>
+        <burstShotCount>1</burstShotCount>
+        <soundCast>Mortar_LaunchA</soundCast>
+        <muzzleFlashScale>16</muzzleFlashScale>
+        <targetParams>
+          <canTargetLocations>true</canTargetLocations>
+        </targetParams>
+      </li>
+    </verbs>
+    <tools>
+      <li>
+        <label>stock</label>
+        <capacities>
+          <li>Blunt</li>
+        </capacities>
+        <power>9</power>
+        <cooldownTime>2</cooldownTime>
+      </li>
+    </tools>
+  </ThingDef>
+
+  <ThingDef ParentName="BaseBullet">
+    <defName>RH_TET_Bullet_SkavenSmallWindMortar</defName>
+    <label>chemical explosion</label>
+    <graphicData>
+      <texPath>Things/Projectile/HoseProjectile</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <shaderType>TransparentPostLight</shaderType>
+    </graphicData>
+    <thingClass>Projectile_Explosive</thingClass>
+    <projectile>
+      <flyOverhead>true</flyOverhead>
+      <speed>30</speed>
+      <damageDef>RH_TET_SkavenPoison</damageDef>
+      <explosionRadius>2.4</explosionRadius>
+      <preExplosionSpawnThingDef>Filth_Fuel</preExplosionSpawnThingDef>
+      <preExplosionSpawnChance>0.5</preExplosionSpawnChance>
+      <ai_IsIncendiary>false</ai_IsIncendiary>
+    </projectile>
+  </ThingDef>
+
+  <ThingDef ParentName="RH_TET_BaseMakeableSkavenGun">
+    <defName>RH_TET_Skaven_Gun_WarpPistolSkaven</defName>
+    <label>skaven warplock pistol</label>
+    <description>The warplock pistol is favoured by the fangleaders of Clan Skryre, but can be found among higher-ranking skaven in most clans. Similar in design to warplock jezzails, yet smaller in scale, warplock pistols are devastating at close range. Warning: avoid this, it causes immense damage.</description>
+    <graphicData>
+      <texPath>Things/Item/Weapon/SkavenWarpPistol/SkavenWarpPistol</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <soundInteract>Interact_Revolver</soundInteract>
+    <equippedAngleOffset>20</equippedAngleOffset>
+    <statBases>
+      <WorkToMake>50000</WorkToMake>
+      <Mass>2.5</Mass>
+      <AccuracyTouch>0.80</AccuracyTouch>
+      <AccuracyShort>0.75</AccuracyShort>
+      <AccuracyMedium>0.35</AccuracyMedium>
+      <AccuracyLong>0.35</AccuracyLong>
+      <RangedWeapon_Cooldown>3</RangedWeapon_Cooldown>
+    </statBases>
+    <costList>
+      <Steel>75</Steel>
+      <RH_TET_Skaven_Warpstone>30</RH_TET_Skaven_Warpstone>
+      <ComponentIndustrial>3</ComponentIndustrial>
+    </costList>
+    <weaponTags>
+      <li>RH_TET_SkavenWarplock</li>
+    </weaponTags>
+    <recipeMaker>
+      <skillRequirements>
+        <Crafting>10</Crafting>
+      </skillRequirements>
+      <researchPrerequisite>RH_TET_SkavenWeaponsRanged_Skryre</researchPrerequisite>
+      <recipeUsers>
+        <li>RH_TET_Skaven_BlastingBench</li>
+      </recipeUsers>
+    </recipeMaker>
+    <tickerType>Normal</tickerType>
+    <comps>
+      <li Class="CompProperties_Explosive">
+        <explosiveRadius>3.9</explosiveRadius>
+        <explosiveDamageType>Bomb</explosiveDamageType>
+      </li>
+    </comps>
+    <verbs>
+      <li>
+        <verbClass>Verb_Shoot</verbClass>
+        <hasStandardCommand>true</hasStandardCommand>
+        <defaultProjectile>RH_TET_Skaven_Bullet_WarplockJezzail</defaultProjectile>
+        <warmupTime>2.4</warmupTime>
+        <range>15.9</range>
+        <soundCast>Shot_TurretSniper</soundCast>
+        <soundCastTail>GunTail_Heavy</soundCastTail>
+        <muzzleFlashScale>15</muzzleFlashScale>
+      </li>
+    </verbs>
+    <tools>
+      <li>
+        <label>barrels</label>
+        <capacities>
+          <li>Blunt</li>
+        </capacities>
+        <power>9</power>
+        <cooldownTime>2</cooldownTime>
+      </li>
+    </tools>
+  </ThingDef>
+ 
+  <ThingDef ParentName="BaseMeleeWeapon_Sharp_Quality">
+    <defName>RH_TET_Skaven_ThrowingStar_Square</defName>
+    <label>skaven throwing star squared</label>
+    <description>A throwing star with razor sharp edges. Has better range than other types of thrown weapons, but does less damage. Ideal for softening up lightly-armoured targets before engaging in melee.\n\nThe night runners and gutter runners of Clan Eshin often carry a clawful of these into battle, using them to harass an enemy into breaking formation or to soften up opponents before they charge.</description>
+    <graphicData>
+      <texPath>Things/Item/Weapon/ThrowingStars/ThrowingStarSquare</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+	  <drawSize>(.8)</drawSize>
+    </graphicData>
+    <soundInteract>Interact_BeatFire</soundInteract>
+    <costStuffCount>50</costStuffCount>
+    <equippedAngleOffset>-60</equippedAngleOffset>
+    <stuffCategories>
+      <li>Metallic</li>
+    </stuffCategories>
+    <techLevel>Medieval</techLevel>
+    <statBases>
+      <WorkToMake>8000</WorkToMake>
+      <Mass>.8</Mass>
+      <AccuracyTouch>0.80</AccuracyTouch>
+      <AccuracyShort>0.65</AccuracyShort>
+      <AccuracyMedium>0.45</AccuracyMedium>
+      <AccuracyLong>0.20</AccuracyLong>
+      <RangedWeapon_Cooldown>1.6</RangedWeapon_Cooldown>
+    </statBases>
+    <weaponTags>
+      <li>RH_TET_Skaven_Assassin</li>
+    </weaponTags>
+    <recipeMaker>
+      <researchPrerequisites>
+		<li>RH_TET_SkavenWeaponsRanged_Eshin</li>
+	  </researchPrerequisites>
+      <skillRequirements>
+        <Crafting>6</Crafting>
+      </skillRequirements>
+	  <recipeUsers>
+        <li>ElectricSmithy</li>
+        <li>FueledSmithy</li>
+        <li>RH_TET_TableSmithy</li>
+        <li>RH_TET_Skaven_TableSmithy</li>
+	  </recipeUsers>
+    </recipeMaker>
+    <verbs>
+      <li>
+        <verbClass>Verb_Shoot</verbClass>
+        <hasStandardCommand>true</hasStandardCommand>
+        <defaultProjectile>RH_TET_Skaven_ThrowingStarSquareP</defaultProjectile>
+        <warmupTime>2.5</warmupTime>
+        <range>10</range>
+        <soundCast>Interact_BeatFire</soundCast>
+      </li>
+    </verbs>
+    <tools>
+      <li>
+        <label>blade</label>
+        <capacities>
+          <li>Cut</li>
+        </capacities>
+        <power>10</power>
+        <cooldownTime>2</cooldownTime>
+      </li>
+    </tools>
+    <thingCategories Inherit="False">
+      <li>RH_TET_Skaven_WeaponsRanged</li>
+    </thingCategories>
+  </ThingDef>
+
+  <ThingDef ParentName="BaseProjectileNeolithic">
+    <defName>RH_TET_Skaven_ThrowingStarSquareP</defName>
+    <label>thrown star</label>
+    <graphicData>
+      <texPath>Things/Projectile/ThrowingStars/ThrowingStarSquare</texPath>
+      <graphicClass>Graphic_Flicker</graphicClass>
+    </graphicData>
+    <projectile>
+      <flyOverhead>false</flyOverhead>
+      <damageDef>RangedStab</damageDef>
+      <damageAmountBase>13</damageAmountBase>
+      <stoppingPower>1</stoppingPower>
+      <armorPenetrationBase>0.05</armorPenetrationBase>
+      <speed>55</speed>
+    </projectile>
+  </ThingDef>
+
+  <ThingDef ParentName="BaseMeleeWeapon_Sharp_Quality">
+    <defName>RH_TET_Skaven_ThrowingStar_Round</defName>
+    <label>skaven throwing star rounded</label>
+    <description>A throwing star with razor sharp edges and a more aerodynamic design. Has better range than other types of thrown weapons, but does less damage.\n\nThe devious skaven assassins of Clan Eshin prefer these silent tools of murder, using them to eliminate their targets at range without risking discovery.</description>
+    <graphicData>
+      <texPath>Things/Item/Weapon/ThrowingStars/ThrowingStarRound</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+	  <drawSize>(.8)</drawSize>
+    </graphicData>
+    <soundInteract>Interact_BeatFire</soundInteract>
+    <costStuffCount>50</costStuffCount>
+    <equippedAngleOffset>-60</equippedAngleOffset>
+    <stuffCategories>
+      <li>Metallic</li>
+    </stuffCategories>
+    <techLevel>Medieval</techLevel>
+    <statBases>
+      <WorkToMake>8000</WorkToMake>
+      <Mass>.8</Mass>
+      <AccuracyTouch>0.80</AccuracyTouch>
+      <AccuracyShort>0.65</AccuracyShort>
+      <AccuracyMedium>0.45</AccuracyMedium>
+      <AccuracyLong>0.20</AccuracyLong>
+      <RangedWeapon_Cooldown>1.6</RangedWeapon_Cooldown>
+    </statBases>
+    <weaponTags>
+      <li>RH_TET_Skaven_Assassin</li>
+    </weaponTags>
+    <recipeMaker>
+      <researchPrerequisites>
+		<li>RH_TET_SkavenWeaponsRanged_Eshin</li>
+	  </researchPrerequisites>
+      <skillRequirements>
+        <Crafting>6</Crafting>
+      </skillRequirements>
+	  <recipeUsers>
+        <li>ElectricSmithy</li>
+        <li>FueledSmithy</li>
+        <li>RH_TET_TableSmithy</li>
+        <li>RH_TET_Skaven_TableSmithy</li>
+	  </recipeUsers>
+    </recipeMaker>
+    <verbs>
+      <li>
+        <verbClass>Verb_Shoot</verbClass>
+        <hasStandardCommand>true</hasStandardCommand>
+        <defaultProjectile>RH_TET_Skaven_ThrowingStarRoundP</defaultProjectile>
+        <warmupTime>2.5</warmupTime>
+        <range>10</range>
+        <soundCast>Interact_BeatFire</soundCast>
+      </li>
+    </verbs>
+    <tools>
+      <li>
+        <label>blade</label>
+        <capacities>
+          <li>Cut</li>
+        </capacities>
+        <power>11</power>
+        <cooldownTime>2</cooldownTime>
+      </li>
+    </tools>
+    <thingCategories Inherit="False">
+      <li>RH_TET_Skaven_WeaponsRanged</li>
+    </thingCategories>
+  </ThingDef>
+
+  <ThingDef ParentName="BaseProjectileNeolithic">
+    <defName>RH_TET_Skaven_ThrowingStarRoundP</defName>
+    <label>thrown star</label>
+    <graphicData>
+      <texPath>Things/Projectile/ThrowingStars/ThrowingStarRound</texPath>
+      <graphicClass>Graphic_Flicker</graphicClass>
+    </graphicData>
+    <projectile>
+      <flyOverhead>false</flyOverhead>
+      <damageDef>RangedStab</damageDef>
+      <damageAmountBase>12</damageAmountBase>
+      <stoppingPower>1</stoppingPower>
+      <armorPenetrationBase>0.05</armorPenetrationBase>
+      <speed>55</speed>
+    </projectile>
+  </ThingDef>
+  
+</Defs>

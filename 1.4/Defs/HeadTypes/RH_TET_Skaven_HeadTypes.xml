@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+  
+	<HeadTypeDef ParentName="AverageBase">
+		<defName>Skaven_Average</defName>
+		<graphicPath>Things/Skaven/Head/Average</graphicPath>
+		<gender>None</gender>
+	</HeadTypeDef>
+  
+	<HeadTypeDef ParentName="AverageBase">
+		<defName>Skaven_Hairy</defName>
+		<graphicPath>Things/Skaven/Head/Hairy</graphicPath>
+		<gender>None</gender>
+	</HeadTypeDef>
+  
+	<HeadTypeDef ParentName="AverageBase">
+		<defName>Skaven_Moulder_Average</defName>
+		<graphicPath>Things/Skaven/HeadMoulder/Average</graphicPath>
+		<gender>None</gender>
+	</HeadTypeDef>
+  
+	<HeadTypeDef ParentName="AverageBase">
+		<defName>Skaven_Moulder_Hairy</defName>
+		<graphicPath>Things/Skaven/HeadMoulder/Hairy</graphicPath>
+		<gender>None</gender>
+	</HeadTypeDef>
+  
+</Defs>

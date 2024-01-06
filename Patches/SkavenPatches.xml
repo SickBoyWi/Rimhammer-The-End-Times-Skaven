@@ -1,0 +1,616 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Patch>
+
+
+	<!-- Recipe updates for new production tables. -->
+	<Operation Class="PatchOperationAdd">
+		<xpath>/Defs/ThingDef[@Name="SculptureBase"]/recipeMaker/recipeUsers</xpath>
+		<value>
+			<li>RH_TET_Skaven_TableSculpting</li>
+		</value>
+	</Operation>
+	<Operation Class="PatchOperationAdd">
+		<xpath>/Defs/RecipeDef[@Name="MakeStoneBlocksBase"]/recipeUsers</xpath>
+		<value>
+			<li>RH_TET_Skaven_TableStonecutter</li>
+		</value>
+	</Operation>
+	<Operation Class="PatchOperationAdd">
+		<xpath>/Defs/ThingDef[@Name="ApparelMakeableBase"]/recipeMaker/recipeUsers</xpath>
+		<value>
+			<li>RH_TET_Skaven_HandTailoringBench</li>
+		</value>
+	</Operation>
+	<Operation Class="PatchOperationAdd">
+		<xpath>/Defs/RecipeDef[defName="Make_Patchleather"]/recipeUsers</xpath>
+		<value>
+			<li>RH_TET_Skaven_HandTailoringBench</li>
+		</value>
+	</Operation>
+	<Operation Class="PatchOperationAdd">
+		<xpath>/Defs/ThingDef[defName = "Apparel_TribalA"]/recipeMaker/recipeUsers</xpath>
+		<value>
+			<li>RH_TET_Skaven_HandTailoringBench</li>
+		</value>
+	</Operation>
+	<Operation Class="PatchOperationAdd">
+		<xpath>/Defs/ThingDef[defName = "Apparel_TribalHeaddress"]/recipeMaker/recipeUsers</xpath>
+		<value>
+			<li>RH_TET_Skaven_HandTailoringBench</li>
+		</value>
+	</Operation>
+	<Operation Class="PatchOperationAdd">
+		<xpath>/Defs/ThingDef[defName = "GoJuice"]/recipeMaker/recipeUsers</xpath>
+		<value>
+			<li>RH_TET_SkavenMoulderBench</li>
+		</value>
+	</Operation>
+	<Operation Class="PatchOperationAdd">
+		<xpath>/Defs/ThingDef[defName = "Penoxycyline"]/recipeMaker/recipeUsers</xpath>
+		<value>
+			<li>RH_TET_SkavenMoulderBench</li>
+		</value>
+	</Operation>
+	<Operation Class="PatchOperationAdd">
+		<xpath>/Defs/ThingDef[defName = "Flake"]/recipeMaker/recipeUsers</xpath>
+		<value>
+			<li>RH_TET_SkavenMoulderBench</li>
+		</value>
+	</Operation>
+	<Operation Class="PatchOperationAdd">
+		<xpath>/Defs/ThingDef[defName = "Yayo"]/recipeMaker/recipeUsers</xpath>
+		<value>
+			<li>RH_TET_SkavenMoulderBench</li>
+		</value>
+	</Operation>
+	<Operation Class="PatchOperationAdd">
+		<xpath>/Defs/ThingDef[defName = "WakeUp"]/recipeMaker/recipeUsers</xpath>
+		<value>
+			<li>RH_TET_SkavenMoulderBench</li>
+		</value>
+	</Operation>
+	<Operation Class="PatchOperationAdd">
+		<xpath>/Defs/ThingDef[defName = "MedicineIndustrial"]/recipeMaker/recipeUsers</xpath>
+		<value>
+			<li>RH_TET_SkavenMoulderBench</li>
+		</value>
+	</Operation>
+	<Operation Class="PatchOperationAdd">
+		<xpath>/Defs/ThingDef[defName = "SmokeleafJoint"]/recipeMaker/recipeUsers</xpath>
+		<value>
+			<li>RH_TET_SkavenMoulderBench</li>
+		</value>
+	</Operation>
+	
+	<!-- Work givers for new production tables. -->
+	<Operation Class="PatchOperationAdd">
+		<xpath>/Defs/WorkGiverDef[defName = "DoBillsSculpt"]/fixedBillGiverDefs</xpath>
+		<value>
+			<li>RH_TET_Skaven_TableSculpting</li>
+		</value>
+	</Operation>
+	<Operation Class="PatchOperationAdd">
+		<xpath>/Defs/WorkGiverDef[defName = "DoBillsButcherFlesh"]/fixedBillGiverDefs</xpath>
+		<value>
+			<li>RH_TET_Skaven_TableButcher</li>
+		</value>
+	</Operation>
+	<Operation Class="PatchOperationAdd">
+		<xpath>/Defs/WorkGiverDef[defName = "DoBillsStonecut"]/fixedBillGiverDefs</xpath>
+		<value>
+			<li>RH_TET_Skaven_TableStonecutter</li>
+		</value>
+	</Operation>
+	<Operation Class="PatchOperationAdd">
+		<xpath>/Defs/WorkGiverDef[defName = "DoBillsMakeApparel"]/fixedBillGiverDefs</xpath>
+		<value>
+			<li>RH_TET_Skaven_HandTailoringBench</li>
+		</value>
+	</Operation>
+	
+	<!-- Extended Storage Patch -->
+	<Operation Class="PatchOperationFindMod">
+		<mods>
+			<li>Extended Storage (Continued)</li>
+		</mods>
+		<match Class="PatchOperationSequence">
+			<operations>
+				<li Class="PatchOperationReplace">
+					<xpath>/Defs/ThingDef[defName = "RH_TET_Skaven_Shelf"]/thingClass</xpath>
+					<value>
+						<thingClass>ExtendedStorage.Building_ExtendedStorage</thingClass>
+					</value>
+				</li>
+				<li Class="PatchOperationReplace">
+					<xpath>/Defs/ThingDef[defName = "RH_TET_Skaven_Shelf"]/inspectorTabs</xpath>
+					<value>
+						<inspectorTabs>
+							<li>ExtendedStorage.ITab_ExtendedStorage</li>
+						</inspectorTabs>
+					</value>
+				</li>
+				<li Class="PatchOperationAdd">
+					<xpath>/Defs/ThingDef[defName = "RH_TET_Skaven_Shelf"]/statBases</xpath>
+					<value>
+						<ES_StorageFactor>6</ES_StorageFactor>
+					</value>
+				</li>
+				<li Class="PatchOperationReplace">
+					<xpath>/Defs/ThingDef[defName = "RH_TET_Skaven_Shelf"]/drawGUIOverlay</xpath>
+					<value>
+						<drawGUIOverlay>True</drawGUIOverlay>
+					</value>
+				</li>
+			</operations>
+		</match>
+	</Operation>
+
+	<Operation Class="PatchOperationFindMod">
+		<mods>
+			<li>Rimhammer - The End Times</li>
+		</mods>
+		<match Class="PatchOperationSequence">
+			<operations>
+				<li Class="PatchOperationAdd">
+					<xpath>//FactionDef[defName = "RH_TET_Outcasts"]/pawnGroupMakers/li[1]/options</xpath>
+					<value>
+						<RH_TET_Skaven_SlaveRatMissile>7</RH_TET_Skaven_SlaveRatMissile>
+						<RH_TET_Skaven_SlaveRatMelee>7</RH_TET_Skaven_SlaveRatMelee>
+						<RH_TET_Skaven_ClanratRanged>5</RH_TET_Skaven_ClanratRanged>
+						<RH_TET_Skaven_ClanratHigh>2</RH_TET_Skaven_ClanratHigh>
+						<RH_TET_Skaven_WizardStandard>.5</RH_TET_Skaven_WizardStandard>
+						<RH_TET_Skaven_WizardGreat>.1</RH_TET_Skaven_WizardGreat>
+					</value>
+				</li>
+				<li Class="PatchOperationAdd">
+					<xpath>//FactionDef[defName = "RH_TET_Outcasts"]/pawnGroupMakers/li[2]/options</xpath>
+					<value>
+						<RH_TET_Skaven_SlaveRatMissile>7</RH_TET_Skaven_SlaveRatMissile>
+						<RH_TET_Skaven_SlaveRatMelee>7</RH_TET_Skaven_SlaveRatMelee>
+						<RH_TET_Skaven_ClanratRanged>5</RH_TET_Skaven_ClanratRanged>
+						<RH_TET_Skaven_ClanratHigh>2</RH_TET_Skaven_ClanratHigh>
+						<RH_TET_Skaven_WizardStandard>.5</RH_TET_Skaven_WizardStandard>
+						<RH_TET_Skaven_WizardGreat>.1</RH_TET_Skaven_WizardGreat>
+					</value>
+				</li>
+				<li Class="PatchOperationAdd">
+					<xpath>//FactionDef[defName = "RH_TET_Outcasts"]/pawnGroupMakers/li[3]/options</xpath>
+					<value>
+						<RH_TET_Skaven_SlaveRatMissile>7</RH_TET_Skaven_SlaveRatMissile>
+						<RH_TET_Skaven_SlaveRatMelee>7</RH_TET_Skaven_SlaveRatMelee>
+						<RH_TET_Skaven_ClanratRanged>5</RH_TET_Skaven_ClanratRanged>
+						<RH_TET_Skaven_ClanratHigh>2</RH_TET_Skaven_ClanratHigh>
+						<RH_TET_Skaven_WizardStandard>.5</RH_TET_Skaven_WizardStandard>
+						<RH_TET_Skaven_WizardGreat>.1</RH_TET_Skaven_WizardGreat>
+					</value>
+				</li>
+				<li Class="PatchOperationAdd">
+					<xpath>//FactionDef[defName = "RH_TET_Outcasts"]/pawnGroupMakers/li[4]/options</xpath>
+					<value>
+						<RH_TET_Skaven_SlaveRatMissile>7</RH_TET_Skaven_SlaveRatMissile>
+						<RH_TET_Skaven_SlaveRatMelee>7</RH_TET_Skaven_SlaveRatMelee>
+						<RH_TET_Skaven_ClanratRanged>5</RH_TET_Skaven_ClanratRanged>
+						<RH_TET_Skaven_ClanratHigh>2</RH_TET_Skaven_ClanratHigh>
+						<RH_TET_Skaven_WizardStandard>.5</RH_TET_Skaven_WizardStandard>
+						<RH_TET_Skaven_WizardGreat>.1</RH_TET_Skaven_WizardGreat>
+					</value>
+				</li>
+				<li Class="PatchOperationAdd">
+					<xpath>//FactionDef[defName = "RH_TET_Outcasts"]/pawnGroupMakers/li[5]/options</xpath>
+					<value>
+						<RH_TET_Skaven_SlaveRatMissile>7</RH_TET_Skaven_SlaveRatMissile>
+						<RH_TET_Skaven_SlaveRatMelee>7</RH_TET_Skaven_SlaveRatMelee>
+						<RH_TET_Skaven_ClanratRanged>5</RH_TET_Skaven_ClanratRanged>
+						<RH_TET_Skaven_ClanratHigh>2</RH_TET_Skaven_ClanratHigh>
+						<RH_TET_Skaven_WizardStandard>.5</RH_TET_Skaven_WizardStandard>
+						<RH_TET_Skaven_WizardGreat>.1</RH_TET_Skaven_WizardGreat>
+					</value>
+				</li>
+				<li Class="PatchOperationAdd">
+					<xpath>//FactionDef[defName = "RH_TET_Outcasts"]/pawnGroupMakers/li[6]/guards</xpath>
+					<value>
+						<RH_TET_Skaven_SlaveRatMissile>7</RH_TET_Skaven_SlaveRatMissile>
+						<RH_TET_Skaven_SlaveRatMelee>7</RH_TET_Skaven_SlaveRatMelee>
+						<RH_TET_Skaven_ClanratRanged>5</RH_TET_Skaven_ClanratRanged>
+						<RH_TET_Skaven_ClanratHigh>2</RH_TET_Skaven_ClanratHigh>
+						<RH_TET_Skaven_WizardStandard>.5</RH_TET_Skaven_WizardStandard>
+						<RH_TET_Skaven_WizardGreat>.1</RH_TET_Skaven_WizardGreat>
+					</value>
+				</li>
+				<li Class="PatchOperationAdd">
+					<xpath>//AlienRace.ThingDef_AlienRace[defName = "RH_TET_Skaven_SkavenAlien"]/recipes</xpath>
+					<value>
+						<li>RH_TET_AdministerHealingPotion</li>
+					</value>
+				</li>
+				<li Class="PatchOperationAdd">
+					<xpath>//AlienRace.ThingDef_AlienRace[defName = "RH_TET_Skaven_StormAlien"]/recipes</xpath>
+					<value>
+						<li>RH_TET_AdministerHealingPotion</li>
+					</value>
+				</li>
+				<li Class="PatchOperationAdd">
+					<xpath>//AlienRace.ThingDef_AlienRace[defName = "RH_TET_Skaven_MoulderAlien"]/recipes</xpath>
+					<value>
+						<li>RH_TET_AdministerHealingPotion</li>
+					</value>
+				</li>
+				<li Class="PatchOperationAdd">
+					<xpath>//AlienRace.ThingDef_AlienRace[defName = "RH_TET_Skaven_HornedAlien"]/recipes</xpath>
+					<value>
+						<li>RH_TET_AdministerHealingPotion</li>
+					</value>
+				</li>
+			</operations>
+		</match>
+	</Operation>
+
+	<Operation Class="PatchOperationFindMod">
+		<mods>
+			<li>Rimhammer - The End Times - WITH GUNS!!</li>
+		</mods>
+		<match Class="PatchOperationSequence">
+			<operations>
+				<li Class="PatchOperationAdd">
+					<xpath>//FactionDef[defName = "RH_TET_Outcasts"]/pawnGroupMakers/li[1]/options</xpath>
+					<value>
+						<RH_TET_Skaven_SlaveRatMissile>7</RH_TET_Skaven_SlaveRatMissile>
+						<RH_TET_Skaven_SlaveRatMelee>7</RH_TET_Skaven_SlaveRatMelee>
+						<RH_TET_Skaven_ClanratRanged>5</RH_TET_Skaven_ClanratRanged>
+						<RH_TET_Skaven_ClanratHigh>2</RH_TET_Skaven_ClanratHigh>
+						<RH_TET_Skaven_WizardStandard>.5</RH_TET_Skaven_WizardStandard>
+						<RH_TET_Skaven_WizardGreat>.1</RH_TET_Skaven_WizardGreat>
+					</value>
+				</li>
+				<li Class="PatchOperationAdd">
+					<xpath>//FactionDef[defName = "RH_TET_Outcasts"]/pawnGroupMakers/li[2]/options</xpath>
+					<value>
+						<RH_TET_Skaven_SlaveRatMissile>7</RH_TET_Skaven_SlaveRatMissile>
+						<RH_TET_Skaven_SlaveRatMelee>7</RH_TET_Skaven_SlaveRatMelee>
+						<RH_TET_Skaven_ClanratRanged>5</RH_TET_Skaven_ClanratRanged>
+						<RH_TET_Skaven_ClanratHigh>2</RH_TET_Skaven_ClanratHigh>
+						<RH_TET_Skaven_WizardStandard>.5</RH_TET_Skaven_WizardStandard>
+						<RH_TET_Skaven_WizardGreat>.1</RH_TET_Skaven_WizardGreat>
+					</value>
+				</li>
+				<li Class="PatchOperationAdd">
+					<xpath>//FactionDef[defName = "RH_TET_Outcasts"]/pawnGroupMakers/li[3]/options</xpath>
+					<value>
+						<RH_TET_Skaven_SlaveRatMissile>7</RH_TET_Skaven_SlaveRatMissile>
+						<RH_TET_Skaven_SlaveRatMelee>7</RH_TET_Skaven_SlaveRatMelee>
+						<RH_TET_Skaven_ClanratRanged>5</RH_TET_Skaven_ClanratRanged>
+						<RH_TET_Skaven_ClanratHigh>2</RH_TET_Skaven_ClanratHigh>
+						<RH_TET_Skaven_WizardStandard>.5</RH_TET_Skaven_WizardStandard>
+						<RH_TET_Skaven_WizardGreat>.1</RH_TET_Skaven_WizardGreat>
+					</value>
+				</li>
+				<li Class="PatchOperationAdd">
+					<xpath>//FactionDef[defName = "RH_TET_Outcasts"]/pawnGroupMakers/li[4]/options</xpath>
+					<value>
+						<RH_TET_Skaven_SlaveRatMissile>7</RH_TET_Skaven_SlaveRatMissile>
+						<RH_TET_Skaven_SlaveRatMelee>7</RH_TET_Skaven_SlaveRatMelee>
+						<RH_TET_Skaven_ClanratRanged>5</RH_TET_Skaven_ClanratRanged>
+						<RH_TET_Skaven_ClanratHigh>2</RH_TET_Skaven_ClanratHigh>
+						<RH_TET_Skaven_WizardStandard>.5</RH_TET_Skaven_WizardStandard>
+						<RH_TET_Skaven_WizardGreat>.1</RH_TET_Skaven_WizardGreat>
+					</value>
+				</li>
+				<li Class="PatchOperationAdd">
+					<xpath>//FactionDef[defName = "RH_TET_Outcasts"]/pawnGroupMakers/li[5]/options</xpath>
+					<value>
+						<RH_TET_Skaven_SlaveRatMissile>7</RH_TET_Skaven_SlaveRatMissile>
+						<RH_TET_Skaven_SlaveRatMelee>7</RH_TET_Skaven_SlaveRatMelee>
+						<RH_TET_Skaven_ClanratRanged>5</RH_TET_Skaven_ClanratRanged>
+						<RH_TET_Skaven_ClanratHigh>2</RH_TET_Skaven_ClanratHigh>
+						<RH_TET_Skaven_WizardStandard>.5</RH_TET_Skaven_WizardStandard>
+						<RH_TET_Skaven_WizardGreat>.1</RH_TET_Skaven_WizardGreat>
+					</value>
+				</li>
+				<li Class="PatchOperationAdd">
+					<xpath>//FactionDef[defName = "RH_TET_Outcasts"]/pawnGroupMakers/li[6]/guards</xpath>
+					<value>
+						<RH_TET_Skaven_SlaveRatMissile>7</RH_TET_Skaven_SlaveRatMissile>
+						<RH_TET_Skaven_SlaveRatMelee>7</RH_TET_Skaven_SlaveRatMelee>
+						<RH_TET_Skaven_ClanratRanged>5</RH_TET_Skaven_ClanratRanged>
+						<RH_TET_Skaven_ClanratHigh>2</RH_TET_Skaven_ClanratHigh>
+						<RH_TET_Skaven_WizardStandard>.5</RH_TET_Skaven_WizardStandard>
+						<RH_TET_Skaven_WizardGreat>.1</RH_TET_Skaven_WizardGreat>
+					</value>
+				</li>
+				<li Class="PatchOperationAdd">
+					<xpath>//AlienRace.ThingDef_AlienRace[defName = "RH_TET_Skaven_SkavenAlien"]/recipes</xpath>
+					<value>
+						<li>RH_TET_AdministerHealingPotion</li>
+					</value>
+				</li>
+				<li Class="PatchOperationAdd">
+					<xpath>//AlienRace.ThingDef_AlienRace[defName = "RH_TET_Skaven_StormAlien"]/recipes</xpath>
+					<value>
+						<li>RH_TET_AdministerHealingPotion</li>
+					</value>
+				</li>
+				<li Class="PatchOperationAdd">
+					<xpath>//AlienRace.ThingDef_AlienRace[defName = "RH_TET_Skaven_MoulderAlien"]/recipes</xpath>
+					<value>
+						<li>RH_TET_AdministerHealingPotion</li>
+					</value>
+				</li>
+				<li Class="PatchOperationAdd">
+					<xpath>//AlienRace.ThingDef_AlienRace[defName = "RH_TET_Skaven_HornedAlien"]/recipes</xpath>
+					<value>
+						<li>RH_TET_AdministerHealingPotion</li>
+					</value>
+				</li>
+			</operations>
+		</match>
+	</Operation>
+
+	<Operation Class="PatchOperationAdd">
+		<order>Append</order>
+		<xpath>/Defs/TraderKindDef[defName = "Orbital_BulkGoods"]/stockGenerators</xpath>
+		<value>
+			<li Class="StockGenerator_SingleDef">
+				<thingDef>RH_TET_Skaven_Warpstone</thingDef>
+				<countRange>
+					<min>25</min>
+					<max>100</max>
+				</countRange>
+			</li>
+		</value>
+	</Operation>
+
+	<Operation Class="PatchOperationAdd">
+		<order>Append</order>
+		<xpath>/Defs/TraderKindDef[defName = "Orbital_CombatSupplier"]/stockGenerators</xpath>
+		<value>
+			<li Class="StockGenerator_SingleDef">
+				<thingDef>RH_TET_Skaven_Warpstone</thingDef>
+				<countRange>
+					<min>10</min>
+					<max>50</max>
+				</countRange>
+			</li>
+		</value>
+	</Operation>
+
+	<Operation Class="PatchOperationAdd">
+		<order>Append</order>
+		<xpath>/Defs/TraderKindDef[defName = "Orbital_PirateMerchant"]/stockGenerators</xpath>
+		<value>
+			<li Class="StockGenerator_SingleDef">
+				<thingDef>RH_TET_Skaven_Warpstone</thingDef>
+				<countRange>
+					<min>25</min>
+					<max>125</max>
+				</countRange>
+			</li>
+		</value>
+	</Operation>
+
+	<Operation Class="PatchOperationAdd">
+		<order>Append</order>
+		<xpath>/Defs/TraderKindDef[defName = "Orbital_Exotic"]/stockGenerators</xpath>
+		<value>
+			<li Class="StockGenerator_SingleDef">
+				<thingDef>RH_TET_Skaven_Warpstone</thingDef>
+				<countRange>
+					<min>50</min>
+					<max>125</max>
+				</countRange>
+			</li>
+		</value>
+	</Operation>
+
+	<Operation Class="PatchOperationAdd">
+		<order>Append</order>
+		<xpath>/Defs/TraderKindDef[defName = "Base_Neolithic_Standard"]/stockGenerators</xpath>
+		<value>
+			<li Class="StockGenerator_SingleDef">
+				<thingDef>RH_TET_Skaven_Warpstone</thingDef>
+				<countRange>
+					<min>5</min>
+					<max>15</max>
+				</countRange>
+			</li>
+		</value>
+	</Operation>
+
+	<Operation Class="PatchOperationAdd">
+		<order>Append</order>
+		<xpath>/Defs/TraderKindDef[defName = "Base_Outlander_Standard"]/stockGenerators</xpath>
+		<value>
+			<li Class="StockGenerator_SingleDef">
+				<thingDef>RH_TET_Skaven_Warpstone</thingDef>
+				<countRange>
+					<min>10</min>
+					<max>20</max>
+				</countRange>
+			</li>
+		</value>
+	</Operation>
+	<!-- TODO - Consider adding the skaven operations to humans.
+	<Operation Class="PatchOperationAdd">
+	    <xpath>/Defs/ThingDef[defName = "Human"]/recipes</xpath>
+	    <value>
+			<li>RH_TET_Skaven_InstallMoulderWarpSpine</li>
+			<li>RH_TET_Skaven_InstallMoulderWarpJaw</li>
+			<li>RH_TET_Skaven_InstallMoulderOgre</li>
+			<li>RH_TET_SkavenBloodExtract</li>
+			<li>RH_TET_SkavenBrainExtract</li>
+	    </value>
+	</Operation>
+	-->
+	<Operation Class="PatchOperationFindMod">
+		<mods>
+			<li>Rimhammer - The End Times - Dwarfs</li>
+		</mods>
+		<match Class="PatchOperationSequence">
+			<operations>
+				<li Class="PatchOperationAdd">
+					<xpath>//RecipeDef[defName = "RH_TET_Skaven_InstallMoulderWarpSpine"]/recipeUsers</xpath>
+					<value>
+						<li>RH_TET_Dwarf_Race_Standard</li>
+						<li>RH_TET_Dwarf_Slayer_Race_Standard</li>
+					</value>
+				</li>
+				<li Class="PatchOperationAdd">
+					<xpath>//RecipeDef[defName = "RH_TET_Skaven_InstallMoulderWarpJaw"]/recipeUsers</xpath>
+					<value>
+						<li>RH_TET_Dwarf_Race_Standard</li>
+						<li>RH_TET_Dwarf_Slayer_Race_Standard</li>
+					</value>
+				</li>
+				<li Class="PatchOperationAdd">
+					<xpath>//RecipeDef[defName = "RH_TET_Skaven_InstallMoulderOgre"]/recipeUsers</xpath>
+					<value>
+						<li>RH_TET_Dwarf_Race_Standard</li>
+						<li>RH_TET_Dwarf_Slayer_Race_Standard</li>
+					</value>
+				</li>
+				<li Class="PatchOperationAdd">
+					<xpath>//RecipeDef[defName = "RH_TET_SkavenBloodExtract"]/recipeUsers</xpath>
+					<value>
+						<li>RH_TET_Dwarf_Race_Standard</li>
+						<li>RH_TET_Dwarf_Slayer_Race_Standard</li>
+					</value>
+				</li>
+				<li Class="PatchOperationAdd">
+					<xpath>//RecipeDef[defName = "RH_TET_SkavenBrainExtract"]/recipeUsers</xpath>
+					<value>
+						<li>RH_TET_Dwarf_Race_Standard</li>
+						<li>RH_TET_Dwarf_Slayer_Race_Standard</li>
+					</value>
+				</li>
+			</operations>
+		</match>
+	</Operation>
+
+	<Operation Class="PatchOperationFindMod">
+		<mods>
+			<li>Rimhammer - The End Times - Ogres</li>
+		</mods>
+		<match Class="PatchOperationSequence">
+			<operations>
+				<li Class="PatchOperationAdd">
+					<xpath>//RecipeDef[defName = "RH_TET_Skaven_InstallMoulderWarpSpine"]/recipeUsers</xpath>
+					<value>
+						<li>RH_TET_Ogre_Race_Standard</li>
+					</value>
+				</li>
+				<li Class="PatchOperationAdd">
+					<xpath>//RecipeDef[defName = "RH_TET_Skaven_InstallMoulderWarpJaw"]/recipeUsers</xpath>
+					<value>
+						<li>RH_TET_Ogre_Race_Standard</li>
+					</value>
+				</li>
+				<li Class="PatchOperationAdd">
+					<xpath>//RecipeDef[defName = "RH_TET_Skaven_InstallMoulderOgre"]/recipeUsers</xpath>
+					<value>
+						<li>RH_TET_Ogre_Race_Standard</li>
+					</value>
+				</li>
+				<li Class="PatchOperationAdd">
+					<xpath>//RecipeDef[defName = "RH_TET_SkavenBloodExtract"]/recipeUsers</xpath>
+					<value>
+						<li>RH_TET_Ogre_Race_Standard</li>
+					</value>
+				</li>
+				<li Class="PatchOperationAdd">
+					<xpath>//RecipeDef[defName = "RH_TET_SkavenBrainExtract"]/recipeUsers</xpath>
+					<value>
+						<li>RH_TET_Ogre_Race_Standard</li>
+					</value>
+				</li>
+			</operations>
+		</match>
+	</Operation>
+
+	<Operation Class="PatchOperationFindMod">
+		<mods>
+			<li>Rimhammer - The End Times - Beastmen</li>
+		</mods>
+		<match Class="PatchOperationSequence">
+			<operations>
+				<li Class="PatchOperationAdd">
+					<xpath>//RecipeDef[defName = "RH_TET_Skaven_InstallMoulderWarpSpine"]/recipeUsers</xpath>
+					<value>
+						<li>RH_TET_Beastmen_Alien_Ungor</li>
+						<li>RH_TET_Beastmen_Alien_Gor</li>
+						<li>RH_TET_Beastmen_Alien_Bullgor</li>
+						<li>RH_TET_Beastmen_Alien_BrayGor</li>
+						<li>RH_TET_Beastmen_Alien_Cygor</li>
+						<li>RH_TET_Beastmen_Alien_Khornegor</li>
+						<li>RH_TET_Beastmen_Alien_Pestigor</li>
+						<li>RH_TET_Beastmen_Alien_Slaangor</li>
+						<li>RH_TET_Beastmen_Alien_Tzaangor</li>
+					</value>
+				</li>
+				<li Class="PatchOperationAdd">
+					<xpath>//RecipeDef[defName = "RH_TET_Skaven_InstallMoulderWarpJaw"]/recipeUsers</xpath>
+					<value>
+						<li>RH_TET_Beastmen_Alien_Ungor</li>
+						<li>RH_TET_Beastmen_Alien_Gor</li>
+						<li>RH_TET_Beastmen_Alien_Bullgor</li>
+						<li>RH_TET_Beastmen_Alien_BrayGor</li>
+						<li>RH_TET_Beastmen_Alien_Cygor</li>
+						<li>RH_TET_Beastmen_Alien_Khornegor</li>
+						<li>RH_TET_Beastmen_Alien_Pestigor</li>
+						<li>RH_TET_Beastmen_Alien_Slaangor</li>
+						<li>RH_TET_Beastmen_Alien_Tzaangor</li>
+					</value>
+				</li>
+				<li Class="PatchOperationAdd">
+					<xpath>//RecipeDef[defName = "RH_TET_Skaven_InstallMoulderOgre"]/recipeUsers</xpath>
+					<value>
+						<li>RH_TET_Beastmen_Alien_Ungor</li>
+						<li>RH_TET_Beastmen_Alien_Gor</li>
+						<li>RH_TET_Beastmen_Alien_Bullgor</li>
+						<li>RH_TET_Beastmen_Alien_BrayGor</li>
+						<li>RH_TET_Beastmen_Alien_Cygor</li>
+						<li>RH_TET_Beastmen_Alien_Khornegor</li>
+						<li>RH_TET_Beastmen_Alien_Pestigor</li>
+						<li>RH_TET_Beastmen_Alien_Slaangor</li>
+						<li>RH_TET_Beastmen_Alien_Tzaangor</li>
+					</value>
+				</li>
+				<li Class="PatchOperationAdd">
+					<xpath>//RecipeDef[defName = "RH_TET_SkavenBloodExtract"]/recipeUsers</xpath>
+					<value>
+						<li>RH_TET_Beastmen_Alien_Ungor</li>
+						<li>RH_TET_Beastmen_Alien_Gor</li>
+						<li>RH_TET_Beastmen_Alien_Bullgor</li>
+						<li>RH_TET_Beastmen_Alien_BrayGor</li>
+						<li>RH_TET_Beastmen_Alien_Cygor</li>
+						<li>RH_TET_Beastmen_Alien_Khornegor</li>
+						<li>RH_TET_Beastmen_Alien_Pestigor</li>
+						<li>RH_TET_Beastmen_Alien_Slaangor</li>
+						<li>RH_TET_Beastmen_Alien_Tzaangor</li>
+					</value>
+				</li>
+				<li Class="PatchOperationAdd">
+					<xpath>//RecipeDef[defName = "RH_TET_SkavenBrainExtract"]/recipeUsers</xpath>
+					<value>
+						<li>RH_TET_Beastmen_Alien_Ungor</li>
+						<li>RH_TET_Beastmen_Alien_Gor</li>
+						<li>RH_TET_Beastmen_Alien_Bullgor</li>
+						<li>RH_TET_Beastmen_Alien_BrayGor</li>
+						<li>RH_TET_Beastmen_Alien_Cygor</li>
+						<li>RH_TET_Beastmen_Alien_Khornegor</li>
+						<li>RH_TET_Beastmen_Alien_Pestigor</li>
+						<li>RH_TET_Beastmen_Alien_Slaangor</li>
+						<li>RH_TET_Beastmen_Alien_Tzaangor</li>
+					</value>
+				</li>
+			</operations>
+		</match>
+	</Operation>
+
+	<Operation Class="PatchOperationAdd">
+		<order>Append</order>
+		<xpath>/Defs/QuestScriptDef[defName = "Util_GenerateSite"]/root/singleSitePartRules/rulesStrings</xpath>
+		<value>
+			<li>root(priority=1,sitePart==RH_TET_Skaven_WarpstoneMeteor)->a large warpstone meteorite crashed here</li>
+		</value>
+	</Operation>
+
+</Patch>
