@@ -1,0 +1,267 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+	<ThingDef ParentName="UnfinishedBase">
+		<defName>RH_TET_UnfinishedGong</defName>
+		<label>unfinished gong</label>
+		<description>An unfinished gong.</description>
+		<stuffCategories>
+			<li>Metallic</li>
+		</stuffCategories>
+		<graphicData>
+			<texPath>Things/Item/Misc/RH_TET_UnfinishedInstrument</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+		</graphicData>
+	</ThingDef>
+ 
+	<ThingDef Name="RH_TET_Skaven_MusicalInstrumentBase" ParentName="BuildingBase" Abstract="True">
+		<passability>PassThroughOnly</passability>
+		<pathCost>50</pathCost>
+		<minifiedDef>MinifiedThing</minifiedDef>
+		<altitudeLayer>BuildingOnTop</altitudeLayer>
+		<rotatable>true</rotatable>
+		<thingClass>TheEndTimes_Skaven.Building_Gong</thingClass>
+		<tickerType>Normal</tickerType>
+		<socialPropernessMatters>true</socialPropernessMatters>
+		<hasInteractionCell>true</hasInteractionCell>
+		<thingCategories>
+			<li>RH_TET_Skaven_BuildingsJoy</li>
+		</thingCategories>
+		<tradeTags>
+			<li>RH_TET_Instrument</li>
+		</tradeTags>
+		<recipeMaker>
+			<workSpeedStat>GeneralLaborSpeed</workSpeedStat>
+			<workSkill>Crafting</workSkill>
+			<effectWorking>Smith</effectWorking>
+			<soundWorking>Recipe_Sculpt</soundWorking>
+			<unfinishedThingDef>RH_TET_UnfinishedGong</unfinishedThingDef>
+		</recipeMaker>
+		<building>
+			<joyKind>RH_TET_Music</joyKind>
+		</building>
+		<comps>
+			<li>
+				<compClass>CompQuality</compClass>
+			</li>
+			<li>
+				<compClass>CompGatherSpot</compClass>
+			</li>
+			<li Class="TheEndTimes_Skaven.CompProperties_MoteThrower">
+				<mote>RH_TET_MoteMusic</mote>
+				<offsetMin>(-0.6,0,0.3)</offsetMin>
+				<offsetMax>(0.6,0,0.5)</offsetMax>
+				<emissionInterval>150</emissionInterval>
+				<scale>0.4~0.8</scale>
+				<rotationRate>-15~15</rotationRate>
+				<velocityX>0.3~0.7</velocityX>
+				<velocityY>0.3~0.8</velocityY>
+			</li>
+		</comps>
+		<placeWorkers>
+			<li>PlaceWorker_ShowInstrumentAoE</li>
+		</placeWorkers>
+	</ThingDef>
+  
+	<ThingDef ParentName="RH_TET_Skaven_MusicalInstrumentBase">
+		<defName>RH_TET_Skaven_Gong</defName>
+		<label>Skaven Gong</label>
+		<description>A metallic gong on a wooden stand. It is a musical instrument that can be played.\n\nThe crude noise reverberates throughout the skaven warrens. It offers recreation to the player, as well as the listeners.</description>
+		<size>(1,1)</size>
+		<pathCost>30</pathCost>
+		<minTechLevelToBuild>Medieval</minTechLevelToBuild>
+		<interactionCellOffset>(0,0,-1)</interactionCellOffset>
+		<soundPlayInstrument>RH_TET_Skaven_GongPlay</soundPlayInstrument>
+		<researchPrerequisites><li>RH_TET_Skaven_Furniture_Recreation</li></researchPrerequisites>
+		<thingSetMakerTags><li>RH_TET_Skaven_RewardStandardQualitySuper</li></thingSetMakerTags>
+		<statBases>
+			<MaxHitPoints>110</MaxHitPoints>
+			<WorkToMake>18000</WorkToMake>
+			<Mass>4</Mass>
+			<JoyGainFactor>1</JoyGainFactor>
+			<Beauty>10</Beauty>
+		</statBases>
+		<recipeMaker>
+			<skillRequirements>
+				<Crafting>4</Crafting>
+			</skillRequirements>
+			<researchPrerequisite>RH_TET_Skaven_Furniture_Recreation</researchPrerequisite>
+			<recipeUsers>
+				<li>FueledSmithy</li>
+				<li>ElectricSmithy</li>
+				<li>RH_TET_TableSmithy</li>
+				<li>RH_TET_Skaven_TableSmithy</li>
+			</recipeUsers>
+		</recipeMaker>
+		<stuffCategories>
+			<li>Metallic</li>
+		</stuffCategories>
+		<costStuffCount>100</costStuffCount>
+		<costList>
+			<WoodLog>50</WoodLog>
+		</costList>
+		<building>
+			<instrumentRange>18</instrumentRange>
+		</building>
+		<uiIconOffset>(0, 0.08)</uiIconOffset>
+		<uiIconScale>0.9</uiIconScale>
+		<graphicData>
+			<texPath>Things/Building/Recreation/RH_TET_Skaven_Gong</texPath>
+			<drawSize>(2,2)</drawSize>
+			<graphicClass>Graphic_Single</graphicClass>
+			<shaderType>CutoutComplex</shaderType>
+			<drawRotated>false</drawRotated>
+			<allowFlip>false</allowFlip>
+			<shadowData>
+				<volume>(0.08, 0.2, 0.08)</volume>
+				<offset>(0, 0, -0.1)</offset>
+			</shadowData>
+			<damageData>
+				<rect>(0.3,0.3,0.4,0.4)</rect>
+			</damageData>
+		</graphicData>
+	</ThingDef>
+
+	<ThingDef ParentName="SculptureBase" Name="RH_TET_Skaven_SculptureBase" Abstract="True">
+		<recipeMaker>
+			<researchPrerequisite>RH_TET_Skaven_Art</researchPrerequisite>
+		</recipeMaker>
+		<thingCategories Inherit="False">
+			<li>RH_TET_Skaven_BuildingsArt</li>
+		</thingCategories>
+	</ThingDef>
+
+	<ThingDef ParentName="RH_TET_Skaven_SculptureBase">
+		<defName>RH_TET_Skaven_SculptureSmall</defName>
+		<label>small skaven sculpture</label>
+		<description>A torso-sized piece of material sculpted into an artistic form, themed to the skaven.</description>
+		<graphicData>
+			<graphicClass>Graphic_Random</graphicClass>
+			<texPath>Things/Building/Art/RH_TET_Skaven_SculptureSmall</texPath>
+		</graphicData>
+		<fillPercent>0.35</fillPercent>
+		<rotatable>false</rotatable>
+		<statBases>
+			<MaxHitPoints>90</MaxHitPoints>
+			<Mass>3</Mass>
+			<Beauty>50</Beauty>
+			<WorkToMake>18000</WorkToMake>
+		</statBases>
+		<stuffCategories>
+			<li>Metallic</li>
+			<li>Woody</li>
+			<li>Stony</li>
+		</stuffCategories>
+		<costStuffCount>50</costStuffCount>
+	</ThingDef>
+
+	<ThingDef ParentName="RH_TET_Skaven_SculptureBase">
+		<defName>RH_TET_Skaven_SculptureLarge</defName>
+		<label>large skaven sculpture</label>
+		<description>A person-sized piece of material sculpted into an artistic form, themed to the skaven.</description>
+		<castEdgeShadows>true</castEdgeShadows>
+		<graphicData>
+			<graphicClass>Graphic_Random</graphicClass>
+			<texPath>Things/Building/Art/RH_TET_Skaven_SculptureLarge</texPath>
+			<drawSize>(3,3)</drawSize>
+		</graphicData>
+		<fillPercent>0.5</fillPercent>
+		<rotatable>false</rotatable>
+		<statBases>
+			<MaxHitPoints>150</MaxHitPoints>
+			<Mass>7</Mass>
+			<Beauty>100</Beauty>
+			<WorkToMake>30000</WorkToMake>
+		</statBases>
+		<stuffCategories>
+			<li>Metallic</li>
+			<li>Woody</li>
+			<li>Stony</li>
+		</stuffCategories>
+		<costStuffCount>100</costStuffCount>
+	</ThingDef>
+
+	<ThingDef ParentName="RH_TET_Skaven_SculptureBase">
+		<defName>RH_TET_Skaven_SculptureGrand</defName>
+		<label>grand skaven sculpture</label>
+		<description>A huge sculpture sized to dominate a room, based on a hero or creation of the skaven.</description>
+		<castEdgeShadows>true</castEdgeShadows>
+		<graphicData>
+			<graphicClass>Graphic_Random</graphicClass>
+			<texPath>Things/Building/Art/RH_TET_Skaven_SculptureGrand</texPath>
+			<drawSize>(4,4)</drawSize>
+		</graphicData>
+		<fillPercent>0.5</fillPercent>
+		<rotatable>false</rotatable>
+		<size>(2,2)</size>
+		<canOverlapZones>false</canOverlapZones>
+		<statBases>
+			<MaxHitPoints>300</MaxHitPoints>
+			<Beauty>400</Beauty>
+			<Mass>28</Mass>
+			<WorkToMake>105000</WorkToMake>
+		</statBases>
+		<stuffCategories>
+			<li>Metallic</li>
+			<li>Woody</li>
+			<li>Stony</li>
+		</stuffCategories>
+		<costStuffCount>400</costStuffCount>
+	</ThingDef>
+  
+	<ThingDef ParentName="BuildingBase">
+		<defName>RH_TET_Skaven_StarTarget</defName>
+		<label>throwing star target</label>
+		<description>A few planks of wood affixed to one another, and used to throw throwing stars at.</description>
+		<graphicData>
+			<texPath>Things/Building/Recreation/RH_TET_Skaven_KnifeTarget</texPath>
+			<graphicClass>Graphic_Multi</graphicClass>
+			<shadowData>
+				<volume>(0.08, 0.2, 0.08)</volume>
+				<offset>(0, 0, -0.1)</offset>
+			</shadowData>
+			<damageData>
+				<rect>(0.3,0.3,0.4,0.4)</rect>
+			</damageData>
+			<drawSize>(1.5,1.5)</drawSize>
+		</graphicData>
+		<minifiedDef>MinifiedThing</minifiedDef>
+		<altitudeLayer>Building</altitudeLayer>
+		<rotatable>true</rotatable>
+		<socialPropernessMatters>true</socialPropernessMatters>
+		<minTechLevelToBuild>Neolithic</minTechLevelToBuild>
+		<drawPlaceWorkersWhileSelected>true</drawPlaceWorkersWhileSelected>
+		<thingCategories>
+			<li>RH_TET_Skaven_BuildingsJoy</li>
+		</thingCategories>
+		<statBases>
+			<MaxHitPoints>80</MaxHitPoints>
+			<WorkToBuild>100</WorkToBuild>
+			<Mass>4</Mass>
+			<Flammability>1.0</Flammability>
+			<JoyGainFactor>1</JoyGainFactor>
+		</statBases>
+		<costList>
+			<WoodLog>10</WoodLog>
+			<Steel>10</Steel>
+		</costList>
+		<building>
+			<joyKind>Gaming_Dexterity</joyKind>
+			<watchBuildingStandDistanceRange>5~5</watchBuildingStandDistanceRange>
+			<watchBuildingStandRectWidth>3</watchBuildingStandRectWidth>
+			<watchBuildingInSameRoom>true</watchBuildingInSameRoom>
+			<artificialForMeditationPurposes>false</artificialForMeditationPurposes>
+		</building>
+		<uiIconScale>0.7</uiIconScale>
+		<pathCost>14</pathCost>
+		<placeWorkers>
+			<li>PlaceWorker_WatchArea</li>
+		</placeWorkers>
+		<designationCategory>Joy</designationCategory>
+		<designationHotKey>Misc1</designationHotKey>
+		<researchPrerequisites>
+			<li>RH_TET_Skaven_Furniture_Recreation</li>
+		</researchPrerequisites>
+	</ThingDef>
+  
+</Defs>

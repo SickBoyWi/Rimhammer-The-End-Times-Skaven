@@ -358,7 +358,7 @@ namespace TheEndTimes_Skaven
                 p.Position = this.Position;
                 p.SetFaction(null);
                 p.SpawnSetup(this.Map, false);
-                p.mindState.mentalStateHandler.TryStartMentalState(MentalStateDefOf.Berserk, (string)null, true, true, (Pawn)null, true, false, false);
+                p.mindState.mentalStateHandler.TryStartMentalState(MentalStateDefOf.Berserk, (string)null, true, true, false, (Pawn)null, true, false, false);
             }
 
             // Send Message.

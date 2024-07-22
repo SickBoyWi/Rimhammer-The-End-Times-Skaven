@@ -16,7 +16,7 @@ namespace TheEndTimes_Skaven
             }
         }
 
-        public override void Notify_PawnDied()
+        public override void Notify_PawnDied(DamageInfo? dinfo, Hediff culprit = null)
         {
             if (!this.Props.destroyBody)
                 return;

@@ -1,0 +1,36 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+	<TraderKindDef>
+		<defName>RH_TET_Skaven_Visitor_Standard</defName>
+		<label>trader</label>
+    
+		<stockGenerators>
+			<li Class="StockGenerator_SingleDef">
+				<thingDef>Silver</thingDef>
+				<countRange>50~200</countRange>
+			</li>
+			<li Class="StockGenerator_SingleDef">
+				<thingDef>ComponentIndustrial</thingDef>
+				<countRange>-2~2</countRange>
+			</li>
+			<li Class="StockGenerator_MarketValue">
+				<tradeTag>WeaponRanged</tradeTag>
+				<countRange>0~1</countRange>
+			</li>
+			<li Class="StockGenerator_Category">
+				<categoryDef>Drugs</categoryDef>
+				<thingDefCountRange>-1~2</thingDefCountRange>
+				<totalPriceRange>50~200</totalPriceRange>
+			</li>
+			<li Class="StockGenerator_MarketValue">
+				<tradeTag>Clothing</tradeTag>
+				<maxTechLevelGenerate>Medieval</maxTechLevelGenerate>
+				<countRange>0~2</countRange>
+			</li>
+			<li Class="StockGenerator_BuyTradeTag"><tag>Art</tag></li>
+			<li Class="StockGenerator_BuyExpensiveSimple"/>
+		</stockGenerators>
+	</TraderKindDef>
+
+</Defs>

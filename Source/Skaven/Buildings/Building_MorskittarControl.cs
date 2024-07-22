@@ -331,10 +331,10 @@ namespace TheEndTimes_Skaven
                         action = TryToBeginPowering,
                         defaultLabel = "RH_TET_Skaven_CommandPower".Translate(),
                         defaultDesc = "RH_TET_Skaven_CommandPowerDesc".Translate(),
-                        disabled = false,
                         hotKey = KeyBindingDefOf.Misc3,
                         icon = ContentFinder<Texture2D>.Get("UI/RH_TET_Skaven_Power")
                     };
+                    command_Action.Disabled = false;
                     yield return command_Action;
                 }
                 else
@@ -348,10 +348,10 @@ namespace TheEndTimes_Skaven
                         action = null,
                         defaultLabel = "RH_TET_Skaven_CommandPower".Translate(),
                         defaultDesc = descr,
-                        disabled = true,
                         hotKey = KeyBindingDefOf.Misc3,
                         icon = ContentFinder<Texture2D>.Get("UI/RH_TET_Skaven_PowerDisabled")
                     };
+                    command_Action.Disabled = true;
                     yield return command_Action;
                 }
             }
@@ -375,10 +375,10 @@ namespace TheEndTimes_Skaven
                     action = WinTheGame,
                     defaultLabel = "RH_TET_Skaven_CommandFireCannon".Translate(),
                     defaultDesc = "RH_TET_Skaven_CommandFireCannonDesc".Translate(),
-                    disabled = false,
                     hotKey = KeyBindingDefOf.Misc3,
                     icon = ContentFinder<Texture2D>.Get("UI/RH_TET_Skaven_FireCannon")
                 };
+                command_Action.Disabled = false;
                 yield return command_Action;
             }
             else
@@ -388,10 +388,10 @@ namespace TheEndTimes_Skaven
                     action = null,
                     defaultLabel = "RH_TET_Skaven_CommandFireCannon".Translate(),
                     defaultDesc = "RH_TET_Skaven_CommandFireDescUnavailable".Translate(),
-                    disabled = true,
                     hotKey = KeyBindingDefOf.Misc3,
                     icon = ContentFinder<Texture2D>.Get("UI/RH_TET_Skaven_FireCannonDisabled")
                 };
+                command_Action.Disabled = true;
                 yield return command_Action;
             }
 

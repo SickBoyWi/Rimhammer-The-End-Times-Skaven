@@ -1,0 +1,410 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+	<ThingDef ParentName="BuildingBase" Name="WarpGunTurret">
+		<defName>RH_TET_Skaven_Turret_WarpCannonSmall</defName>
+		<label>skaven warp-lightning cannon</label>
+		<description>A static turret version of the infamous Warp-Lightning Cannon used by Clan Skryre. It channels an amazing amount of energy into pure warp lightning, firing the blast through it's rune-etched barrel at great distances. This iteration eschews portability for a combination of stability and versatility, allowing it's unstable batteries to be housed away from combat.</description>
+		<thingClass>Building_TurretGun</thingClass>
+		<graphicData>
+			<texPath>Things/Building/Security/SkavenWarpCannon/WarpCannonTip</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+			<drawSize>(2,2)</drawSize>
+			<damageData>
+				<rect>(0.2,0.2,0.6,0.6)</rect>
+			</damageData>
+		</graphicData>
+		<minifiedDef>MinifiedThing</minifiedDef>
+		<hasInteractionCell>True</hasInteractionCell>
+		<interactionCellOffset>(0,0,-1)</interactionCellOffset>
+		<uiIconPath>Things/Building/Security/SkavenWarpCannon/WarpCannonTip</uiIconPath>
+		<altitudeLayer>Building</altitudeLayer>
+		<stealable>false</stealable>
+		<rotatable>true</rotatable>
+		<size>(1,1)</size>
+		<statBases>
+			<MaxHitPoints>200</MaxHitPoints>
+			<Flammability>0.8</Flammability>
+			<WorkToBuild>15000</WorkToBuild>
+			<Mass>32</Mass>
+			<Beauty>-20</Beauty>
+			<ShootingAccuracyTurret>0.98</ShootingAccuracyTurret>
+		</statBases>
+		<tickerType>Normal</tickerType>
+		<comps>
+			<li Class="CompProperties_Flickable"/>
+			<li Class="CompProperties_Power">
+				<compClass>CompPowerTrader</compClass>
+				<basePowerConsumption>120</basePowerConsumption>
+			</li>
+			<li Class="CompProperties_Mannable">
+				<manWorkType>Violent</manWorkType>
+			</li>
+			<li Class="CompProperties_Forbiddable"/>
+		</comps>
+		<passability>PassThroughOnly</passability>
+		<pathCost>50</pathCost>
+		<fillPercent>0.5</fillPercent>
+		<thingCategories>
+			<li>RH_TET_Skaven_BuildingsSecurity</li>
+		</thingCategories>
+		<hasTooltip>true</hasTooltip>
+		<costList>
+			<Steel>150</Steel>
+			<Gold>25</Gold>
+			<RH_TET_Skaven_Warpstone>25</RH_TET_Skaven_Warpstone>
+			<ComponentIndustrial>3</ComponentIndustrial>
+		</costList>
+		<terrainAffordanceNeeded>Light</terrainAffordanceNeeded>
+		<designationCategory>Security</designationCategory>
+		<specialDisplayRadius>54</specialDisplayRadius>
+		<constructionSkillPrerequisite>6</constructionSkillPrerequisite>
+		<building>
+			<turretGunDef>RH_TET_Skaven_Gun_WarpCannonTurret</turretGunDef>
+			<turretBurstWarmupTime>3.0</turretBurstWarmupTime>
+			<turretBurstCooldownTime>4</turretBurstCooldownTime>
+			<turretTopDrawSize>1.5</turretTopDrawSize>
+			<turretTopOffset>(0, 0)</turretTopOffset>
+			<buildingTags>
+				<li>Artillery_BaseDestroyer</li>
+				<li>Artillery_MannedMortar</li>
+			</buildingTags>
+		</building>
+		<placeWorkers>
+			<li>PlaceWorker_TurretTop</li>
+			<li>PlaceWorker_ShowTurretRadius</li>
+		</placeWorkers>
+		<designationHotKey>Misc3</designationHotKey>
+		<uiIconScale>0.95</uiIconScale>
+		<researchPrerequisites>
+			<li>RH_TET_SkavenSecurity_SkryreAdvanced</li>
+		</researchPrerequisites>
+	</ThingDef>
+
+	<ThingDef ParentName="BaseBullet">
+		<defName>RH_TET_Skaven_Bullet_WarpCannon</defName>
+		<label>warp-lightning</label>
+		<graphicData>
+			<texPath>Things/Projectile/WarpCannonBullet</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+			<shaderType>TransparentPostLight</shaderType>
+			<drawSize>(1, 5)</drawSize>
+		</graphicData>
+		<thingClass>Projectile_Explosive</thingClass>
+		<projectile>
+			<damageDef>Flame</damageDef>
+			<explosionRadius>0.7</explosionRadius>
+			<damageAmountBase>40</damageAmountBase>
+			<speed>200</speed>
+		</projectile>
+	</ThingDef>
+
+	<ThingDef ParentName="BaseWeaponTurret">
+		<defName>RH_TET_Skaven_Gun_WarpCannonTurret</defName>
+		<label>skaven warp-lightning turret</label>
+		<description>A rune-etched cannon designed to attach to a warp-lightning turret.</description>
+		<graphicData>
+			<texPath>Things/Building/Security/SkavenWarpCannon/WarpCannonTipAlt</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+			<drawSize>(2,2)</drawSize>
+		</graphicData>
+		<soundInteract>Interact_ChargeLance</soundInteract>
+		<destroyOnDrop>true</destroyOnDrop>
+		<tradeability>None</tradeability>
+		<useHitPoints>false</useHitPoints>
+		<statBases>
+			<AccuracyTouch>0.25</AccuracyTouch>
+			<AccuracyShort>0.6</AccuracyShort>
+			<AccuracyMedium>0.70</AccuracyMedium>
+			<AccuracyLong>0.9</AccuracyLong>
+			<RangedWeapon_Cooldown>7</RangedWeapon_Cooldown>
+			<DeteriorationRate>0</DeteriorationRate>
+			<Mass>40</Mass>
+			<Flammability>0</Flammability>
+		</statBases>
+		<weaponTags Inherit="false">
+			<li>TurretGun</li>
+		</weaponTags>
+		<verbs>
+			<li>
+				<verbClass>Verb_Shoot</verbClass>
+				<hasStandardCommand>true</hasStandardCommand>
+				<defaultProjectile>RH_TET_Skaven_Bullet_WarpCannon</defaultProjectile>
+				<warmupTime>0</warmupTime>
+				<minRange>8.9</minRange>
+				<range>54</range>
+				<burstShotCount>1</burstShotCount>
+				<soundCast>ChargeLance_Fire</soundCast>
+				<soundCastTail>GunTail_Heavy</soundCastTail>
+				<muzzleFlashScale>40</muzzleFlashScale>
+				<forcedMissRadius>0.2</forcedMissRadius>
+			</li>
+		</verbs>
+	</ThingDef>
+
+	<ThingDef Name="RH_TET_Skaven_TrapBase" ParentName="BuildingBase" Abstract="True">
+		<thingClass>Building_TrapExplosive</thingClass>
+		<graphicData>
+			<graphicClass>Graphic_Single</graphicClass>
+			<damageData>
+				<rect>(0.1,0,0.8,0.3)</rect>
+			</damageData>
+		</graphicData>
+		<uiIconOffset>(0,-0.14)</uiIconOffset>
+		<altitudeLayer>Building</altitudeLayer>
+		<drawerType>RealtimeOnly</drawerType>
+		<rotatable>false</rotatable>
+		<tickerType>Normal</tickerType>
+		<stealable>false</stealable>
+		<minifiedDef>MinifiedThing</minifiedDef>
+		<leaveResourcesWhenKilled>false</leaveResourcesWhenKilled>
+		<thingCategories>
+			<li>RH_TET_Skaven_BuildingsSecurity</li>
+		</thingCategories>
+		<statBases>
+			<Mass>2</Mass>
+			<MaxHitPoints>40</MaxHitPoints>
+			<WorkToBuild>1400</WorkToBuild>
+			<Flammability>1</Flammability>
+			<Beauty>-4</Beauty>
+			<TrapSpringChance>0.9</TrapSpringChance>
+		</statBases>
+		<designationCategory>Security</designationCategory>
+		<building>
+			<isTrap>true</isTrap>
+			<trapPeacefulWildAnimalsSpringChanceFactor>0.20</trapPeacefulWildAnimalsSpringChanceFactor>
+			<expandHomeArea>false</expandHomeArea>
+			<ai_chillDestination>false</ai_chillDestination>
+		</building>
+		<constructionSkillPrerequisite>3</constructionSkillPrerequisite>
+		<placeWorkers>
+			<li>PlaceWorker_NeverAdjacentTrap</li>
+		</placeWorkers>
+	</ThingDef>
+
+	<ThingDef ParentName="RH_TET_Skaven_TrapBase">
+		<defName>RH_TET_SkavenTrap_SkavenPoisonMine</defName>
+		<label>skaven poisoned-wind bomb trap</label>
+		<description>A simple contraption that will trigger a blast of poisoned-wind when stepped on. Many a careless Warlock Engineer has perished in their laboratories after forgetting they had set one such trap for possible intruders.</description>
+		<graphicData>
+			<texPath>Things/Building/Security/SkavenToxicBomb/ToxicBomb</texPath>
+		</graphicData>
+		<costList>
+			<PsychoidLeaves>20</PsychoidLeaves>
+			<RH_TET_BlackPowder>25</RH_TET_BlackPowder>
+			<Steel>10</Steel>
+		</costList>
+		<designationHotKey>Misc7</designationHotKey>
+		<uiIconPath>UI/Menu/ToxicBomb</uiIconPath>
+		<comps>
+			<li Class="CompProperties_Explosive">
+				<explosiveRadius>2.5</explosiveRadius>
+				<explosiveDamageType>RH_TET_SkavenPoison</explosiveDamageType>
+				<startWickHitPointsPercent>0.2</startWickHitPointsPercent>
+				<wickTicks>
+					<min>7</min>
+					<max>15</max>
+				</wickTicks>
+			</li>
+		</comps>
+		<specialDisplayRadius>2.5</specialDisplayRadius>
+		<researchPrerequisites>
+			<li>RH_TET_SkavenSecurity_SkryreAdvanced</li>
+		</researchPrerequisites>
+	</ThingDef>
+
+	<ThingDef ParentName="BuildingBase">
+		<defName>RH_TET_SkavenBarricade</defName>
+		<label>skaven board barricade</label>
+		<description>Wood fastened together with steel, frequently used by warplock jezzail teams as both a firing platform and a form of portable cover.  A simple yet effective barricade, reminiscent of a pavise shield used by some no-furs. The barricade is somewhat flimsy, but it's design allows for high mobility in placement.</description>
+		<thingClass>Building</thingClass>
+		<category>Building</category>
+		<graphicData>
+			<texPath>Things/Building/Security/SkavenBarricade/SkavenBarricade</texPath>
+			<graphicClass>Graphic_Multi</graphicClass>
+		</graphicData>
+		<uiIconPath>Things/Building/Security/SkavenBarricade/SkavenBarricade</uiIconPath>
+		<minifiedDef>MinifiedThing</minifiedDef>
+		<thingCategories>
+			<li>RH_TET_Skaven_BuildingsSecurity</li>
+		</thingCategories>
+		<altitudeLayer>Building</altitudeLayer>
+		<passability>PassThroughOnly</passability>
+		<pathCost>120</pathCost>
+		<castEdgeShadows>false</castEdgeShadows>
+		<fillPercent>0.8</fillPercent>
+		<canOverlapZones>false</canOverlapZones>
+		<holdsRoof>false</holdsRoof>
+		<blockLight>false</blockLight>
+		<statBases>
+			<MaxHitPoints>280</MaxHitPoints>
+			<Beauty>-10</Beauty>
+			<WorkToBuild>500</WorkToBuild>
+			<Flammability>1</Flammability>
+			<Mass>10</Mass>
+		</statBases>
+		<building>
+			<ai_chillDestination>false</ai_chillDestination>
+			<isInert>true</isInert>
+		</building>
+		<costList>
+			<WoodLog>5</WoodLog>
+			<Steel>3</Steel>
+		</costList>
+		<filthLeaving>SandbagRubble</filthLeaving>
+		<rotatable>true</rotatable>
+		<selectable>true</selectable>
+		<neverMultiSelect>true</neverMultiSelect>
+		<terrainAffordanceNeeded>Light</terrainAffordanceNeeded>
+		<designationCategory>Security</designationCategory>
+		<constructEffect>ConstructWood</constructEffect>
+		<repairEffect>ConstructWood</repairEffect>
+		<designationHotKey>Misc1</designationHotKey>
+		<researchPrerequisites>
+			<li>RH_TET_SkavenSecurity</li>
+		</researchPrerequisites>
+	</ThingDef>
+
+	<ThingDef ParentName="BuildingBase">
+		<defName>RH_TET_Skaven_Turret_SkavenJezzail</defName>
+		<thingClass>Building_TurretGun</thingClass>
+		<label>skaven warplock jezzail</label>
+		<description>A long barrelled musket capable of hitting targets at tremendous distances, outpacing even that of the famed Hochland Long Rifle. Once the jezzail is fired, the weapon unleashes a single bullet made entirely of warpstone with such impressive force it can penetrate even the thickest of armour. One talented marksman, Natty Buboe, was famed for shooting through the lens of a dwarf telescope 7000 paces away. This particular variant is a touch less mobile, but it's integrated stand removes the need for a pavise to act as a firing platform.</description>
+		<uiIconPath>Things/Building/Security/SkavenJezzail/SkavenJezzail</uiIconPath>
+		<uiIconScale>0.95</uiIconScale>
+		<graphicData>
+			<texPath>Things/Building/Security/SkavenJezzail/SkavenJezzail</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+			<drawSize>(2,2)</drawSize>
+			<damageData>
+				<rect>(0.2,0.2,0.6,0.6)</rect>
+			</damageData>
+		</graphicData>
+		<statBases>
+			<MarketValue>350</MarketValue>
+			<MaxHitPoints>120</MaxHitPoints>
+			<Flammability>0.9</Flammability>
+			<WorkToBuild>15000</WorkToBuild>
+			<Mass>12</Mass>
+			<Beauty>-20</Beauty>
+			<ShootingAccuracyTurret>0.98</ShootingAccuracyTurret>
+		</statBases>
+		<costList>
+			<Steel>150</Steel>
+			<ComponentIndustrial>4</ComponentIndustrial>
+		</costList>
+		<comps Inherit="False">
+			<li Class="CompProperties_Mannable">
+				<manWorkType>Violent</manWorkType>
+			</li>
+			<li Class="CompProperties_Forbiddable"/>
+			<li Class="CompProperties_Refuelable">
+				<fuelLabel>Shots until rearm</fuelLabel>
+				<fuelGizmoLabel>Ammo stack</fuelGizmoLabel>
+				<fuelFilter>
+					<thingDefs>
+						<li>RH_TET_Skaven_Warpstone</li>
+					</thingDefs>
+				</fuelFilter>
+				<fuelCapacity>10</fuelCapacity>
+				<initialFuelPercent>0</initialFuelPercent>
+				<autoRefuelPercent>0</autoRefuelPercent>
+				<showFuelGizmo>true</showFuelGizmo>
+				<minimumFueledThreshold>1</minimumFueledThreshold>
+				<fuelMultiplier>1</fuelMultiplier>
+				<factorByDifficulty>true</factorByDifficulty>
+				<consumeFuelOnlyWhenUsed>true</consumeFuelOnlyWhenUsed>
+				<outOfFuelMessage>Cannot shoot: Needs ammo</outOfFuelMessage>
+				<fuelIconPath>UI/Overlays/Barrel</fuelIconPath>
+			</li>
+		</comps>
+		<tickerType>Normal</tickerType>
+		<terrainAffordanceNeeded>Light</terrainAffordanceNeeded>
+		<designationCategory>Security</designationCategory>
+		<constructionSkillPrerequisite>6</constructionSkillPrerequisite>
+		<altitudeLayer>Building</altitudeLayer>
+		<stealable>false</stealable>
+		<rotatable>true</rotatable>
+		<size>(1,1)</size>
+		<passability>PassThroughOnly</passability>
+		<pathCost>50</pathCost>
+		<fillPercent>0.4</fillPercent>
+		<minifiedDef>MinifiedThing</minifiedDef>
+		<thingCategories>
+			<li>RH_TET_Skaven_BuildingsSecurity</li>
+		</thingCategories>
+		<hasInteractionCell>True</hasInteractionCell>
+		<interactionCellOffset>(0,0,-1)</interactionCellOffset>
+		<building>
+			<turretGunDef>RH_TET_Skaven_Gun_WarplockJezzail</turretGunDef>
+			<turretBurstWarmupTime>5.0</turretBurstWarmupTime>
+			<turretBurstCooldownTime>4</turretBurstCooldownTime>
+			<turretTopDrawSize>2.5</turretTopDrawSize>
+			<turretTopOffset>(0, 0)</turretTopOffset>
+			<buildingTags>
+				<li>Artillery_BaseDestroyer</li>
+				<li>Artillery_MannedMortar</li>
+			</buildingTags>
+		</building>
+		<placeWorkers>
+			<li>PlaceWorker_TurretTop</li>
+		</placeWorkers>
+		<researchPrerequisites>
+			<li>RH_TET_SkavenSecurity_Skryre</li>
+		</researchPrerequisites>
+	</ThingDef>
+
+	<ThingDef ParentName="BaseBullet">
+		<defName>RH_TET_Skaven_Bullet_WarplockJezzail</defName>
+		<label>jezzail bullet</label>
+		<graphicData>
+			<texPath>Things/Projectile/JezzailBullet</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+			<drawSize>1 , 5</drawSize>
+			<shaderType>TransparentPostLight</shaderType>
+		</graphicData>
+		<projectile>
+			<damageDef>RH_TET_SkavenBullet</damageDef>
+			<damageAmountBase>40</damageAmountBase>
+			<speed>280</speed>
+			<armorPenetrationBase>1</armorPenetrationBase>
+		</projectile>
+	</ThingDef>
+
+	<ThingDef ParentName="BaseWeaponTurret">
+		<defName>RH_TET_Skaven_Gun_WarplockJezzail</defName>
+		<label>skaven warplock jezzail</label>
+		<description>A long barrelled skaven warplock firearm.</description>
+		<graphicData>
+			<texPath>Things/Building/Security/SkavenJezzail/SkavenJezzailAlt</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+			<drawSize>(2,2)</drawSize>
+		</graphicData>
+		<statBases>
+			<AccuracyTouch>0.24</AccuracyTouch>
+			<AccuracyShort>0.99</AccuracyShort>
+			<AccuracyMedium>0.99</AccuracyMedium>
+			<AccuracyLong>0.99</AccuracyLong>
+			<RangedWeapon_Cooldown>4.0</RangedWeapon_Cooldown>
+			<DeteriorationRate>0</DeteriorationRate>
+			<Mass>10</Mass>
+			<Flammability>0</Flammability>
+		</statBases>
+		<verbs>
+			<li>
+				<verbClass>Verb_Shoot</verbClass>
+				<hasStandardCommand>true</hasStandardCommand>
+				<defaultProjectile>RH_TET_Skaven_Bullet_WarplockJezzail</defaultProjectile>
+				<warmupTime>5</warmupTime>
+				<minRange>3.9</minRange>
+				<range>500</range>
+				<burstShotCount>1</burstShotCount>
+				<soundCast>Shot_TurretSniper</soundCast>
+				<soundCastTail>GunTail_Heavy</soundCastTail>
+				<muzzleFlashScale>22</muzzleFlashScale>
+				<consumeFuelPerShot>1</consumeFuelPerShot>
+			</li>
+		</verbs>
+	</ThingDef>
+
+</Defs>

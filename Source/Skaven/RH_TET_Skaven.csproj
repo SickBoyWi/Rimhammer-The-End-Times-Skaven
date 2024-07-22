@@ -17,7 +17,7 @@
     <DebugSymbols>false</DebugSymbols>
     <DebugType>none</DebugType>
     <Optimize>false</Optimize>
-    <OutputPath>..\..\1.4\Assemblies\</OutputPath>
+    <OutputPath>..\..\1.5\Assemblies\</OutputPath>
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
@@ -37,24 +37,24 @@
       <HintPath>C:\Program Files (x86)\Steam\steamapps\workshop\content\294100\2009463077\Current\Assemblies\0Harmony.dll</HintPath>
       <Private>False</Private>
     </Reference>
-    <Reference Include="AbilityUser">
-      <HintPath>C:\Program Files (x86)\Steam\steamapps\workshop\content\294100\932008009\1.4\Assemblies\AbilityUser.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
-    <Reference Include="AbilityUserAI">
-      <HintPath>C:\Program Files (x86)\Steam\steamapps\workshop\content\294100\932008009\1.4\Assemblies\AbilityUserAI.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
     <Reference Include="Assembly-CSharp">
       <HintPath>C:\Program Files (x86)\Steam\steamapps\common\RimWorld\RimWorldWin64_Data\Managed\Assembly-CSharp.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="HugsLib">
-      <HintPath>C:\Program Files (x86)\Steam\steamapps\workshop\content\294100\818773962\v1.4\Assemblies\HugsLib.dll</HintPath>
+      <HintPath>C:\Program Files (x86)\Steam\steamapps\workshop\content\294100\818773962\v1.5\Assemblies\HugsLib.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="RH_TET_Magic">
-      <HintPath>..\..\..\Rimhammer-The-End-Times-Magic\1.4\Assemblies\RH_TET_Magic.dll</HintPath>
+      <HintPath>..\..\..\Rimhammer-The-End-Times-Magic\1.5\Assemblies\RH_TET_Magic.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="SickAbilityUser">
+      <HintPath>..\..\..\SickTools\1.5\Assemblies\SickAbilityUser.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="SickAbilityUserAI">
+      <HintPath>..\..\..\SickTools\1.5\Assemblies\SickAbilityUserAI.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="System" />

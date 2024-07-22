@@ -200,7 +200,7 @@ namespace TheEndTimes_Skaven.RandomHarmonyStuff
         }
 
         [HarmonyPatch(typeof(RimWorld.FoodUtility))]
-        [HarmonyPatch("BestFoodSourceOnMap_NewTemp")]
+        [HarmonyPatch("BestFoodSourceOnMap")]
         static class Patch_FoodUtility_BestFoodSourceOnMap
         {
             static void Postfix(ref Thing __result,

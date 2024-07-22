@@ -160,11 +160,11 @@ namespace TheEndTimes_Skaven
                 action = NoncombatRing,
                 defaultLabel = "RH_TET_Skaven_CommandNoncombatRing".Translate(),
                 defaultDesc = "RH_TET_Skaven_CommandNoncombatRingDesc".Translate(),
-                disabled = !canCombatRing || !canNonCombatRing,
                 disabledReason = "RH_TET_Skaven_CommandBellDisabled".Translate(),
                 hotKey = KeyBindingDefOf.Misc1,
                 icon = ContentFinder<Texture2D>.Get("UI/RH_TET_SkavenBellRing_Noncombat")
             };
+            command_Action.Disabled = !canCombatRing || !canNonCombatRing;
             yield return command_Action;
 
             var command_Action2 = new Command_Action
@@ -172,11 +172,11 @@ namespace TheEndTimes_Skaven
                 action = CombatRing,
                 defaultLabel = "RH_TET_Skaven_CommandCombatRing".Translate(),
                 defaultDesc = "RH_TET_Skaven_CommandCombatRingDesc".Translate(),
-                disabled = !canCombatRing || !canNonCombatRing,
                 disabledReason = "RH_TET_Skaven_CommandBellDisabled".Translate(),
                 hotKey = KeyBindingDefOf.Misc2,
                 icon = ContentFinder<Texture2D>.Get("UI/RH_TET_SkavenBellRing_Combat")
             };
+            command_Action2.Disabled = !canCombatRing || !canNonCombatRing;
             yield return command_Action2;
 
             var command_Action3 = new Command_Action
@@ -184,11 +184,11 @@ namespace TheEndTimes_Skaven
                 action = MightyRing,
                 defaultLabel = "RH_TET_Skaven_CommandMightyRing".Translate(),
                 defaultDesc = "RH_TET_Skaven_CommandMightyRingDesc".Translate(),
-                disabled = !canMightyRing || !canCombatRing || !canNonCombatRing,
                 disabledReason = "RH_TET_Skaven_CommandBellDisabled".Translate(),
                 hotKey = KeyBindingDefOf.Misc3,
                 icon = ContentFinder<Texture2D>.Get("UI/RH_TET_SkavenBellRing_Mighty")
             };
+            command_Action3.Disabled = !canMightyRing || !canCombatRing || !canNonCombatRing;
             yield return command_Action3;
 
             if (Prefs.DevMode)
@@ -326,7 +326,7 @@ namespace TheEndTimes_Skaven
                     incidentParams.spawnCenter = spawnSpot;
                     incidentParams.pawnCount = RH_TET_SkavenMod.random.Next(10, 65);
                     PawnKindDef animalKindUse = RH_TET_MagicDefOf.RH_TET_Rat;
-                    int num = incidentParams.pawnCount > 0 ? incidentParams.pawnCount : ManhunterPackIncidentUtility.GetAnimalsCount(animalKindUse, 1.2f);
+                    int num = incidentParams.pawnCount > 0 ? incidentParams.pawnCount : AggressiveAnimalIncidentUtility.GetAnimalsCount(animalKindUse, 1.2f);
                     Find.Storyteller.incidentQueue.Add(new QueuedIncident(new FiringIncident(IncidentDefOf.ManhunterPack, null, incidentParams), Find.TickManager.TicksGame + 500, 0));
                 }
                 else
@@ -470,7 +470,7 @@ namespace TheEndTimes_Skaven
                             try
                             {
                                 GenSpawn.Spawn((Thing)newPawn, position, this.Map, WipeMode.Vanish);
-                                newPawn.mindState.mentalStateHandler.TryStartMentalState(MentalStateDefOf.Manhunter, (string)null, true, false, (Pawn)null, true);
+                                newPawn.mindState.mentalStateHandler.TryStartMentalState(MentalStateDefOf.Manhunter, (string)null, true, false, false, (Pawn)null, true);
                             }
                             catch
                             {
@@ -600,7 +600,7 @@ namespace TheEndTimes_Skaven
                 }
                 else if (randy == 4)
                 {
-                    thingToMake = ThingDefOf.SmokeleafJoint;
+                    thingToMake = DefDatabase<ThingDef>.GetNamed("SmokeleafJoint");
                     stackCount = 75;
                 }
                 else if (randy == 5)
@@ -690,9 +690,9 @@ namespace TheEndTimes_Skaven
             else if (rando < 75)
             {
                 //Cause Disease(random, 1 - 3 pawns)
-                HediffDef use1 = HediffDefOf.Malaria;
+                HediffDef use1 = DefDatabase<HediffDef>.GetNamed("Malaria");
                 HediffDef use2 = HediffDefOf.Plague;
-                HediffDef use3 = HediffDefOf.Flu;
+                HediffDef use3 = DefDatabase<HediffDef>.GetNamed("Flu");
 
                 List<HediffDef> diseases = new List<HediffDef>();
                 diseases.Add(use1);
@@ -730,7 +730,7 @@ namespace TheEndTimes_Skaven
                 {
                     Pawn p = pawns.RandomElement();
                     MentalStateDef state = states.RandomElement();
-                    p.mindState.mentalStateHandler.TryStartMentalState(state, "bell ring", true, false, (Pawn)null, true);
+                    p.mindState.mentalStateHandler.TryStartMentalState(state, "bell ring", true, false, false, (Pawn)null, true);
                     Messages.Message("RH_TET_Skaven_BellRingNegativeMentalDesc".Translate(p.Name, state.label), (LookTargets)(Thing)this, MessageTypeDefOf.NegativeEvent, true);
                 }
             }
