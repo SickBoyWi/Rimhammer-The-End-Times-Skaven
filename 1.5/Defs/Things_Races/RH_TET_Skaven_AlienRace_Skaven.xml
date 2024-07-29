@@ -547,6 +547,7 @@
 					<li>ExecutedPrisoner</li>
 					<li>KilledColonist</li>
 					<li>KilledColonyAnimal</li>
+					<li>RH_TET_Magic_WizardApparel</li>
 				</cannotReceiveThoughts>
 			</thoughtSettings>
       
