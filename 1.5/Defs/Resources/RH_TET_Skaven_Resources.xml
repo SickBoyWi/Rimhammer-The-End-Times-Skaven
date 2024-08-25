@@ -29,6 +29,7 @@
 				<min>9</min>
 				<max>14</max>
 			</mineableScatterLumpSizeRange>
+			<veinMineable>true</veinMineable>
 		</building>
 		<comps>
 			<li Class="CompProperties_Glower">
