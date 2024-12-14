@@ -316,7 +316,7 @@
 		</colorGenerator>
 	</ThingDef>
 
-	<ThingDef ParentName="ArmorSmithableBase">
+	<ThingDef ParentName="RH_TET_Skaven_ArmorSmithableBaseSkaven">
 		<defName>RH_TET_Skaven_Apparel_MoulderPadded</defName>
 		<label>skaven packmaster armor</label>
 		<description>Armour worn by the packmasters of Clan Moulder. More akin to safety equipment than battlefield wear, this padded chestpiece gives a modicum of protection against the clan's wild warbeasts.</description>
@@ -358,10 +358,6 @@
 			<TameAnimalChance>0.05</TameAnimalChance>
 			<TrainAnimalChance>0.05</TrainAnimalChance>
 		</equippedStatOffsets>
-		<thingCategories>
-			<li>ApparelArmor</li>
-			<li>RH_TET_Skaven_ApparelArmor</li>
-		</thingCategories>
 		<apparel>
 			<bodyPartGroups>
 				<li>Torso</li>
