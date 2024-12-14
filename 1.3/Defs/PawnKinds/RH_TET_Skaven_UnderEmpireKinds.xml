@@ -377,7 +377,7 @@
 
   <PawnKindDef ParentName="RH_TET_SkavenUnderEmpireKind">
     <defName>RH_TET_Skaven_MoulderRatMid</defName>
-    <label>RH_TET_Packmaster</label>
+    <label>Packmaster</label>
     <race>RH_TET_Skaven_SkavenAlien</race>
     <backstoryFiltersOverride>
       <li>
