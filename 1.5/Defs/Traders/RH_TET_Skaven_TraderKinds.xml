@@ -80,6 +80,9 @@
 				<respectPopulationIntent>true</respectPopulationIntent>
 				<countRange>2~5</countRange>
 			</li>
+			<li Class="StockGenerator_BuyTradeTag"><tag>Armor</tag></li>
+			<li Class="StockGenerator_BuyTradeTag"><tag>WeaponMelee</tag></li>
+			<li Class="StockGenerator_BuyTradeTag"><tag>WeaponRanged</tag></li>
 		</stockGenerators>
 	</TraderKindDef>
   
@@ -152,6 +155,9 @@
 				<respectPopulationIntent>true</respectPopulationIntent>
 				<countRange>2~5</countRange>
 			</li>
+			<li Class="StockGenerator_BuyTradeTag"><tag>Armor</tag></li>
+			<li Class="StockGenerator_BuyTradeTag"><tag>WeaponMelee</tag></li>
+			<li Class="StockGenerator_BuyTradeTag"><tag>WeaponRanged</tag></li>
 		</stockGenerators>
 	</TraderKindDef>
 
