@@ -2,6 +2,56 @@
 <Defs>
 
 	<RecipeDef>
+		<defName>RH_TET_Skaven_Magic_RefineMagic</defName>
+		<label>refine magic essence</label>
+		<description>Turn raw magic essence into refined magic essence so that it's usable for crafting, at a wizard's crafting bench.</description>
+		<jobString>Refining magic essence.</jobString>
+		<workAmount>1000</workAmount>
+		<workSpeedStat>GeneralLaborSpeed</workSpeedStat>
+		<workSkill>Crafting</workSkill>
+		<effectWorking>Smelt</effectWorking>
+		<soundWorking>Recipe_Cremate</soundWorking>
+		<unfinishedThingDef>RH_TET_Unfinished_MagicItem</unfinishedThingDef>
+		<allowMixingIngredients>false</allowMixingIngredients>
+		<ingredients>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>RH_TET_Daemons_MagicEssence_Raw</li>
+					</thingDefs>
+				</filter>
+				<count>10</count>
+			</li>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>Steel</li>
+					</thingDefs>
+				</filter>
+				<count>5</count>
+			</li>
+		</ingredients>
+		<fixedIngredientFilter>
+			<thingDefs>
+				<li>RH_TET_Daemons_MagicEssence_Raw</li>
+				<li>Steel</li>
+			</thingDefs>
+		</fixedIngredientFilter>
+		<recipeUsers>
+			<li>RH_TET_Skaven_MagicBench</li>
+		</recipeUsers>
+		<products>
+			<RH_TET_Daemons_MagicEssence_Refined>10</RH_TET_Daemons_MagicEssence_Refined>
+		</products>
+		<skillRequirements>
+			<Crafting>6</Crafting>
+		</skillRequirements>
+		<researchPrerequisites>
+			<li>RH_TET_Skaven_Magic</li>
+		</researchPrerequisites>
+	</RecipeDef>
+	
+	<RecipeDef>
 		<defName>RH_TET_Skaven_Magic_HealingPotion</defName>
 		<label>craft healing potion</label>
 		<description>Craft a potion of healing at a seer's crafting bench.</description>
@@ -854,6 +904,84 @@
 			<li>RH_TET_Skaven_Magic</li>
 		</researchPrerequisites>
 	</RecipeDef>
+ 
+	<RecipeDef>
+		<defName>RH_TET_Skaven_Magic_ShroudsRing</defName>
+		<label>craft shrouds ring of tending</label>
+		<description>Craft Shrouds Ring of Tending at a wizard's crafting bench.</description>
+		<jobString>Crafting Shrouds Ring of Tending.</jobString>
+		<workAmount>100000</workAmount>
+		<workSpeedStat>GeneralLaborSpeed</workSpeedStat>
+		<workSkill>Crafting</workSkill>
+		<effectWorking>Smelt</effectWorking>
+		<soundWorking>Recipe_Cremate</soundWorking>
+		<unfinishedThingDef>RH_TET_Unfinished_MagicItem</unfinishedThingDef>
+		<allowMixingIngredients>false</allowMixingIngredients>
+		<ingredients>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>WoodLog</li>
+					</thingDefs>
+				</filter>
+				<count>50</count>
+			</li>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>Uranium</li>
+					</thingDefs>
+				</filter>
+				<count>20</count>
+			</li>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>Gold</li>
+					</thingDefs>
+				</filter>
+				<count>50</count>
+			</li>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>Jade</li>
+					</thingDefs>
+				</filter>
+				<count>100</count>
+			</li>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>RH_TET_Dwarfs_MedicineMedieval</li>
+					</thingDefs>
+				</filter>
+				<count>10</count>
+			</li>
+		</ingredients>
+		<fixedIngredientFilter>
+			<thingDefs>
+				<li>WoodLog</li>
+				<li>Uranium</li>
+				<li>Gold</li>
+				<li>Jade</li>
+				<li>RH_TET_Dwarfs_MedicineMedieval</li>
+			</thingDefs>
+		</fixedIngredientFilter>
+		<recipeUsers>
+			<li>RH_TET_Skaven_MagicBench</li>
+		</recipeUsers>
+		<products>
+			<RH_TET_Magic_Jewelry_ShroudRingTending>1</RH_TET_Magic_Jewelry_ShroudRingTending>
+		</products>
+		<skillRequirements>
+			<Crafting>10</Crafting>
+		</skillRequirements>
+		<researchPrerequisites>
+			<li>RH_TET_SkavenApparel_Advanced</li>
+			<li>RH_TET_Skaven_MagicAdvanced</li>
+		</researchPrerequisites>
+	</RecipeDef> 
  
 	<RecipeDef>
 		<defName>RH_TET_Skaven_Magic_HeatingStatue</defName>
