@@ -150,6 +150,7 @@ namespace TheEndTimes_Skaven
             letterAcceptJoiner.signalAccept = this.signalAccept;
             letterAcceptJoiner.signalReject = this.signalReject;
             letterAcceptJoiner.quest = quest;
+            letterAcceptJoiner.overrideMap = Find.AnyPlayerHomeMap;
             letterAcceptJoiner.StartTimeout(60000);
             Find.LetterStack.ReceiveLetter((Letter)letterAcceptJoiner, (string)null);
         }

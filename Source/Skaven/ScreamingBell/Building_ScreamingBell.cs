@@ -71,7 +71,7 @@ namespace TheEndTimes_Skaven
             base.Destroy(mode);
         }
 
-        public override void Tick()
+        protected override void Tick()
         {
             if (destroyedFlag)
                 return;
@@ -523,11 +523,11 @@ namespace TheEndTimes_Skaven
                 ThingDef postExplosionSpawnThingDef = filth;
                 float? direction = new float?();
                 // Note: Launcher is null, may cause issue. So is equipment def.
-                GenExplosion.DoExplosion(position, map2, (float)explosionRadius, bomb, null, damageAmount, (float)armorPenetration, (SoundDef)null, null, def, thing, postExplosionSpawnThingDef, 0.2f, 1, new GasType?(), false, (ThingDef)null, 0.0f, 1, 0.4f, false, direction, (List<Thing>)null);
+                GenExplosion.DoExplosion(position, map2, (float)explosionRadius, bomb, null, damageAmount, (float)armorPenetration, (SoundDef)null, null, def, thing, postExplosionSpawnThingDef, 0.2f, 1, new GasType?(), new float?(), new int(), false, (ThingDef)null, 0.0f, 1, 0.4f, false, direction, (List<Thing>)null);
                 CellRect cellRect = CellRect.CenteredOn(this.Position, 5);
                 cellRect.ClipInsideMap(map1);
                 for (int index = 0; index < 3; ++index)
-                    GenExplosion.DoExplosion(position, map2, 3.0f, DamageDefOf.Flame, null, 20, 0f, (SoundDef)null, null, this.def, this, (ThingDef)null, 0.0f, 1, new GasType?(), false, (ThingDef)null, 0.0f, 1, 0.0f, false, new float?(), (List<Thing>)null);
+                    GenExplosion.DoExplosion(position, map2, 3.0f, DamageDefOf.Flame, null, 20, 0f, (SoundDef)null, null, this.def, this, (ThingDef)null, 0.0f, 1, new GasType?(), new float?(), new int(), false, (ThingDef)null, 0.0f, 1, 0.0f, false, new float?(), (List<Thing>)null);
             }
             else
             {

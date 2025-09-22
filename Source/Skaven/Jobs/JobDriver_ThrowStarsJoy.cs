@@ -8,11 +8,11 @@ namespace TheEndTimes_Skaven
     {
         private const int StarThrowInterval = 400;
 
-        protected override void WatchTickAction()
+        protected override void WatchTickAction(int delta)
         {
             if (this.pawn.IsHashIntervalTick(400))
                 JobDriver_ThrowStarsJoy.ThrowObjectAt(this.pawn, this.TargetA.Cell, SkavenDefOf.RH_TET_Skaven_MoteStar);
-            base.WatchTickAction();
+            base.WatchTickAction(delta);
         }
 
         private static void ThrowObjectAt(Pawn thrower, IntVec3 targetCell, ThingDef mote)

@@ -1,0 +1,243 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+	<ThingDef ParentName="RockBase" Name="MineableWarpstone">
+		<defName>RH_TET_Skaven_MineableWarpstone</defName>
+		<label>mineable warpstone</label>
+		<graphicData>
+			<texPath>Things/Building/Linked/RockFlecked_Atlas</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+			<shaderType>CutoutComplex</shaderType>
+			<color>(10,80,10)</color>
+			<colorTwo>(35,255,50)</colorTwo>
+		</graphicData>
+		<statBases>
+			<MaxHitPoints>9000</MaxHitPoints>
+		</statBases>
+		<leaveResourcesWhenKilled>true</leaveResourcesWhenKilled>
+		<killedLeavings>
+			<RH_TET_WarpstonePowder>6</RH_TET_WarpstonePowder>
+			<RH_TET_Filth_WarpstoneDust>2</RH_TET_Filth_WarpstoneDust>
+		</killedLeavings>
+		<description>A natural vein of warpstone. The magical and otherworldly mineral craved by skaven and mad men alike for it's potent alchemical properties.</description>
+		<building>
+			<isResourceRock>true</isResourceRock>
+			<mineableThing>RH_TET_Skaven_Warpstone</mineableThing>
+			<mineableYield>35</mineableYield>
+			<mineableScatterCommonality>0.02</mineableScatterCommonality>
+			<mineableScatterLumpSizeRange>
+				<min>9</min>
+				<max>14</max>
+			</mineableScatterLumpSizeRange>
+			<veinMineable>true</veinMineable>
+		</building>
+		<comps>
+			<li Class="CompProperties_Glower">
+				<glowRadius>3</glowRadius>
+				<glowColor>(98, 248, 118,0)</glowColor>
+			</li>
+		</comps>
+	</ThingDef>
+  
+	<ThingDef ParentName="ResourceBase" Name="RH_TET_Skaven_MetalBase" Abstract="True">
+		<soundInteract>Metal_Drop</soundInteract>
+		<soundDrop>Metal_Drop</soundDrop>
+		<useHitPoints>false</useHitPoints>
+		<stuffProps>
+			<categories>
+				<li>Metallic</li>
+			</categories>
+			<constructEffect>ConstructMetal</constructEffect>
+			<color>(107,225,75)</color>
+			<soundImpactStuff>BulletImpact_Metal</soundImpactStuff>
+			<soundMeleeHitSharp>MeleeHit_Metal_Sharp</soundMeleeHitSharp>
+			<soundMeleeHitBlunt>MeleeHit_Metal_Blunt</soundMeleeHitBlunt>
+			<statFactors>
+				<MaxHitPoints>1</MaxHitPoints>
+				<Beauty>1</Beauty>
+				<Flammability>0.2</Flammability>
+				<MeleeWeapon_CooldownMultiplier>.7</MeleeWeapon_CooldownMultiplier>
+			</statFactors>
+		</stuffProps>
+		<smeltable>true</smeltable>
+	</ThingDef>
+
+	<ThingDef Abstract="True" Name="RH_TET_Skaven_PlantFoodRawBase" ParentName="PlantFoodRawBase">
+		<ingestible>
+			<preferability>RawBad</preferability>
+			<tasteThought>AteRawFood</tasteThought>
+			<ingestEffect>EatVegetarian</ingestEffect>
+			<ingestSound>RawVegetable_Eat</ingestSound>
+		</ingestible>
+		<statBases>
+			<Nutrition>0.05</Nutrition>
+			<FoodPoisonChanceFixedHuman>0.075</FoodPoisonChanceFixedHuman>
+		</statBases>
+		<socialPropernessMatters>true</socialPropernessMatters>
+	</ThingDef>
+  
+	<ThingDef ParentName="RH_TET_Skaven_PlantFoodRawBase">
+		<defName>RH_TET_RawBlackCorn</defName>
+		<label>black corn</label>
+		<description>Raw black corn. A food generally only grown by the skaven due to it's high chance of causing food poisoning. It does have the benefits of high yield and fast growth, to keep the clans fed.</description>
+		<soundInteract>Grain_Drop</soundInteract>
+		<soundDrop>Grain_Drop</soundDrop>
+		<graphicData>
+			<texPath>Things/Item/Resource/Raw/BlackCorn</texPath>
+			<graphicClass>Graphic_StackCount</graphicClass>
+		</graphicData>
+		<statBases>
+			<MarketValue>.6</MarketValue>
+		</statBases>
+		<ingestible>
+			<foodType>VegetableOrFruit</foodType>
+		</ingestible>
+		<comps>
+			<li Class="CompProperties_Rottable">
+				<daysToRotStart>15</daysToRotStart>
+				<rotDestroys>true</rotDestroys>
+			</li>
+		</comps>
+	</ThingDef>
+  
+	<ThingDef ParentName="ResourceBase">
+		<defName>RH_TET_BlackPowder</defName>
+		<label>black powder</label>
+		<description>Used for weapons, and to make things explode!\n\nOld dwarfs scoff at the stuff, but still can't deny how it has helped the clans to defend themselves. Skaven embrace it for it's destructive ability. The Empire embrace it as well, although with the proper amount of respect.</description>
+		<graphicData>
+			<texPath>Things/Item/Resource/BlackPowder</texPath>
+			<graphicClass>Graphic_StackCount</graphicClass>
+		</graphicData>
+		<soundInteract>ChunkRock_Drop</soundInteract>
+		<soundDrop>ChunkRock_Drop</soundDrop>
+		<statBases>
+			<MarketValue>4.5</MarketValue>
+			<MaxHitPoints>100</MaxHitPoints>
+			<Flammability>1.0</Flammability>
+			<Mass>0.45</Mass>
+			<DeteriorationRate>0.35</DeteriorationRate>
+		</statBases>
+		<tickerType>Normal</tickerType>
+		<thingCategories>
+			<li>Manufactured</li>
+		</thingCategories>
+		<comps>
+			<li Class="CompProperties_Forbiddable"/>
+			<li Class="CompProperties_Explosive">
+				<explosiveRadius>2.9</explosiveRadius>
+				<explosiveDamageType>Flame</explosiveDamageType>
+				<explosiveExpandPerStackcount>0.4</explosiveExpandPerStackcount>
+				<startWickHitPointsPercent>0.7</startWickHitPointsPercent>
+				<wickTicks>
+					<min>30</min>
+					<max>60</max>
+				</wickTicks>
+			</li>
+		</comps>
+	</ThingDef>
+  
+	<!-- Redundant -->
+	<ThingDef ParentName="ResourceBase">
+		<defName>RH_TET_Coal</defName>
+		<label>coal</label>
+		<description>A lump of dark, dirty coal. Can be used to fuel for forges, stoves, torches and campfires.</description>
+		<graphicData>
+			<texPath>Things/Item/Resource/Coal</texPath>
+			<graphicClass>Graphic_StackCount</graphicClass>
+		</graphicData>
+		<soundInteract>ChunkRock_Drop</soundInteract>
+		<soundDrop>ChunkRock_Drop</soundDrop>
+		<statBases>
+			<MarketValue>1.0</MarketValue>
+			<MaxHitPoints>100</MaxHitPoints>
+			<Flammability>1.0</Flammability>
+			<Mass>0.4</Mass>
+		</statBases>
+		<thingCategories>
+			<li>ResourcesRaw</li>
+		</thingCategories>
+		<deepCommonality>2</deepCommonality>
+		<deepCountPerPortion>35</deepCountPerPortion>
+		<deepLumpSizeRange>
+			<min>15</min>
+			<max>50</max>
+		</deepLumpSizeRange>
+	</ThingDef>
+  
+	<!-- This is for compatibility with other mods, that may or may not be present. -->
+	<ThingDef ParentName="ResourceBase" Name="RH_TET_Dwarf_MetalBase" Abstract="True">
+		<soundInteract>Metal_Drop</soundInteract>
+		<soundDrop>Metal_Drop</soundDrop>
+		<useHitPoints>false</useHitPoints>
+		<stuffProps>
+			<categories>
+				<li>Metallic</li>
+			</categories>
+			<constructEffect>ConstructMetal</constructEffect>
+			<color>(102,102,105)</color>
+			<soundImpactBullet>BulletImpact_Metal</soundImpactBullet>
+			<soundMeleeHitSharp>MeleeHit_Metal_Sharp</soundMeleeHitSharp>
+			<soundMeleeHitBlunt>MeleeHit_Metal_Blunt</soundMeleeHitBlunt>
+			<soundImpactMelee>Pawn_Melee_Punch_HitBuilding_Metal</soundImpactMelee>
+			<statFactors>
+				<MaxHitPoints>1</MaxHitPoints>
+				<Beauty>1</Beauty>
+				<Flammability>0.2</Flammability>
+				<MeleeWeapon_CooldownMultiplier>1</MeleeWeapon_CooldownMultiplier>
+			</statFactors>
+		</stuffProps>
+		<smeltable>true</smeltable>
+	</ThingDef>
+
+	<ThingDef ParentName="RH_TET_Dwarf_MetalBase">
+		<defName>RH_TET_Dwarf_Gromril</defName>
+		<label>gromril</label>
+		<description>A silvery metal. It's much stronger than steel. It is the rarest metal in the olde world, and that makes it worth very much. Typically used by dwarfs, as they're the ones that discovered it, and have delved into it's secret properties.</description>
+		<graphicData>
+			<texPath>Things/Item/Resource/Gromril</texPath>
+			<graphicClass>Graphic_StackCount</graphicClass>
+		</graphicData>
+		<soundInteract>Silver_Drop</soundInteract>
+		<soundDrop>Silver_Drop</soundDrop>
+		<useHitPoints>false</useHitPoints>
+		<statBases>
+			<MarketValue>32</MarketValue>
+			<Mass>0.15</Mass>
+			<StuffPower_Armor_Sharp>1.51</StuffPower_Armor_Sharp>
+			<StuffPower_Armor_Blunt>0.76</StuffPower_Armor_Blunt>
+			<StuffPower_Armor_Heat>1.3</StuffPower_Armor_Heat>
+			<StuffPower_Insulation_Cold>3</StuffPower_Insulation_Cold>
+			<StuffPower_Insulation_Heat>0</StuffPower_Insulation_Heat>
+			<SharpDamageMultiplier>1.3</SharpDamageMultiplier>
+			<BluntDamageMultiplier>1.1</BluntDamageMultiplier>
+		</statBases>
+		<thingCategories>
+			<li>ResourcesRaw</li>
+		</thingCategories>
+		<stuffProps>
+			<categories>
+				<li>Metallic</li>
+			</categories>
+			<commonality>0.05</commonality>
+			<constructEffect>ConstructMetal</constructEffect>
+			<color>(186,195,211)</color>
+			<soundMeleeHitSharp>MeleeHit_Metal_Sharp</soundMeleeHitSharp>
+			<soundMeleeHitBlunt>MeleeHit_Metal_Blunt</soundMeleeHitBlunt>
+			<soundImpactMelee>Pawn_Melee_Punch_HitBuilding_Metal</soundImpactMelee>
+			<statOffsets>
+				<Beauty>6</Beauty>
+			</statOffsets>
+			<statFactors>
+				<MaxHitPoints>2.8</MaxHitPoints>
+				<Beauty>2</Beauty>
+				<Flammability>0.1</Flammability>
+				<WorkToMake>2.2</WorkToMake>
+				<WorkToBuild>2.2</WorkToBuild>
+				<MeleeWeapon_CooldownMultiplier>0.8</MeleeWeapon_CooldownMultiplier>
+			</statFactors>
+		</stuffProps>
+		<smeltable>true</smeltable>
+	</ThingDef>
+  
+  
+</Defs>

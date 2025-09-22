@@ -42,7 +42,7 @@ namespace TheEndTimes_Skaven
             }
         }
 
-        public override void Tick()
+        protected override void Tick()
         {
             base.Tick();
             ResolveSmoke();

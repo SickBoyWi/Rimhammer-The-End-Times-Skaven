@@ -21,7 +21,7 @@ namespace TheEndTimes_Skaven
             else if ((building.def.graphicData.linkFlags & (LinkFlags.Wall | LinkFlags.Rock)) == 0)
                 return "Must be placed on walls.";
 
-            if (rot.FacingCell != null)
+            if (rot.FacingCell.IsValid)
             {
 
                 IntVec3 facingLoc = loc;

@@ -71,7 +71,7 @@ namespace TheEndTimes_Skaven
             base.Destroy(mode);
         }
 
-        public override void Tick()
+        protected override void Tick()
         {
             if (isDestroyed)
                 return;
@@ -216,7 +216,7 @@ namespace TheEndTimes_Skaven
         private bool TryFindCell(out IntVec3 cell, Map map)
         {
             int maxMineables = ThingSetMaker_Meteorite.MineablesCountRange.max;
-            return CellFinderLoose.TryFindSkyfallerCell(ThingDefOf.MeteoriteIncoming, map, out cell, 6, new IntVec3(), -1, true, true, true, false, false, false, (Predicate<IntVec3>)(x =>
+            return CellFinderLoose.TryFindSkyfallerCell(ThingDefOf.MeteoriteIncoming, map, TerrainAffordanceDefOf.Light, out cell, 6, new IntVec3(), -1, true, true, true, false, false, false, (Predicate<IntVec3>)(x =>
             {
                 int num1 = Mathf.CeilToInt(Mathf.Sqrt((float)maxMineables)) + 2;
                 CellRect cellRect = CellRect.CenteredOn(x, num1, num1);

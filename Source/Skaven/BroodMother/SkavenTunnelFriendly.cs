@@ -24,7 +24,7 @@ namespace TheEndTimes_Skaven
                 this.SetFaction(map.ParentFaction, (Pawn)null);
         }
 
-        public override void Tick()
+        protected override void Tick()
         {
             base.Tick();
             if (!this.Spawned || this.Position.Fogged(this.Map))
@@ -244,7 +244,7 @@ namespace TheEndTimes_Skaven
             parms.target = this.Map;
             parms.spawnCenter = this.Position;
             float points = parms.points;
-            parms.points = IncidentWorker_Raid.AdjustedRaidPoints(parms.points, parms.raidArrivalMode, parms.raidStrategy, parms.faction, combat);
+            parms.points = IncidentWorker_Raid.AdjustedRaidPoints(parms.points, parms.raidArrivalMode, parms.raidStrategy, parms.faction, combat, parms.target, parms.raidAgeRestriction);
 
             PawnGroupMakerParms pawnGroupMakerParms = new PawnGroupMakerParms();
             pawnGroupMakerParms.tile = thisMap.Tile;

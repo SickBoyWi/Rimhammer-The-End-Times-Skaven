@@ -1,0 +1,217 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+	<!-- TODO consider starting research, warpstone, food, and items here. -->
+	<ScenarioDef ParentName="ScenarioBase">
+		<defName>RH_TET_SkavenScenario_Standard</defName>
+		<label>Rimhammer - The End Times - Skaven</label>
+		<description>An ambitious group of Skaven have left the warrens of the Under-Empire, stealing a powerful warp-lightning cannon and a few warpstone batteries. They intend to settle their own warrens, found their own clan, and accumulate power for themselves. They hope that perhaps, in time, they can one day cement their status among the Great Clans of Skavendom. Perhaps even to challenge the Lords Of Decay, to touch the Black Pillar, and to sit among the Council Of Thirteen themselves.</description>
+		<scenario>
+			<summary>A group of skaven set out on their own to gain power and prestige for themselves.</summary>
+			<playerFaction>
+				<def>PlayerFaction</def>
+				<factionDef>RH_TET_Skaven_PlayerFaction</factionDef>
+			</playerFaction>
+			<parts>
+
+				<!-- Config pages -->
+				<li Class="ScenPart_ConfigPage_ConfigureStartingPawns">
+					<def>ConfigPage_ConfigureStartingPawns</def>
+					<pawnCount>3</pawnCount>
+					<pawnChoiceCount>6</pawnChoiceCount>
+				</li>
+
+				<!-- Player starting stuff spawn method-->
+				<li Class="ScenPart_PlayerPawnsArriveMethod">
+					<def>PlayerPawnsArriveMethod</def>
+					<method>Standing</method>
+				</li>
+  
+				<!-- Player pawns modifiers -->
+				<li Class="ScenPart_SetNeedLevel">
+					<def>SetNeedLevel</def>
+					<visible>false</visible>
+					<context>PlayerStarter</context>
+					<chance>1.0</chance>
+					<need>Food</need>
+					<levelRange>
+						<min>0.7</min>
+						<max>0.9</max>
+					</levelRange>
+				</li>
+				<li Class="ScenPart_SetNeedLevel">
+					<def>SetNeedLevel</def>
+					<visible>false</visible>
+					<context>PlayerStarter</context>
+					<chance>1.0</chance>
+					<need>Rest</need>
+					<levelRange>
+						<min>0.5</min>
+						<max>0.8</max>
+					</levelRange>
+				</li>
+        
+				<!-- Starting research. -->
+				<li Class="ScenPart_StartingResearch">
+					<def>StartingResearch</def>
+					<project>Stonecutting</project>
+				</li>
+				<li Class="ScenPart_StartingResearch">
+					<def>StartingResearch</def>
+					<project>Brewing</project>
+				</li>
+				<li Class="ScenPart_StartingResearch">
+					<def>StartingResearch</def>
+					<project>RH_TET_SkavenFurniture</project>
+				</li>
+				<li Class="ScenPart_StartingResearch">
+					<def>StartingResearch</def>
+					<project>ComplexFurniture</project>
+				</li>
+				<li Class="ScenPart_StartingResearch">
+					<def>StartingResearch</def>
+					<project>RH_TET_SkavenWeaponryRanged_Basic</project>
+				</li>
+				<li Class="ScenPart_StartingResearch">
+					<def>StartingResearch</def>
+					<project>RH_TET_SkavenApparel_Basic</project>
+				</li>
+		
+				<!-- Player starting things -->
+				<li Class="ScenPart_StartingThing_Defined">
+					<def>StartingThing_Defined</def>
+					<thingDef>Pemmican</thingDef>
+					<count>600</count>
+				</li>
+				<li Class="ScenPart_StartingThing_Defined">
+					<def>StartingThing_Defined</def>
+					<thingDef>RH_TET_SkavenWarpBattery</thingDef>
+					<count>2</count>
+				</li>
+				<li Class="ScenPart_StartingThing_Defined">
+					<def>StartingThing_Defined</def>
+					<thingDef>RH_TET_Skaven_Turret_WarpCannonSmall</thingDef>
+					<count>1</count>
+				</li>
+				<!-- TODO add critters here -->
+				<li Class="ScenPart_StartingAnimal">
+					<def>StartingAnimal</def>
+					<animalKind>Rat</animalKind>
+					<count>3</count>
+					<bondToRandomPlayerPawnChance>0.4</bondToRandomPlayerPawnChance>
+				</li>
+
+				<li Class="ScenPart_ScatterThingsNearPlayerStart">
+					<def>ScatterThingsNearPlayerStart</def>
+					<thingDef>RH_TET_Skaven_Warpstone</thingDef>
+					<count>25</count>
+				</li>
+
+				<!-- Game start dialog -->
+				<li Class="ScenPart_GameStartDialog">
+					<def>GameStartDialog</def>
+					<text>Your skaven stand on newly claimed ground with the stolen batteries and cannon at hand. Build your warren, gather wealth, and prove to your fellow skaven and the wretched no-furs that your clan is superior!</text>
+					<closeSound>GameStartSting</closeSound>
+				</li>
+			</parts>
+		</scenario>
+	</ScenarioDef>
+
+	<ScenarioDef ParentName="ScenarioBase">
+		<defName>RH_TET_Skaven_Wizard</defName>
+		<label>Rimhammer - The End Times - Skaven - Lone Grey Seer</label>
+		<description>A single grey seer of the Under-Empire has set out on their own, deciding to create a new warren. Somewhere away from their peers to scheme against their rivals, to assemble their own warband, and amass power for themself. They alone will found their own clan, bring devastation to the no-furs, and enact vengeance upon any skaven who offended them. Go forth then, brave-mighty seer! Swell your ranks with underlings, research your own weapons of war, and lead your new clan to inevitable victory!</description>
+		<scenario>
+			<summary>A lone grey seer sets out to accumulate power for themself.</summary>
+	  
+			<playerFaction>
+				<def>PlayerFaction</def>
+				<factionDef>RH_TET_Skaven_PlayerWizard</factionDef>
+			</playerFaction>
+			<parts>
+
+				<!-- Game set up pages. -->
+				<li Class="ScenPart_ConfigPage_ConfigureStartingPawns">
+					<def>ConfigPage_ConfigureStartingPawns</def>
+					<pawnCount>1</pawnCount>
+					<pawnChoiceCount>5</pawnChoiceCount>
+				</li>
+
+				<!-- Starting stuff spawn method. -->
+				<li Class="ScenPart_PlayerPawnsArriveMethod">
+					<def>PlayerPawnsArriveMethod</def>
+					<method>Standing</method>
+					<visible>false</visible>
+				</li>
+
+				<!-- Starting research. -->
+				<li Class="ScenPart_StartingResearch">
+					<def>StartingResearch</def>
+					<project>Stonecutting</project>
+				</li>
+				<li Class="ScenPart_StartingResearch">
+					<def>StartingResearch</def>
+					<project>Brewing</project>
+				</li>
+				<li Class="ScenPart_StartingResearch">
+					<def>StartingResearch</def>
+					<project>RH_TET_SkavenFurniture</project>
+				</li>
+				<li Class="ScenPart_StartingResearch">
+					<def>StartingResearch</def>
+					<project>ComplexFurniture</project>
+				</li>
+				<li Class="ScenPart_StartingResearch">
+					<def>StartingResearch</def>
+					<project>RH_TET_SkavenWeaponryRanged_Basic</project>
+				</li>
+				<li Class="ScenPart_StartingResearch">
+					<def>StartingResearch</def>
+					<project>RH_TET_SkavenApparel_Basic</project>
+				</li>
+		
+				<!-- Starting stuff. -->
+				<li Class="ScenPart_StartingThing_Defined">
+					<def>StartingThing_Defined</def>
+					<thingDef>Silver</thingDef>
+					<count>250</count>
+				</li>
+				<li Class="ScenPart_StartingThing_Defined">
+					<def>StartingThing_Defined</def>
+					<thingDef>MealSurvivalPack</thingDef>
+					<count>25</count>
+				</li>
+				<!-- TODO Add fungal meds to the skaven or magic mod animal here. -->
+				<li Class="ScenPart_StartingThing_Defined">
+					<def>StartingThing_Defined</def>
+					<thingDef>RH_TET_Dwarf_MedicinalMushroom</thingDef>
+					<count>5</count>
+				</li>
+		
+				<!-- Scatter some things near player start. -->
+				<li Class="ScenPart_ScatterThingsNearPlayerStart">
+					<def>ScatterThingsNearPlayerStart</def>
+					<thingDef>Steel</thingDef>
+					<count>250</count>
+				</li>
+				<li Class="ScenPart_ScatterThingsNearPlayerStart">
+					<def>ScatterThingsNearPlayerStart</def>
+					<thingDef>WoodLog</thingDef>
+					<count>250</count>
+				</li>
+				<li Class="ScenPart_ScatterThingsAnywhere">
+					<def>ScatterThingsNearPlayerStart</def>
+					<thingDef>MealSurvivalPack</thingDef>
+					<count>25</count>
+				</li>
+				<!-- Scatter some things anywhere. -->
+				<li Class="ScenPart_ScatterThingsAnywhere">
+					<def>ScatterThingsAnywhere</def>
+					<thingDef>Steel</thingDef>
+					<count>150</count>
+				</li>
+			</parts>
+		</scenario>
+	</ScenarioDef>
+
+</Defs>

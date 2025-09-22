@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+	<PawnKindDef Name="RH_TET_Skaven_BaseRatOgre" Abstract="True">
+		<destroyGearOnDrop>true</destroyGearOnDrop>
+		<aiAvoidCover>true</aiAvoidCover>
+		<initialResistanceRange>20~30</initialResistanceRange>
+		<initialWillRange>0~1</initialWillRange>
+	</PawnKindDef>
+
+	<PawnKindDef ParentName="RH_TET_Skaven_BaseRatOgre">
+		<defName>RH_TET_Skaven_RatOgreBladeUE</defName>
+		<label>rat ogre</label>
+		<defaultFactionDef>RH_TET_Skaven_UnderEmpireFaction</defaultFactionDef>
+		<race>RH_TET_Skaven_RatOgreBlade</race>
+		<combatPower>180</combatPower>
+		<lifeStages>
+			<li>
+				<bodyGraphicData>
+					<texPath>Things/Pawn/Animal/RatOgreBladed/RatOgre</texPath>
+					<drawSize>2.1</drawSize>
+					<color>(192,180,135)</color>
+				</bodyGraphicData>
+				<dessicatedBodyGraphicData>
+					<texPath>Things/Pawn/Animal/RatOgreBladed/Dessicated_RatOgre</texPath>
+					<drawSize>2.1</drawSize>
+				</dessicatedBodyGraphicData>
+			</li>
+		</lifeStages>
+		<apparelMoney>
+			<min>-10</min>
+			<max>-10</max>
+		</apparelMoney>
+		<weaponMoney>
+			<min>0</min>
+			<max>0</max>
+		</weaponMoney>
+		<weaponTags>
+			<li>None</li>
+		</weaponTags>
+	</PawnKindDef>
+  
+	<PawnKindDef ParentName="RH_TET_Skaven_BaseRatOgre">
+		<defName>RH_TET_Skaven_RatOgreBladeEshin</defName>
+		<label>rat ogre</label>
+		<defaultFactionDef>RH_TET_Skaven_UnderEmpireFaction</defaultFactionDef>
+		<race>RH_TET_Skaven_RatOgreBlade</race>
+		<combatPower>180</combatPower>
+		<lifeStages>
+			<li>
+				<bodyGraphicData>
+					<texPath>Things/Pawn/Animal/RatOgreBladed/RatOgre</texPath>
+					<drawSize>2.1</drawSize>
+					<color>(157,144,133)</color>
+				</bodyGraphicData>
+				<dessicatedBodyGraphicData>
+					<texPath>Things/Pawn/Animal/RatOgreBladed/Dessicated_RatOgre</texPath>
+					<drawSize>2.1</drawSize>
+				</dessicatedBodyGraphicData>
+			</li>
+		</lifeStages>
+		<apparelMoney>
+			<min>-10</min>
+			<max>-10</max>
+		</apparelMoney>
+		<weaponMoney>
+			<min>0</min>
+			<max>0</max>
+		</weaponMoney>
+		<weaponTags>
+			<li>None</li>
+		</weaponTags>
+	</PawnKindDef>
+
+	<PawnKindDef ParentName="AnimalKindBase">
+		<defName>RH_TET_Skaven_RatOgreAnimal</defName>
+		<label>rat ogre</label>
+		<race>RH_TET_Skaven_RatOgreAnimal</race>
+		<combatPower>50</combatPower>
+		<maxGenerationAge>20</maxGenerationAge>
+		<lifeStages>
+			<li>
+				<bodyGraphicData>
+					<texPath>Things/Pawn/Animal/RatOgre/RatOgre</texPath>
+					<drawSize>2.1</drawSize>
+					<color>(200,147,101)</color>
+				</bodyGraphicData>
+				<dessicatedBodyGraphicData>
+					<texPath>Things/Pawn/Animal/RatOgre/Dessicated_RatOgre</texPath>
+					<drawSize>2.1</drawSize>
+				</dessicatedBodyGraphicData>
+			</li>
+		</lifeStages>
+	</PawnKindDef>
+
+</Defs>
