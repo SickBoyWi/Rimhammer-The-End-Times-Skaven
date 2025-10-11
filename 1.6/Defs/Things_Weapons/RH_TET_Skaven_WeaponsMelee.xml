@@ -115,14 +115,6 @@
 				<westOffset>(0,0,0.5)</westOffset>
 				<southOffset>(0.3,0,0.5)</southOffset>
 			</li>
-			<!--
-			<li Class="MVCF.Comps.CompProperties_VerbProps">
-				<compClass>MVCF.Comps.Comp_VerbProps</compClass>
-				<verbProps>
-					<li><brawlerCaresAbout>false</brawlerCaresAbout></li>
-				</verbProps>
-			</li>
-			-->
 		</comps>
 		<weaponTags>
 			<li>RH_TET_SkavenStormvermin</li>
@@ -164,6 +156,9 @@
 				<cooldownTime>2.6</cooldownTime>
 			</li>
 		</tools>
+		<modExtensions>
+			<li Class="BrawlerFriendly.DefModExtension_BrawlerFriendly" />
+		</modExtensions>
 	</ThingDef>
   
 	<ThingDef ParentName="BaseProjectileNeolithic">
