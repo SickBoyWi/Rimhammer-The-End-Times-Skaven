@@ -157,8 +157,8 @@
 			</li>
 		</tools>
 		<modExtensions>
-			<li Class="BrawlerFriendly.DefModExtension_BrawlerFriendly" />
-		</modExtensions>
+			<li Class="SickTools.DefModExtension_BrawlerAllowance" />
+		</modExtensions>	
 	</ThingDef>
   
 	<ThingDef ParentName="BaseProjectileNeolithic">
